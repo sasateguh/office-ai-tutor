@@ -32,8 +32,8 @@ try {
     $answer = mb_substr((string) ($input['answer'] ?? ''), 0, 500);   // jawapan sebenar < 200 aksara
 
     $subjek = (string) ($input['subjek'] ?? 'excel');
-    if (!Subjek::bolehLihat($subjek)) {
-        jsonOut(404, ['success' => false, 'error' => 'Subjek tidak dijumpai']);
+    if (!Subjek::bolehLihat($subjek) || !in_array('practice', Subjek::semua()[$subjek]['halaman'], true)) {
+        jsonOut(404, ['success' => false, 'error' => 'Subjek tidak dijumpai']);   // subjek tanpa latihan (cth cabang AI)
     }
     $bahasa = ($input['bahasa'] ?? 'ms') === 'en' ? 'en' : 'ms';
     $exercises = Kandungan::baca($subjek, 'latihan', $bahasa);
@@ -50,6 +50,9 @@ try {
 
     if ($q['mode'] !== 'choice' && trim($answer) === '') {
         jsonOut(400, ['success' => false, 'error' => 'Jawapan kosong']);
+    }
+    if ($q['mode'] === 'susun' && Latihan::bacaSusun($q, $answer) === null) {
+        jsonOut(400, ['success' => false, 'error' => 'Susunan tak sah']);   // bukan pilih atur lengkap 0..n-1
     }
     $correct = Latihan::betul($q, $answer, isset($input['choice_index']) ? (int) $input['choice_index'] : -1);
     // Hasil sama dengan fungsi yang sama (dikira pelayar, assets/js/formula-enjin.js) — hanya untuk soalan yang membenarkannya.
@@ -70,7 +73,7 @@ try {
         'correct' => $correct,
         'canonical' => $q['canonical'] ?? '',
         'explanation' => Latihan::html((string) ($q['explanation'] ?? '')),
-    ]);
+    ] + ($q['mode'] === 'susun' ? ['susunan' => array_map(fn($l) => Latihan::html((string) $l), $q['langkah'] ?? [])] : []));
 } catch (Throwable $e) {
     error_log('[exercise-check] ' . $e->getMessage());
     jsonOut(500, ['success' => false, 'error' => 'Server error']);

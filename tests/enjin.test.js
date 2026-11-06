@@ -57,10 +57,36 @@ for (const [f, j] of kes) {
     const ok = v === j;
     if (!ok) { gagal++; console.log(`BEZA  ${f}  →  ${v}   (Excel: ${j})`); }
 }
+// Jawapan contoh set jadual-data + analisis-formula (BM dan EN) atas grid soalan masing-masing; nilai = hasil Excel 365 Windows.
+const jualan = (w, p) => [['Tarikh', 'Wilayah', 'Produk', 'Unit', 'Jualan (RM)'], ['05/01/2026', w[0], p[0], 12, 480], ['18/01/2026', w[1], p[1], 20, 400],
+    ['27/01/2026', w[0], p[1], 8, 160], ['03/02/2026', w[2], p[0], 15, 600], ['14/02/2026', w[1], p[0], 10, 400], ['25/02/2026', w[0], p[0], 18, 720],
+    ['09/03/2026', w[2], p[1], 25, 500], ['21/03/2026', w[1], p[0], 6, 240], ['?', '', '', '', '']];
+const sel = (a) => [['Asal', 'Hasil'], [a, '']];
+const harga = [['Kod', 'Produk', 'Harga'], ['K-01', 'x', 40], ['K-02', 'x', 20], ['K-03', 'x', 25], ['K-04', 'x', 15], ['', '', ''], ['Kod dicari', 'K-03', '']];
+const kesSet = [
+    [sel('Ali  bin  Abu'), '=TRIM(A2)', 'Ali bin Abu'], [sel('SITI AMINAH'), '=PROPER(A2)', 'Siti Aminah'], [sel('ahmad   faiz'), '=PROPER(TRIM(A2))', 'Ahmad Faiz'],
+    [sel('RM1250'), '=VALUE(SUBSTITUTE(A2,"RM",""))', '1250'], [sel('KL-0425'), '=LEFT(A2,2)', 'KL'], [sel('KL-0425'), '=VALUE(RIGHT(A2,4))', '425'],
+    [sel('15.03.2026'), '=DATE(RIGHT(A2,4),MID(A2,4,2),LEFT(A2,2))', '15/03/2026'], [sel('05/01/2026'), '=TEXT(A2,"mmm yyyy")', 'Jan 2026'],
+    [sel('05/01/2026'), '=EOMONTH(A2,1)', '28/02/2026'], [[['ID'], ['A101'], ['A102'], ['A101'], ['A103'], ['A102'], ['A101']], '=COUNTIF(A2:A7,A2)', '3'],
+    [harga, '=XLOOKUP(B7,A2:A5,C2:C5,"Tiada")', '25'],
+];
+for (const [w, p, t] of [[['Utara', 'Selatan', 'Tengah'], ['Kopi', 'Teh'], 'Tiada'], [['North', 'South', 'Central'], ['Coffee', 'Tea'], 'None']]) {
+    const g2 = jualan(w, p);
+    kesSet.push([g2, `=SUMIFS(E2:E9,B2:B9,"${w[0]}")`, '1360'], [g2, `=SUMIFS(E2:E9,B2:B9,"${w[0]}",C2:C9,"${p[0]}")`, '1200'],
+        [g2, `=COUNTIFS(C2:C9,"${p[0]}",D2:D9,">=10")`, '4'], [g2, `=AVERAGEIFS(E2:E9,B2:B9,"${w[2]}")`, '550'], [g2, `=MAXIFS(E2:E9,C2:C9,"${p[0]}")`, '720'],
+        [g2, `=MINIFS(D2:D9,C2:C9,"${p[1]}")`, '8'], [g2, '=SUMIFS(E2:E9,A2:A9,">="&DATE(2026,2,1),A2:A9,"<="&DATE(2026,2,28))', '1720'],
+        [g2, '=SUMIFS(E2:E9,A2:A9,">="&DATE(2026,2,1),A2:A9,"<="&EOMONTH(DATE(2026,2,1),0))', '1720'],
+        [g2, `=XLOOKUP("${w[1]}",B2:B9,E2:E9,"${t}",0,-1)`, '240'], [g2, `=XLOOKUP("${w[1]}",B2:B9,E2:E9)`, '400'],
+        [g2, `=SUMIFS(E2:E9,B2:B9,"${w[1]}",C2:C9,"${p[0]}")`, '640'], [g2, `=ROUND(SUMIFS(E2:E9,B2:B9,"${w[0]}")/SUM(E2:E9),3)`, '0.389']);
+}
+for (const [g2, f, j] of kesSet) {
+    const v = E.papar(E.nilai(f, g2));
+    if (v !== j) { gagal++; console.log(`BEZA  ${f}  →  ${v}   (Excel: ${j})`); }
+}
 // setara: tandatangan
 const t = (a, b) => JSON.stringify(E.tandatangan(a, g)) === JSON.stringify(E.tandatangan(b, g));
 const setara = [['=SUM(E4,E3,E2)', '=SUM(E2:E4)', true], ['=MAX(E3,E4)', '=MAX(E2:E5)', false], ['=IF(E2>0,"a","b")', '=IF(E2>=50,"a","b")', false],
     ['=VLOOKUP("P003",A2:B5,2,TRUE)', '=VLOOKUP("P003",A2:B5,2,FALSE)', false], ['=E2*0+40', '=E2', false], ['=SUM(E2:E4)+0', '=SUM(E2:E4)', false]];
 for (const [a, b, j] of setara) if (t(a, b) !== j) { gagal++; console.log(`SETARA ${a} vs ${b} → ${!j}  (jangka ${j})`); }
-console.log(JSON.stringify({ kes: kes.length + setara.length, gagal }));
+console.log(JSON.stringify({ kes: kes.length + kesSet.length + setara.length, gagal }));
 process.exit(gagal ? 1 : 0);

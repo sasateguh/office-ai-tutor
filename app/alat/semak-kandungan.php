@@ -4,14 +4,17 @@ declare(strict_types=1);
 
 /**
  * Gerbang kandungan dwibahasa (docs/REVAMP.md, docs/GAYA-TULISAN.md). Dijalankan oleh ujian/uji.py dan oleh sesiapa yang
- * menyunting kandungan:  php alat/semak-kandungan.php [excel|word|powerpoint|formulas ...]   (tiada hujah = semua)
+ * menyunting kandungan:  php alat/semak-kandungan.php [excel|word|powerpoint|ai|formulas ...]   (tiada hujah = semua)
  * Menyemak: fail EN wujud untuk setiap fail BM; struktur sama (id, susunan, kunci, jawapan); perkataan dilarang;
- * tiada emoji dalam teks; nilai `ikon` = nama dalam src/Ikon.php. Keluar 1 bila ada masalah.
+ * tiada emoji dalam teks; nilai `ikon` = nama dalam src/Ikon.php; pautan jejak wujud; skema panduan (semak-panduan.php).
+ * Keluar 1 bila ada masalah.
  */
 
 require __DIR__ . '/../src/Ikon.php';
 require __DIR__ . '/../src/Latihan.php';
 require __DIR__ . '/../src/Kandungan.php';
+require __DIR__ . '/../src/Laluan.php';
+require __DIR__ . '/../src/Jejak.php';
 
 $AKAR = dirname(__DIR__);
 $masalah = [];
@@ -32,8 +35,13 @@ function teks(mixed $d, string $laluan = ''): Generator
         yield $laluan => $d;
     } elseif (is_array($d)) {
         foreach ($d as $k => $v) {
-            if (in_array($k, ['icon', 'accept', 'canonical', 'keys', 'syntax', 'example', 'id', 'cat', 'highlight', 'mode', 'color'], true)) {
+            if (in_array($k, ['icon', 'accept', 'canonical', 'keys', 'syntax', 'example', 'id', 'cat', 'highlight', 'mode', 'color',
+                'kod', 'kod_jenis', 'tempat', 'sumber', 'ubuntu'], true)) {
                 continue;   // bukan prosa
+            }
+            if (in_array($k, ['cheatsheet', 'rujukan', 'latihan'], true) && is_array($v) && array_is_list($v)
+                && !array_filter($v, fn($x) => !is_string($x) || !preg_match('/^[a-z0-9-]+$/', $x))) {
+                continue;   // senarai id pautan jejak (slug, disemak Jejak::masalah); medan teks bernama sama dalam utama tetap disemak
             }
             yield from teks($v, $laluan . '/' . $k);
         }
@@ -89,7 +97,10 @@ function muat(string $f): mixed
     return require $f;
 }
 
-$pilih = array_slice($argv, 1) ?: ['excel', 'word', 'powerpoint', 'formulas'];
+// lalai = setiap subjek dalam config/subjek.php (termasuk draf, cth 'ai') + fungsi Excel
+$pilih = array_slice($argv, 1) ?: [...array_keys(require "$AKAR/config/subjek.php"), 'formulas'];
+$subjekSemua = require "$AKAR/config/subjek.php";
+require __DIR__ . '/semak-panduan.php';
 
 foreach (array_diff($pilih, ['formulas']) as $s) {
     $dir = "$AKAR/config/pek/$s";
@@ -138,10 +149,21 @@ foreach (array_diff($pilih, ['formulas']) as $s) {
             if (array_keys($ms['kategori']) !== array_keys($en['kategori'])) {
                 $m($rel, 'kategori ms ≠ en');
             }
-            $a = array_map(fn($c) => [$c['nama'], $c['cat'], $c['pintasan'] ?? ''], $ms['ciri']);
-            $b = array_map(fn($c) => [$c['nama'], $c['cat'], $c['pintasan'] ?? ''], $en['ciri']);
+            $a = array_map(fn($c) => [$c['nama'], $c['cat'], $c['pintasan'] ?? '', !empty($c['awas'])], $ms['ciri']);
+            $b = array_map(fn($c) => [$c['nama'], $c['cat'], $c['pintasan'] ?? '', !empty($c['awas'])], $en['ciri']);
             if ($a !== $b) {
-                $m($rel, 'ciri ms ≠ en (nama/cat/pintasan, susunan sama): ' . json_encode(array_values(array_filter(array_map(null, $a, $b), fn($p) => $p[0] !== $p[1]))));
+                $m($rel, 'ciri ms ≠ en (nama/cat/pintasan/ada awas, susunan sama): ' . json_encode(array_values(array_filter(array_map(null, $a, $b), fn($p) => $p[0] !== $p[1]))));
+            }
+            // id kad = slug nama (src/papar/rujukan.php): nama berganda = sauh #ciri-… bertindih; cat mesti kategori yang wujud
+            foreach (array_count_values(array_column($ms['ciri'], 'nama')) as $nama => $n) {
+                if ($n > 1) {
+                    $m($rel, "nama ciri berganda: $nama");
+                }
+            }
+            foreach (array_unique(array_column($ms['ciri'], 'cat')) as $cat) {
+                if (!isset($ms['kategori'][$cat])) {
+                    $m($rel, "cat \"$cat\" tiada dalam kategori");
+                }
             }
         } elseif ($jenis === 'formula') {
             // contoh boleh berbeza HANYA pada literal teks ("Tinggi" / "High"); rujukan sel + fungsi mesti sama
@@ -160,9 +182,10 @@ foreach (array_diff($pilih, ['formulas']) as $s) {
             }
             foreach ($ms as $sid => $set) {
                 $qe = $en[$sid]['questions'] ?? [];
-                $tetap = fn($q) => [$q['id'], $q['mode'], $q['level'], $q['highlight'] ?? null, $q['correct_index'] ?? null, count($q['options'] ?? [])];
+                $tetap = fn($q) => [$q['id'], $q['mode'], $q['level'], $q['highlight'] ?? null, $q['correct_index'] ?? null, count($q['options'] ?? []),
+                    count($q['langkah'] ?? [])];
                 if (array_map($tetap, $set['questions']) !== array_map($tetap, $qe)) {
-                    $m($rel, "set $sid: soalan ms ≠ en (id/mode/level/highlight/correct_index/bil. pilihan)");
+                    $m($rel, "set $sid: soalan ms ≠ en (id/mode/level/highlight/correct_index/bil. pilihan/bil. langkah)");
                     continue;
                 }
                 foreach (['name', 'tagline', 'description'] as $k) {
@@ -179,7 +202,15 @@ foreach (array_diff($pilih, ['formulas']) as $s) {
                             $m($rel, "set $sid {$q['id']}: '$k' EN sama dengan BM (belum diterjemah)");
                         }
                     }
-                    if ($q['mode'] !== 'choice' && isset($q['canonical']) && !Latihan::betul($q, (string) $q['canonical'], -1)) {
+                    foreach ($q['mode'] === 'susun' ? ['ms' => $set['questions'][$j], 'en' => $q] : [] as $b => $qs) {
+                        // susun: 3–7 langkah berbeza; susunan betul (dikira dari kocokan) diterima pelayan
+                        $l = array_map(fn($x) => mb_strtolower(trim(strip_tags((string) $x))), $qs['langkah'] ?? []);
+                        if (count($l) < Latihan::SUSUN_MIN || count($l) > Latihan::SUSUN_MAKS || in_array('', $l, true) || count(array_unique($l)) !== count($l)
+                            || !Latihan::betul($qs, Latihan::jawapanSusun($qs), -1)) {
+                            $m($rel, "set $sid {$q['id']} ($b): susun perlu " . Latihan::SUSUN_MIN . '–' . Latihan::SUSUN_MAKS . ' langkah berbeza dan tidak kosong');
+                        }
+                    }
+                    if (!in_array($q['mode'], ['choice', 'susun'], true) && isset($q['canonical']) && !Latihan::betul($q, (string) $q['canonical'], -1)) {
                         $m($rel, "set $sid {$q['id']}: jawapan contoh EN tidak diterima oleh accept EN");
                     }
                     if (isset($q['grid'], $set['questions']) ) {
@@ -190,6 +221,20 @@ foreach (array_diff($pilih, ['formulas']) as $s) {
                         }
                     }
                 }
+            }
+        } elseif ($jenis === 'jejak') {
+            // setiap pautan wujud (seksyen cheat sheet, kategori rujukan, set latihan, fail muat) + BM = EN (id/tahap/pautan)
+            foreach (['ms' => $ms, 'en' => $en] as $b => $d) {
+                foreach (Jejak::masalah($s, $d, $b) as $x) {
+                    $m("$rel ($b)", $x);
+                }
+            }
+            if (is_array($ms) && is_array($en) && Jejak::rangka($ms) !== Jejak::rangka($en)) {
+                $m($rel, 'modul ms ≠ en (id/tahap/cheatsheet/rujukan/latihan/bil. muat, susunan sama)');
+            }
+        } elseif ($jenis === 'panduan') {
+            foreach (semakPanduan($ms, $en, $subjekSemua[$s] ?? []) as $x) {
+                $m($rel, $x);
             }
         } elseif ($jenis === 'utama') {
             $k = fn($d) => array_keys($d);

@@ -7,6 +7,9 @@ module.exports = {
   content: ['../app/src/papar/**/*.php', '../app/src/Ikon.php', '../app/public/laman.php', '../app/public/*.html',
     '../app/public/assets/js/*.js', '../app/config/bahasa/*.php'],
   darkMode: ['selector', '[data-tema="gelap"]'],
+  // Token dalam komen/JS yang Tailwind salah baca sebagai kelas (`!fn`, `!teks` = JS "bukan"; backdrop-filter = komen _bingkai.php
+  // yang MELARANGNYA): ~1 900 bait CSS mati. Tiada markup memakainya (diukur grep, W3 / D76).
+  blocklist: ['backdrop-filter', '!fn', '!teks', '!ralat', '!bahagian'],
   theme: {
     container: { center: true, padding: { DEFAULT: '1.25rem', sm: '1.5rem', lg: '2rem' } },
     extend: {

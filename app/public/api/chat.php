@@ -86,8 +86,8 @@ try {
 
     // Subjek: arahan AI + statistik ikut subjek. Draf = admin yang log masuk sahaja (pratonton).
     $subjek = (string) ($input['subjek'] ?? 'excel');
-    if (!Subjek::bolehLihat($subjek)) {
-        jsonError(404, t('api.subjek'));
+    if (!Subjek::bolehLihat($subjek) || !in_array('tutor', Subjek::semua()[$subjek]['halaman'], true)) {
+        jsonError(404, t('api.subjek'));   // subjek tanpa halaman tutor (cth cabang AI) tiada arahan AI: bukan untuk chat
     }
 
     $message = trim((string) ($input['message'] ?? ''));

@@ -1,0 +1,736 @@
+﻿Date,Invoice No,Region,Branch,Product,Category,Units,Unit Price (RM),Sales (RM)
+2026-01-01,INV-0001,East,Kuantan,Tea,Drinks,8,6.00,48.00
+2026-01-01,INV-0002,North,George Town,Chocolate,Drinks,40,9.00,360.00
+2026-01-01,INV-0003,Central,Shah Alam,Tea,Drinks,28,6.00,168.00
+2026-01-02,INV-0004,South,Johor Bahru,Biscuits,Food,6,7.50,45.00
+2026-01-02,INV-0005,North,Alor Setar,Chocolate,Drinks,56,9.00,504.00
+2026-01-02,INV-0006,Central,Shah Alam,Bread,Food,35,4.50,157.50
+2026-01-03,INV-0007,Central,Shah Alam,Coffee,Drinks,33,8.50,280.50
+2026-01-03,INV-0008,East,Kuantan,Bread,Food,21,4.50,94.50
+2026-01-03,INV-0009,East,Kuantan,Bread,Food,11,4.50,49.50
+2026-01-03,INV-0010,Central,Shah Alam,Coffee,Drinks,15,8.50,127.50
+2026-01-03,INV-0011,East,Kota Bharu,Biscuits,Food,41,7.50,307.50
+2026-01-04,INV-0012,Central,Shah Alam,Biscuits,Food,13,7.50,97.50
+2026-01-04,INV-0013,North,Alor Setar,Coffee,Drinks,45,8.50,382.50
+2026-01-04,INV-0014,East,Kota Bharu,Cake,Food,5,12.00,60.00
+2026-01-04,INV-0015,East,Kuantan,Cake,Food,35,12.00,420.00
+2026-01-05,INV-0016,Central,Shah Alam,Tea,Drinks,24,6.00,144.00
+2026-01-05,INV-0017,North,Alor Setar,Coffee,Drinks,29,8.50,246.50
+2026-01-05,INV-0018,Central,Shah Alam,Coffee,Drinks,17,8.50,144.50
+2026-01-06,INV-0019,South,Johor Bahru,Bread,Food,40,4.50,180.00
+2026-01-06,INV-0020,East,Kota Bharu,Chocolate,Drinks,37,9.00,333.00
+2026-01-06,INV-0021,South,Melaka,Coffee,Drinks,40,8.50,340.00
+2026-01-07,INV-0022,East,Kota Bharu,Chocolate,Drinks,28,9.00,252.00
+2026-01-07,INV-0023,North,Alor Setar,Chocolate,Drinks,50,9.00,450.00
+2026-01-07,INV-0024,Central,Shah Alam,Coffee,Drinks,41,8.50,348.50
+2026-01-07,INV-0025,Central,Shah Alam,Tea,Drinks,35,6.00,210.00
+2026-01-07,INV-0026,Central,Shah Alam,Tea,Drinks,37,6.00,222.00
+2026-01-08,INV-0027,South,Johor Bahru,Cake,Food,9,12.00,108.00
+2026-01-08,INV-0028,North,George Town,Cake,Food,55,12.00,660.00
+2026-01-08,INV-0029,South,Melaka,Cake,Food,47,12.00,564.00
+2026-01-09,INV-0030,North,George Town,Cake,Food,24,12.00,288.00
+2026-01-09,INV-0031,North,Alor Setar,Cake,Food,23,12.00,276.00
+2026-01-09,INV-0032,South,Johor Bahru,Tea,Drinks,35,6.00,210.00
+2026-01-09,INV-0033,Central,Shah Alam,Coffee,Drinks,16,8.50,136.00
+2026-01-09,INV-0034,East,Kuantan,Bread,Food,40,4.50,180.00
+2026-01-10,INV-0035,Central,Kuala Lumpur,Coffee,Drinks,42,8.50,357.00
+2026-01-10,INV-0036,South,Johor Bahru,Biscuits,Food,50,7.50,375.00
+2026-01-10,INV-0037,Central,Shah Alam,Bread,Food,57,4.50,256.50
+2026-01-11,INV-0038,Central,Kuala Lumpur,Bread,Food,58,4.50,261.00
+2026-01-11,INV-0039,South,Johor Bahru,Coffee,Drinks,20,8.50,170.00
+2026-01-11,INV-0040,Central,Kuala Lumpur,Bread,Food,57,4.50,256.50
+2026-01-11,INV-0041,North,George Town,Tea,Drinks,57,6.00,342.00
+2026-01-11,INV-0042,Central,Kuala Lumpur,Tea,Drinks,10,6.00,60.00
+2026-01-12,INV-0043,Central,Kuala Lumpur,Coffee,Drinks,28,8.50,238.00
+2026-01-12,INV-0044,Central,Kuala Lumpur,Biscuits,Food,33,7.50,247.50
+2026-01-12,INV-0045,East,Kota Bharu,Tea,Drinks,27,6.00,162.00
+2026-01-12,INV-0046,Central,Kuala Lumpur,Cake,Food,37,12.00,444.00
+2026-01-13,INV-0047,South,Melaka,Bread,Food,55,4.50,247.50
+2026-01-13,INV-0048,North,Alor Setar,Bread,Food,27,4.50,121.50
+2026-01-13,INV-0049,North,George Town,Cake,Food,11,12.00,132.00
+2026-01-13,INV-0050,East,Kota Bharu,Biscuits,Food,25,7.50,187.50
+2026-01-14,INV-0051,South,Johor Bahru,Biscuits,Food,11,7.50,82.50
+2026-01-14,INV-0052,East,Kota Bharu,Coffee,Drinks,11,8.50,93.50
+2026-01-14,INV-0053,North,Alor Setar,Coffee,Drinks,29,8.50,246.50
+2026-01-14,INV-0054,South,Johor Bahru,Tea,Drinks,17,6.00,102.00
+2026-01-14,INV-0055,South,Johor Bahru,Coffee,Drinks,59,8.50,501.50
+2026-01-15,INV-0056,East,Kota Bharu,Coffee,Drinks,30,8.50,255.00
+2026-01-15,INV-0057,East,Kuantan,Coffee,Drinks,51,8.50,433.50
+2026-01-15,INV-0058,Central,Kuala Lumpur,Biscuits,Food,52,7.50,390.00
+2026-01-15,INV-0059,North,Alor Setar,Coffee,Drinks,11,8.50,93.50
+2026-01-16,INV-0060,South,Johor Bahru,Chocolate,Drinks,33,9.00,297.00
+2026-01-16,INV-0061,North,Alor Setar,Cake,Food,53,12.00,636.00
+2026-01-16,INV-0062,South,Johor Bahru,Bread,Food,48,4.50,216.00
+2026-01-16,INV-0063,Central,Kuala Lumpur,Tea,Drinks,54,6.00,324.00
+2026-01-16,INV-0064,North,George Town,Bread,Food,49,4.50,220.50
+2026-01-17,INV-0065,North,Alor Setar,Chocolate,Drinks,20,9.00,180.00
+2026-01-17,INV-0066,Central,Kuala Lumpur,Biscuits,Food,40,7.50,300.00
+2026-01-17,INV-0067,South,Johor Bahru,Biscuits,Food,8,7.50,60.00
+2026-01-17,INV-0068,North,Alor Setar,Chocolate,Drinks,53,9.00,477.00
+2026-01-18,INV-0069,South,Johor Bahru,Cake,Food,10,12.00,120.00
+2026-01-18,INV-0070,South,Melaka,Coffee,Drinks,27,8.50,229.50
+2026-01-18,INV-0071,Central,Shah Alam,Cake,Food,55,12.00,660.00
+2026-01-18,INV-0072,East,Kuantan,Coffee,Drinks,44,8.50,374.00
+2026-01-19,INV-0073,North,George Town,Cake,Food,37,12.00,444.00
+2026-01-19,INV-0074,South,Melaka,Biscuits,Food,22,7.50,165.00
+2026-01-19,INV-0075,North,George Town,Chocolate,Drinks,14,9.00,126.00
+2026-01-19,INV-0076,North,George Town,Chocolate,Drinks,10,9.00,90.00
+2026-01-19,INV-0077,East,Kuantan,Chocolate,Drinks,53,9.00,477.00
+2026-01-20,INV-0078,East,Kuantan,Bread,Food,50,4.50,225.00
+2026-01-20,INV-0079,North,Alor Setar,Tea,Drinks,45,6.00,270.00
+2026-01-20,INV-0080,South,Melaka,Coffee,Drinks,53,8.50,450.50
+2026-01-21,INV-0081,East,Kota Bharu,Cake,Food,7,12.00,84.00
+2026-01-21,INV-0082,South,Johor Bahru,Chocolate,Drinks,50,9.00,450.00
+2026-01-21,INV-0083,East,Kota Bharu,Cake,Food,35,12.00,420.00
+2026-01-21,INV-0084,North,George Town,Tea,Drinks,25,6.00,150.00
+2026-01-22,INV-0085,East,Kuantan,Bread,Food,59,4.50,265.50
+2026-01-22,INV-0086,South,Johor Bahru,Tea,Drinks,30,6.00,180.00
+2026-01-22,INV-0087,East,Kota Bharu,Cake,Food,30,12.00,360.00
+2026-01-23,INV-0088,South,Johor Bahru,Biscuits,Food,11,7.50,82.50
+2026-01-23,INV-0089,Central,Shah Alam,Bread,Food,25,4.50,112.50
+2026-01-23,INV-0090,Central,Kuala Lumpur,Biscuits,Food,12,7.50,90.00
+2026-01-24,INV-0091,East,Kuantan,Bread,Food,22,4.50,99.00
+2026-01-24,INV-0092,North,George Town,Tea,Drinks,49,6.00,294.00
+2026-01-24,INV-0093,Central,Shah Alam,Biscuits,Food,44,7.50,330.00
+2026-01-24,INV-0094,South,Melaka,Biscuits,Food,47,7.50,352.50
+2026-01-24,INV-0095,East,Kuantan,Cake,Food,49,12.00,588.00
+2026-01-25,INV-0096,North,George Town,Tea,Drinks,43,6.00,258.00
+2026-01-25,INV-0097,North,George Town,Biscuits,Food,6,7.50,45.00
+2026-01-25,INV-0098,South,Melaka,Cake,Food,33,12.00,396.00
+2026-01-25,INV-0099,Central,Kuala Lumpur,Bread,Food,34,4.50,153.00
+2026-01-26,INV-0100,South,Melaka,Chocolate,Drinks,33,9.00,297.00
+2026-01-26,INV-0101,North,Alor Setar,Tea,Drinks,13,6.00,78.00
+2026-01-26,INV-0102,Central,Shah Alam,Biscuits,Food,7,7.50,52.50
+2026-01-26,INV-0103,East,Kuantan,Biscuits,Food,42,7.50,315.00
+2026-01-27,INV-0104,South,Johor Bahru,Biscuits,Food,59,7.50,442.50
+2026-01-27,INV-0105,East,Kuantan,Bread,Food,45,4.50,202.50
+2026-01-27,INV-0106,South,Melaka,Biscuits,Food,34,7.50,255.00
+2026-01-27,INV-0107,East,Kuantan,Bread,Food,44,4.50,198.00
+2026-01-27,INV-0108,Central,Kuala Lumpur,Tea,Drinks,32,6.00,192.00
+2026-01-28,INV-0109,South,Johor Bahru,Bread,Food,41,4.50,184.50
+2026-01-28,INV-0110,Central,Shah Alam,Tea,Drinks,12,6.00,72.00
+2026-01-28,INV-0111,South,Melaka,Chocolate,Drinks,52,9.00,468.00
+2026-01-28,INV-0112,South,Johor Bahru,Tea,Drinks,45,6.00,270.00
+2026-01-28,INV-0113,East,Kota Bharu,Cake,Food,25,12.00,300.00
+2026-01-29,INV-0114,Central,Shah Alam,Tea,Drinks,35,6.00,210.00
+2026-01-29,INV-0115,East,Kota Bharu,Coffee,Drinks,23,8.50,195.50
+2026-01-29,INV-0116,East,Kuantan,Chocolate,Drinks,58,9.00,522.00
+2026-01-29,INV-0117,South,Johor Bahru,Tea,Drinks,49,6.00,294.00
+2026-01-29,INV-0118,East,Kuantan,Tea,Drinks,22,6.00,132.00
+2026-01-30,INV-0119,Central,Shah Alam,Chocolate,Drinks,58,9.00,522.00
+2026-01-30,INV-0120,East,Kuantan,Cake,Food,46,12.00,552.00
+2026-01-30,INV-0121,Central,Shah Alam,Chocolate,Drinks,27,9.00,243.00
+2026-01-30,INV-0122,East,Kuantan,Bread,Food,34,4.50,153.00
+2026-01-30,INV-0123,North,Alor Setar,Bread,Food,7,4.50,31.50
+2026-01-31,INV-0124,North,Alor Setar,Chocolate,Drinks,60,9.00,540.00
+2026-01-31,INV-0125,North,George Town,Biscuits,Food,10,7.50,75.00
+2026-01-31,INV-0126,North,Alor Setar,Coffee,Drinks,41,8.50,348.50
+2026-01-31,INV-0127,East,Kota Bharu,Biscuits,Food,55,7.50,412.50
+2026-02-01,INV-0128,East,Kuantan,Tea,Drinks,48,6.00,288.00
+2026-02-01,INV-0129,North,Alor Setar,Cake,Food,50,12.00,600.00
+2026-02-01,INV-0130,North,Alor Setar,Biscuits,Food,25,7.50,187.50
+2026-02-02,INV-0131,Central,Kuala Lumpur,Bread,Food,16,4.50,72.00
+2026-02-02,INV-0132,North,George Town,Biscuits,Food,22,7.50,165.00
+2026-02-02,INV-0133,East,Kota Bharu,Chocolate,Drinks,38,9.00,342.00
+2026-02-02,INV-0134,South,Melaka,Bread,Food,36,4.50,162.00
+2026-02-02,INV-0135,South,Melaka,Chocolate,Drinks,44,9.00,396.00
+2026-02-03,INV-0136,South,Melaka,Biscuits,Food,48,7.50,360.00
+2026-02-03,INV-0137,Central,Shah Alam,Chocolate,Drinks,45,9.00,405.00
+2026-02-03,INV-0138,Central,Shah Alam,Biscuits,Food,40,7.50,300.00
+2026-02-03,INV-0139,South,Melaka,Biscuits,Food,10,7.50,75.00
+2026-02-04,INV-0140,North,George Town,Bread,Food,6,4.50,27.00
+2026-02-04,INV-0141,East,Kota Bharu,Cake,Food,21,12.00,252.00
+2026-02-04,INV-0142,Central,Shah Alam,Coffee,Drinks,15,8.50,127.50
+2026-02-05,INV-0143,East,Kuantan,Bread,Food,52,4.50,234.00
+2026-02-05,INV-0144,Central,Shah Alam,Tea,Drinks,57,6.00,342.00
+2026-02-05,INV-0145,Central,Shah Alam,Chocolate,Drinks,25,9.00,225.00
+2026-02-05,INV-0146,East,Kota Bharu,Cake,Food,37,12.00,444.00
+2026-02-05,INV-0147,North,George Town,Bread,Food,14,4.50,63.00
+2026-02-06,INV-0148,South,Melaka,Tea,Drinks,35,6.00,210.00
+2026-02-06,INV-0149,North,Alor Setar,Tea,Drinks,32,6.00,192.00
+2026-02-06,INV-0150,East,Kuantan,Tea,Drinks,8,6.00,48.00
+2026-02-06,INV-0151,South,Melaka,Biscuits,Food,57,7.50,427.50
+2026-02-07,INV-0152,East,Kuantan,Bread,Food,50,4.50,225.00
+2026-02-07,INV-0153,Central,Kuala Lumpur,Chocolate,Drinks,39,9.00,351.00
+2026-02-07,INV-0154,East,Kuantan,Bread,Food,19,4.50,85.50
+2026-02-07,INV-0155,South,Johor Bahru,Bread,Food,11,4.50,49.50
+2026-02-07,INV-0156,South,Melaka,Tea,Drinks,10,6.00,60.00
+2026-02-08,INV-0157,South,Melaka,Coffee,Drinks,31,8.50,263.50
+2026-02-08,INV-0158,North,George Town,Chocolate,Drinks,6,9.00,54.00
+2026-02-08,INV-0159,North,Alor Setar,Tea,Drinks,10,6.00,60.00
+2026-02-08,INV-0160,South,Melaka,Coffee,Drinks,10,8.50,85.00
+2026-02-08,INV-0161,East,Kota Bharu,Bread,Food,6,4.50,27.00
+2026-02-09,INV-0162,Central,Kuala Lumpur,Bread,Food,16,4.50,72.00
+2026-02-09,INV-0163,South,Johor Bahru,Chocolate,Drinks,26,9.00,234.00
+2026-02-09,INV-0164,East,Kota Bharu,Biscuits,Food,5,7.50,37.50
+2026-02-09,INV-0165,East,Kota Bharu,Tea,Drinks,29,6.00,174.00
+2026-02-09,INV-0166,East,Kuantan,Chocolate,Drinks,46,9.00,414.00
+2026-02-10,INV-0167,North,Alor Setar,Bread,Food,21,4.50,94.50
+2026-02-10,INV-0168,East,Kota Bharu,Cake,Food,41,12.00,492.00
+2026-02-10,INV-0169,North,George Town,Tea,Drinks,59,6.00,354.00
+2026-02-10,INV-0170,North,Alor Setar,Biscuits,Food,12,7.50,90.00
+2026-02-10,INV-0171,South,Johor Bahru,Coffee,Drinks,59,8.50,501.50
+2026-02-11,INV-0172,North,George Town,Chocolate,Drinks,39,9.00,351.00
+2026-02-11,INV-0173,North,Alor Setar,Coffee,Drinks,37,8.50,314.50
+2026-02-11,INV-0174,East,Kota Bharu,Bread,Food,14,4.50,63.00
+2026-02-11,INV-0175,Central,Shah Alam,Cake,Food,39,12.00,468.00
+2026-02-12,INV-0176,East,Kota Bharu,Cake,Food,19,12.00,228.00
+2026-02-12,INV-0177,East,Kuantan,Chocolate,Drinks,52,9.00,468.00
+2026-02-12,INV-0178,Central,Shah Alam,Tea,Drinks,5,6.00,30.00
+2026-02-12,INV-0179,South,Johor Bahru,Tea,Drinks,45,6.00,270.00
+2026-02-12,INV-0180,Central,Shah Alam,Biscuits,Food,30,7.50,225.00
+2026-02-13,INV-0181,North,George Town,Cake,Food,51,12.00,612.00
+2026-02-13,INV-0182,East,Kota Bharu,Bread,Food,29,4.50,130.50
+2026-02-13,INV-0183,East,Kuantan,Biscuits,Food,56,7.50,420.00
+2026-02-14,INV-0184,East,Kota Bharu,Biscuits,Food,55,7.50,412.50
+2026-02-14,INV-0185,Central,Shah Alam,Cake,Food,59,12.00,708.00
+2026-02-14,INV-0186,East,Kuantan,Biscuits,Food,55,7.50,412.50
+2026-02-14,INV-0187,Central,Kuala Lumpur,Biscuits,Food,27,7.50,202.50
+2026-02-14,INV-0188,Central,Kuala Lumpur,Tea,Drinks,48,6.00,288.00
+2026-02-15,INV-0189,Central,Shah Alam,Chocolate,Drinks,7,9.00,63.00
+2026-02-15,INV-0190,Central,Kuala Lumpur,Coffee,Drinks,6,8.50,51.00
+2026-02-15,INV-0191,North,Alor Setar,Bread,Food,47,4.50,211.50
+2026-02-15,INV-0192,Central,Shah Alam,Coffee,Drinks,20,8.50,170.00
+2026-02-15,INV-0193,Central,Shah Alam,Bread,Food,35,4.50,157.50
+2026-02-16,INV-0194,East,Kota Bharu,Coffee,Drinks,60,8.50,510.00
+2026-02-16,INV-0195,East,Kota Bharu,Biscuits,Food,54,7.50,405.00
+2026-02-16,INV-0196,East,Kuantan,Biscuits,Food,59,7.50,442.50
+2026-02-16,INV-0197,North,George Town,Biscuits,Food,49,7.50,367.50
+2026-02-16,INV-0198,South,Johor Bahru,Bread,Food,27,4.50,121.50
+2026-02-17,INV-0199,East,Kuantan,Biscuits,Food,20,7.50,150.00
+2026-02-17,INV-0200,East,Kuantan,Cake,Food,42,12.00,504.00
+2026-02-17,INV-0201,East,Kota Bharu,Bread,Food,51,4.50,229.50
+2026-02-17,INV-0202,South,Johor Bahru,Tea,Drinks,43,6.00,258.00
+2026-02-18,INV-0203,East,Kuantan,Tea,Drinks,38,6.00,228.00
+2026-02-18,INV-0204,North,Alor Setar,Coffee,Drinks,9,8.50,76.50
+2026-02-18,INV-0205,South,Johor Bahru,Tea,Drinks,18,6.00,108.00
+2026-02-19,INV-0206,Central,Kuala Lumpur,Coffee,Drinks,12,8.50,102.00
+2026-02-19,INV-0207,North,Alor Setar,Biscuits,Food,13,7.50,97.50
+2026-02-19,INV-0208,North,Alor Setar,Tea,Drinks,40,6.00,240.00
+2026-02-20,INV-0209,Central,Shah Alam,Cake,Food,6,12.00,72.00
+2026-02-20,INV-0210,North,Alor Setar,Biscuits,Food,35,7.50,262.50
+2026-02-20,INV-0211,North,Alor Setar,Coffee,Drinks,45,8.50,382.50
+2026-02-20,INV-0212,South,Johor Bahru,Cake,Food,22,12.00,264.00
+2026-02-20,INV-0213,East,Kuantan,Coffee,Drinks,31,8.50,263.50
+2026-02-21,INV-0214,North,Alor Setar,Tea,Drinks,41,6.00,246.00
+2026-02-21,INV-0215,South,Melaka,Chocolate,Drinks,17,9.00,153.00
+2026-02-21,INV-0216,North,Alor Setar,Coffee,Drinks,42,8.50,357.00
+2026-02-21,INV-0217,North,George Town,Chocolate,Drinks,11,9.00,99.00
+2026-02-21,INV-0218,North,Alor Setar,Coffee,Drinks,49,8.50,416.50
+2026-02-22,INV-0219,East,Kuantan,Coffee,Drinks,9,8.50,76.50
+2026-02-22,INV-0220,South,Johor Bahru,Coffee,Drinks,18,8.50,153.00
+2026-02-22,INV-0221,Central,Shah Alam,Cake,Food,10,12.00,120.00
+2026-02-22,INV-0222,South,Melaka,Tea,Drinks,60,6.00,360.00
+2026-02-22,INV-0223,East,Kuantan,Chocolate,Drinks,47,9.00,423.00
+2026-02-23,INV-0224,North,George Town,Coffee,Drinks,44,8.50,374.00
+2026-02-23,INV-0225,Central,Shah Alam,Chocolate,Drinks,16,9.00,144.00
+2026-02-23,INV-0226,Central,Shah Alam,Chocolate,Drinks,39,9.00,351.00
+2026-02-23,INV-0227,South,Johor Bahru,Chocolate,Drinks,25,9.00,225.00
+2026-02-23,INV-0228,North,Alor Setar,Biscuits,Food,50,7.50,375.00
+2026-02-24,INV-0229,North,Alor Setar,Bread,Food,19,4.50,85.50
+2026-02-24,INV-0230,Central,Kuala Lumpur,Chocolate,Drinks,17,9.00,153.00
+2026-02-24,INV-0231,North,George Town,Cake,Food,8,12.00,96.00
+2026-02-24,INV-0232,Central,Kuala Lumpur,Cake,Food,10,12.00,120.00
+2026-02-24,INV-0233,Central,Shah Alam,Biscuits,Food,32,7.50,240.00
+2026-02-25,INV-0234,South,Melaka,Biscuits,Food,7,7.50,52.50
+2026-02-25,INV-0235,East,Kota Bharu,Chocolate,Drinks,47,9.00,423.00
+2026-02-25,INV-0236,South,Johor Bahru,Coffee,Drinks,53,8.50,450.50
+2026-02-25,INV-0237,South,Melaka,Bread,Food,55,4.50,247.50
+2026-02-25,INV-0238,East,Kota Bharu,Coffee,Drinks,50,8.50,425.00
+2026-02-26,INV-0239,South,Johor Bahru,Coffee,Drinks,38,8.50,323.00
+2026-02-26,INV-0240,East,Kuantan,Chocolate,Drinks,49,9.00,441.00
+2026-02-26,INV-0241,East,Kuantan,Biscuits,Food,22,7.50,165.00
+2026-02-26,INV-0242,East,Kuantan,Chocolate,Drinks,24,9.00,216.00
+2026-02-26,INV-0243,Central,Shah Alam,Coffee,Drinks,41,8.50,348.50
+2026-02-27,INV-0244,Central,Shah Alam,Coffee,Drinks,9,8.50,76.50
+2026-02-27,INV-0245,North,George Town,Tea,Drinks,6,6.00,36.00
+2026-02-27,INV-0246,East,Kuantan,Biscuits,Food,26,7.50,195.00
+2026-02-28,INV-0247,Central,Shah Alam,Coffee,Drinks,52,8.50,442.00
+2026-02-28,INV-0248,Central,Shah Alam,Chocolate,Drinks,51,9.00,459.00
+2026-02-28,INV-0249,South,Melaka,Biscuits,Food,41,7.50,307.50
+2026-03-01,INV-0250,East,Kota Bharu,Bread,Food,24,4.50,108.00
+2026-03-01,INV-0251,South,Melaka,Coffee,Drinks,28,8.50,238.00
+2026-03-01,INV-0252,East,Kota Bharu,Biscuits,Food,10,7.50,75.00
+2026-03-01,INV-0253,North,George Town,Chocolate,Drinks,29,9.00,261.00
+2026-03-01,INV-0254,East,Kuantan,Coffee,Drinks,52,8.50,442.00
+2026-03-02,INV-0255,East,Kota Bharu,Cake,Food,40,12.00,480.00
+2026-03-02,INV-0256,East,Kota Bharu,Biscuits,Food,18,7.50,135.00
+2026-03-02,INV-0257,Central,Kuala Lumpur,Coffee,Drinks,27,8.50,229.50
+2026-03-02,INV-0258,North,George Town,Biscuits,Food,19,7.50,142.50
+2026-03-02,INV-0259,Central,Shah Alam,Cake,Food,59,12.00,708.00
+2026-03-03,INV-0260,South,Melaka,Coffee,Drinks,20,8.50,170.00
+2026-03-03,INV-0261,East,Kota Bharu,Chocolate,Drinks,29,9.00,261.00
+2026-03-03,INV-0262,Central,Shah Alam,Tea,Drinks,9,6.00,54.00
+2026-03-03,INV-0263,Central,Kuala Lumpur,Bread,Food,29,4.50,130.50
+2026-03-04,INV-0264,South,Melaka,Coffee,Drinks,58,8.50,493.00
+2026-03-04,INV-0265,South,Melaka,Bread,Food,45,4.50,202.50
+2026-03-04,INV-0266,South,Melaka,Tea,Drinks,35,6.00,210.00
+2026-03-04,INV-0267,South,Melaka,Bread,Food,59,4.50,265.50
+2026-03-05,INV-0268,East,Kota Bharu,Coffee,Drinks,60,8.50,510.00
+2026-03-05,INV-0269,South,Melaka,Bread,Food,34,4.50,153.00
+2026-03-05,INV-0270,East,Kuantan,Biscuits,Food,57,7.50,427.50
+2026-03-05,INV-0271,South,Melaka,Coffee,Drinks,14,8.50,119.00
+2026-03-05,INV-0272,Central,Kuala Lumpur,Cake,Food,49,12.00,588.00
+2026-03-06,INV-0273,Central,Shah Alam,Coffee,Drinks,46,8.50,391.00
+2026-03-06,INV-0274,North,Alor Setar,Cake,Food,13,12.00,156.00
+2026-03-06,INV-0275,East,Kuantan,Bread,Food,25,4.50,112.50
+2026-03-06,INV-0276,East,Kota Bharu,Coffee,Drinks,53,8.50,450.50
+2026-03-06,INV-0277,North,George Town,Tea,Drinks,27,6.00,162.00
+2026-03-07,INV-0278,North,Alor Setar,Bread,Food,21,4.50,94.50
+2026-03-07,INV-0279,North,Alor Setar,Bread,Food,12,4.50,54.00
+2026-03-07,INV-0280,South,Johor Bahru,Coffee,Drinks,53,8.50,450.50
+2026-03-08,INV-0281,East,Kota Bharu,Chocolate,Drinks,8,9.00,72.00
+2026-03-08,INV-0282,Central,Kuala Lumpur,Biscuits,Food,39,7.50,292.50
+2026-03-08,INV-0283,East,Kuantan,Tea,Drinks,24,6.00,144.00
+2026-03-08,INV-0284,Central,Shah Alam,Tea,Drinks,15,6.00,90.00
+2026-03-08,INV-0285,South,Johor Bahru,Cake,Food,46,12.00,552.00
+2026-03-09,INV-0286,Central,Kuala Lumpur,Biscuits,Food,21,7.50,157.50
+2026-03-09,INV-0287,North,George Town,Bread,Food,23,4.50,103.50
+2026-03-09,INV-0288,North,Alor Setar,Tea,Drinks,39,6.00,234.00
+2026-03-09,INV-0289,Central,Shah Alam,Coffee,Drinks,46,8.50,391.00
+2026-03-10,INV-0290,East,Kota Bharu,Biscuits,Food,16,7.50,120.00
+2026-03-10,INV-0291,Central,Shah Alam,Tea,Drinks,38,6.00,228.00
+2026-03-10,INV-0292,South,Johor Bahru,Bread,Food,26,4.50,117.00
+2026-03-11,INV-0293,North,George Town,Biscuits,Food,15,7.50,112.50
+2026-03-11,INV-0294,North,George Town,Chocolate,Drinks,26,9.00,234.00
+2026-03-11,INV-0295,Central,Shah Alam,Bread,Food,52,4.50,234.00
+2026-03-11,INV-0296,South,Johor Bahru,Chocolate,Drinks,52,9.00,468.00
+2026-03-11,INV-0297,East,Kota Bharu,Tea,Drinks,42,6.00,252.00
+2026-03-12,INV-0298,East,Kota Bharu,Bread,Food,56,4.50,252.00
+2026-03-12,INV-0299,North,George Town,Biscuits,Food,46,7.50,345.00
+2026-03-12,INV-0300,East,Kuantan,Cake,Food,20,12.00,240.00
+2026-03-13,INV-0301,Central,Kuala Lumpur,Coffee,Drinks,21,8.50,178.50
+2026-03-13,INV-0302,South,Melaka,Bread,Food,60,4.50,270.00
+2026-03-13,INV-0303,North,George Town,Chocolate,Drinks,28,9.00,252.00
+2026-03-13,INV-0304,Central,Kuala Lumpur,Cake,Food,38,12.00,456.00
+2026-03-13,INV-0305,Central,Kuala Lumpur,Cake,Food,40,12.00,480.00
+2026-03-14,INV-0306,South,Melaka,Biscuits,Food,10,7.50,75.00
+2026-03-14,INV-0307,Central,Shah Alam,Coffee,Drinks,31,8.50,263.50
+2026-03-14,INV-0308,East,Kota Bharu,Biscuits,Food,53,7.50,397.50
+2026-03-14,INV-0309,South,Melaka,Tea,Drinks,58,6.00,348.00
+2026-03-14,INV-0310,Central,Shah Alam,Chocolate,Drinks,16,9.00,144.00
+2026-03-15,INV-0311,Central,Shah Alam,Tea,Drinks,19,6.00,114.00
+2026-03-15,INV-0312,South,Johor Bahru,Chocolate,Drinks,21,9.00,189.00
+2026-03-15,INV-0313,North,George Town,Chocolate,Drinks,25,9.00,225.00
+2026-03-15,INV-0314,East,Kota Bharu,Cake,Food,42,12.00,504.00
+2026-03-15,INV-0315,South,Melaka,Biscuits,Food,20,7.50,150.00
+2026-03-16,INV-0316,Central,Kuala Lumpur,Cake,Food,16,12.00,192.00
+2026-03-16,INV-0317,Central,Kuala Lumpur,Biscuits,Food,15,7.50,112.50
+2026-03-16,INV-0318,East,Kota Bharu,Biscuits,Food,26,7.50,195.00
+2026-03-16,INV-0319,East,Kuantan,Biscuits,Food,54,7.50,405.00
+2026-03-16,INV-0320,Central,Shah Alam,Bread,Food,13,4.50,58.50
+2026-03-17,INV-0321,East,Kota Bharu,Tea,Drinks,57,6.00,342.00
+2026-03-17,INV-0322,South,Johor Bahru,Tea,Drinks,30,6.00,180.00
+2026-03-17,INV-0323,North,George Town,Cake,Food,30,12.00,360.00
+2026-03-17,INV-0324,North,George Town,Chocolate,Drinks,13,9.00,117.00
+2026-03-17,INV-0325,South,Johor Bahru,Tea,Drinks,57,6.00,342.00
+2026-03-18,INV-0326,Central,Shah Alam,Chocolate,Drinks,46,9.00,414.00
+2026-03-18,INV-0327,Central,Kuala Lumpur,Coffee,Drinks,40,8.50,340.00
+2026-03-18,INV-0328,East,Kota Bharu,Cake,Food,23,12.00,276.00
+2026-03-19,INV-0329,North,George Town,Coffee,Drinks,9,8.50,76.50
+2026-03-19,INV-0330,North,Alor Setar,Cake,Food,16,12.00,192.00
+2026-03-19,INV-0331,North,Alor Setar,Cake,Food,23,12.00,276.00
+2026-03-20,INV-0332,South,Johor Bahru,Tea,Drinks,14,6.00,84.00
+2026-03-20,INV-0333,South,Melaka,Biscuits,Food,49,7.50,367.50
+2026-03-20,INV-0334,Central,Kuala Lumpur,Cake,Food,22,12.00,264.00
+2026-03-20,INV-0335,North,Alor Setar,Coffee,Drinks,13,8.50,110.50
+2026-03-20,INV-0336,East,Kuantan,Biscuits,Food,12,7.50,90.00
+2026-03-21,INV-0337,South,Johor Bahru,Coffee,Drinks,20,8.50,170.00
+2026-03-21,INV-0338,South,Johor Bahru,Tea,Drinks,48,6.00,288.00
+2026-03-21,INV-0339,South,Melaka,Chocolate,Drinks,48,9.00,432.00
+2026-03-21,INV-0340,Central,Kuala Lumpur,Chocolate,Drinks,22,9.00,198.00
+2026-03-21,INV-0341,North,George Town,Chocolate,Drinks,45,9.00,405.00
+2026-03-22,INV-0342,Central,Shah Alam,Coffee,Drinks,30,8.50,255.00
+2026-03-22,INV-0343,Central,Shah Alam,Chocolate,Drinks,52,9.00,468.00
+2026-03-22,INV-0344,East,Kuantan,Coffee,Drinks,53,8.50,450.50
+2026-03-22,INV-0345,Central,Shah Alam,Coffee,Drinks,43,8.50,365.50
+2026-03-23,INV-0346,North,Alor Setar,Cake,Food,40,12.00,480.00
+2026-03-23,INV-0347,Central,Shah Alam,Coffee,Drinks,60,8.50,510.00
+2026-03-23,INV-0348,Central,Kuala Lumpur,Coffee,Drinks,19,8.50,161.50
+2026-03-23,INV-0349,East,Kuantan,Tea,Drinks,39,6.00,234.00
+2026-03-24,INV-0350,Central,Kuala Lumpur,Bread,Food,23,4.50,103.50
+2026-03-24,INV-0351,North,George Town,Biscuits,Food,30,7.50,225.00
+2026-03-24,INV-0352,North,Alor Setar,Chocolate,Drinks,22,9.00,198.00
+2026-03-25,INV-0353,North,George Town,Biscuits,Food,14,7.50,105.00
+2026-03-25,INV-0354,South,Melaka,Coffee,Drinks,54,8.50,459.00
+2026-03-25,INV-0355,North,Alor Setar,Biscuits,Food,22,7.50,165.00
+2026-03-26,INV-0356,Central,Kuala Lumpur,Tea,Drinks,29,6.00,174.00
+2026-03-26,INV-0357,Central,Shah Alam,Coffee,Drinks,26,8.50,221.00
+2026-03-26,INV-0358,North,George Town,Cake,Food,37,12.00,444.00
+2026-03-27,INV-0359,North,George Town,Biscuits,Food,53,7.50,397.50
+2026-03-27,INV-0360,Central,Kuala Lumpur,Biscuits,Food,5,7.50,37.50
+2026-03-27,INV-0361,Central,Shah Alam,Cake,Food,16,12.00,192.00
+2026-03-28,INV-0362,South,Johor Bahru,Cake,Food,19,12.00,228.00
+2026-03-28,INV-0363,Central,Kuala Lumpur,Tea,Drinks,20,6.00,120.00
+2026-03-28,INV-0364,East,Kota Bharu,Coffee,Drinks,41,8.50,348.50
+2026-03-29,INV-0365,South,Johor Bahru,Biscuits,Food,7,7.50,52.50
+2026-03-29,INV-0366,South,Johor Bahru,Bread,Food,50,4.50,225.00
+2026-03-29,INV-0367,North,Alor Setar,Bread,Food,43,4.50,193.50
+2026-03-29,INV-0368,South,Melaka,Chocolate,Drinks,24,9.00,216.00
+2026-03-29,INV-0369,North,Alor Setar,Cake,Food,17,12.00,204.00
+2026-03-30,INV-0370,Central,Kuala Lumpur,Chocolate,Drinks,40,9.00,360.00
+2026-03-30,INV-0371,North,Alor Setar,Coffee,Drinks,17,8.50,144.50
+2026-03-30,INV-0372,South,Johor Bahru,Cake,Food,48,12.00,576.00
+2026-03-30,INV-0373,East,Kuantan,Bread,Food,23,4.50,103.50
+2026-03-31,INV-0374,South,Johor Bahru,Coffee,Drinks,36,8.50,306.00
+2026-03-31,INV-0375,South,Melaka,Chocolate,Drinks,21,9.00,189.00
+2026-03-31,INV-0376,South,Johor Bahru,Cake,Food,27,12.00,324.00
+2026-04-01,INV-0377,North,Alor Setar,Chocolate,Drinks,11,9.00,99.00
+2026-04-01,INV-0378,Central,Kuala Lumpur,Cake,Food,52,12.00,624.00
+2026-04-01,INV-0379,East,Kota Bharu,Chocolate,Drinks,44,9.00,396.00
+2026-04-01,INV-0380,Central,Shah Alam,Tea,Drinks,46,6.00,276.00
+2026-04-01,INV-0381,North,Alor Setar,Chocolate,Drinks,25,9.00,225.00
+2026-04-02,INV-0382,South,Melaka,Coffee,Drinks,6,8.50,51.00
+2026-04-02,INV-0383,East,Kota Bharu,Coffee,Drinks,50,8.50,425.00
+2026-04-02,INV-0384,East,Kota Bharu,Coffee,Drinks,25,8.50,212.50
+2026-04-03,INV-0385,South,Johor Bahru,Chocolate,Drinks,7,9.00,63.00
+2026-04-03,INV-0386,North,George Town,Tea,Drinks,29,6.00,174.00
+2026-04-03,INV-0387,South,Johor Bahru,Tea,Drinks,45,6.00,270.00
+2026-04-04,INV-0388,South,Johor Bahru,Chocolate,Drinks,56,9.00,504.00
+2026-04-04,INV-0389,Central,Kuala Lumpur,Bread,Food,19,4.50,85.50
+2026-04-04,INV-0390,Central,Kuala Lumpur,Biscuits,Food,44,7.50,330.00
+2026-04-05,INV-0391,Central,Shah Alam,Coffee,Drinks,10,8.50,85.00
+2026-04-05,INV-0392,Central,Shah Alam,Coffee,Drinks,30,8.50,255.00
+2026-04-05,INV-0393,South,Johor Bahru,Cake,Food,17,12.00,204.00
+2026-04-05,INV-0394,North,Alor Setar,Coffee,Drinks,50,8.50,425.00
+2026-04-05,INV-0395,North,George Town,Cake,Food,38,12.00,456.00
+2026-04-06,INV-0396,East,Kota Bharu,Coffee,Drinks,25,8.50,212.50
+2026-04-06,INV-0397,East,Kuantan,Biscuits,Food,13,7.50,97.50
+2026-04-06,INV-0398,East,Kuantan,Chocolate,Drinks,53,9.00,477.00
+2026-04-06,INV-0399,North,George Town,Tea,Drinks,21,6.00,126.00
+2026-04-06,INV-0400,South,Johor Bahru,Biscuits,Food,52,7.50,390.00
+2026-04-07,INV-0401,East,Kuantan,Chocolate,Drinks,28,9.00,252.00
+2026-04-07,INV-0402,South,Johor Bahru,Chocolate,Drinks,40,9.00,360.00
+2026-04-07,INV-0403,Central,Shah Alam,Tea,Drinks,13,6.00,78.00
+2026-04-07,INV-0404,Central,Shah Alam,Tea,Drinks,43,6.00,258.00
+2026-04-07,INV-0405,East,Kota Bharu,Coffee,Drinks,6,8.50,51.00
+2026-04-08,INV-0406,North,Alor Setar,Chocolate,Drinks,34,9.00,306.00
+2026-04-08,INV-0407,South,Melaka,Chocolate,Drinks,7,9.00,63.00
+2026-04-08,INV-0408,North,George Town,Tea,Drinks,26,6.00,156.00
+2026-04-09,INV-0409,North,Alor Setar,Bread,Food,54,4.50,243.00
+2026-04-09,INV-0410,South,Melaka,Tea,Drinks,48,6.00,288.00
+2026-04-09,INV-0411,East,Kuantan,Cake,Food,13,12.00,156.00
+2026-04-09,INV-0412,North,Alor Setar,Biscuits,Food,42,7.50,315.00
+2026-04-09,INV-0413,North,George Town,Coffee,Drinks,10,8.50,85.00
+2026-04-10,INV-0414,Central,Shah Alam,Tea,Drinks,19,6.00,114.00
+2026-04-10,INV-0415,North,Alor Setar,Cake,Food,48,12.00,576.00
+2026-04-10,INV-0416,North,George Town,Cake,Food,20,12.00,240.00
+2026-04-10,INV-0417,North,Alor Setar,Coffee,Drinks,17,8.50,144.50
+2026-04-10,INV-0418,Central,Shah Alam,Cake,Food,6,12.00,72.00
+2026-04-11,INV-0419,East,Kuantan,Cake,Food,20,12.00,240.00
+2026-04-11,INV-0420,North,George Town,Coffee,Drinks,43,8.50,365.50
+2026-04-11,INV-0421,East,Kota Bharu,Cake,Food,15,12.00,180.00
+2026-04-12,INV-0422,Central,Kuala Lumpur,Biscuits,Food,26,7.50,195.00
+2026-04-12,INV-0423,North,George Town,Chocolate,Drinks,26,9.00,234.00
+2026-04-12,INV-0424,South,Melaka,Coffee,Drinks,34,8.50,289.00
+2026-04-13,INV-0425,North,Alor Setar,Cake,Food,14,12.00,168.00
+2026-04-13,INV-0426,North,Alor Setar,Tea,Drinks,58,6.00,348.00
+2026-04-13,INV-0427,South,Melaka,Biscuits,Food,53,7.50,397.50
+2026-04-13,INV-0428,South,Melaka,Cake,Food,26,12.00,312.00
+2026-04-14,INV-0429,South,Melaka,Cake,Food,13,12.00,156.00
+2026-04-14,INV-0430,East,Kuantan,Biscuits,Food,36,7.50,270.00
+2026-04-14,INV-0431,South,Johor Bahru,Bread,Food,55,4.50,247.50
+2026-04-15,INV-0432,South,Johor Bahru,Cake,Food,54,12.00,648.00
+2026-04-15,INV-0433,East,Kuantan,Bread,Food,13,4.50,58.50
+2026-04-15,INV-0434,South,Johor Bahru,Bread,Food,18,4.50,81.00
+2026-04-15,INV-0435,North,Alor Setar,Tea,Drinks,7,6.00,42.00
+2026-04-16,INV-0436,South,Johor Bahru,Chocolate,Drinks,58,9.00,522.00
+2026-04-16,INV-0437,North,George Town,Coffee,Drinks,55,8.50,467.50
+2026-04-16,INV-0438,South,Johor Bahru,Tea,Drinks,30,6.00,180.00
+2026-04-16,INV-0439,Central,Kuala Lumpur,Tea,Drinks,19,6.00,114.00
+2026-04-16,INV-0440,Central,Shah Alam,Cake,Food,45,12.00,540.00
+2026-04-17,INV-0441,Central,Shah Alam,Biscuits,Food,54,7.50,405.00
+2026-04-17,INV-0442,Central,Kuala Lumpur,Coffee,Drinks,37,8.50,314.50
+2026-04-17,INV-0443,South,Melaka,Biscuits,Food,27,7.50,202.50
+2026-04-18,INV-0444,South,Johor Bahru,Bread,Food,28,4.50,126.00
+2026-04-18,INV-0445,Central,Kuala Lumpur,Chocolate,Drinks,54,9.00,486.00
+2026-04-18,INV-0446,Central,Kuala Lumpur,Tea,Drinks,13,6.00,78.00
+2026-04-18,INV-0447,South,Melaka,Chocolate,Drinks,6,9.00,54.00
+2026-04-19,INV-0448,Central,Shah Alam,Bread,Food,26,4.50,117.00
+2026-04-19,INV-0449,South,Melaka,Coffee,Drinks,42,8.50,357.00
+2026-04-19,INV-0450,East,Kota Bharu,Biscuits,Food,56,7.50,420.00
+2026-04-19,INV-0451,East,Kota Bharu,Chocolate,Drinks,56,9.00,504.00
+2026-04-19,INV-0452,East,Kuantan,Bread,Food,44,4.50,198.00
+2026-04-20,INV-0453,North,George Town,Cake,Food,33,12.00,396.00
+2026-04-20,INV-0454,North,George Town,Biscuits,Food,12,7.50,90.00
+2026-04-20,INV-0455,East,Kota Bharu,Biscuits,Food,54,7.50,405.00
+2026-04-20,INV-0456,Central,Shah Alam,Bread,Food,56,4.50,252.00
+2026-04-20,INV-0457,Central,Shah Alam,Biscuits,Food,5,7.50,37.50
+2026-04-21,INV-0458,North,George Town,Coffee,Drinks,43,8.50,365.50
+2026-04-21,INV-0459,South,Johor Bahru,Chocolate,Drinks,26,9.00,234.00
+2026-04-21,INV-0460,South,Melaka,Bread,Food,24,4.50,108.00
+2026-04-21,INV-0461,North,Alor Setar,Tea,Drinks,35,6.00,210.00
+2026-04-22,INV-0462,South,Melaka,Cake,Food,25,12.00,300.00
+2026-04-22,INV-0463,Central,Shah Alam,Bread,Food,10,4.50,45.00
+2026-04-22,INV-0464,East,Kota Bharu,Tea,Drinks,12,6.00,72.00
+2026-04-23,INV-0465,Central,Kuala Lumpur,Tea,Drinks,20,6.00,120.00
+2026-04-23,INV-0466,South,Johor Bahru,Bread,Food,12,4.50,54.00
+2026-04-23,INV-0467,East,Kota Bharu,Bread,Food,37,4.50,166.50
+2026-04-23,INV-0468,Central,Shah Alam,Coffee,Drinks,12,8.50,102.00
+2026-04-24,INV-0469,North,Alor Setar,Coffee,Drinks,43,8.50,365.50
+2026-04-24,INV-0470,South,Johor Bahru,Tea,Drinks,7,6.00,42.00
+2026-04-24,INV-0471,East,Kuantan,Bread,Food,15,4.50,67.50
+2026-04-24,INV-0472,East,Kota Bharu,Tea,Drinks,6,6.00,36.00
+2026-04-24,INV-0473,North,George Town,Bread,Food,11,4.50,49.50
+2026-04-25,INV-0474,Central,Shah Alam,Coffee,Drinks,10,8.50,85.00
+2026-04-25,INV-0475,Central,Kuala Lumpur,Tea,Drinks,22,6.00,132.00
+2026-04-25,INV-0476,East,Kota Bharu,Coffee,Drinks,14,8.50,119.00
+2026-04-25,INV-0477,South,Melaka,Bread,Food,34,4.50,153.00
+2026-04-26,INV-0478,North,Alor Setar,Bread,Food,36,4.50,162.00
+2026-04-26,INV-0479,East,Kuantan,Cake,Food,6,12.00,72.00
+2026-04-26,INV-0480,South,Melaka,Bread,Food,17,4.50,76.50
+2026-04-26,INV-0481,South,Melaka,Biscuits,Food,41,7.50,307.50
+2026-04-27,INV-0482,Central,Kuala Lumpur,Bread,Food,35,4.50,157.50
+2026-04-27,INV-0483,Central,Kuala Lumpur,Bread,Food,17,4.50,76.50
+2026-04-27,INV-0484,South,Melaka,Chocolate,Drinks,37,9.00,333.00
+2026-04-27,INV-0485,Central,Shah Alam,Tea,Drinks,31,6.00,186.00
+2026-04-28,INV-0486,South,Melaka,Bread,Food,27,4.50,121.50
+2026-04-28,INV-0487,East,Kuantan,Cake,Food,43,12.00,516.00
+2026-04-28,INV-0488,Central,Shah Alam,Chocolate,Drinks,51,9.00,459.00
+2026-04-28,INV-0489,Central,Kuala Lumpur,Cake,Food,41,12.00,492.00
+2026-04-28,INV-0490,South,Melaka,Biscuits,Food,26,7.50,195.00
+2026-04-29,INV-0491,East,Kuantan,Coffee,Drinks,19,8.50,161.50
+2026-04-29,INV-0492,South,Melaka,Cake,Food,15,12.00,180.00
+2026-04-29,INV-0493,South,Johor Bahru,Chocolate,Drinks,16,9.00,144.00
+2026-04-29,INV-0494,North,George Town,Biscuits,Food,57,7.50,427.50
+2026-04-30,INV-0495,North,George Town,Chocolate,Drinks,30,9.00,270.00
+2026-04-30,INV-0496,Central,Shah Alam,Tea,Drinks,23,6.00,138.00
+2026-04-30,INV-0497,Central,Shah Alam,Coffee,Drinks,31,8.50,263.50
+2026-04-30,INV-0498,South,Melaka,Biscuits,Food,25,7.50,187.50
+2026-04-30,INV-0499,South,Johor Bahru,Biscuits,Food,44,7.50,330.00
+2026-05-01,INV-0500,South,Melaka,Bread,Food,51,4.50,229.50
+2026-05-01,INV-0501,North,George Town,Chocolate,Drinks,23,9.00,207.00
+2026-05-01,INV-0502,South,Johor Bahru,Biscuits,Food,35,7.50,262.50
+2026-05-01,INV-0503,North,Alor Setar,Biscuits,Food,23,7.50,172.50
+2026-05-01,INV-0504,North,Alor Setar,Tea,Drinks,20,6.00,120.00
+2026-05-02,INV-0505,North,George Town,Cake,Food,59,12.00,708.00
+2026-05-02,INV-0506,North,Alor Setar,Chocolate,Drinks,10,9.00,90.00
+2026-05-02,INV-0507,Central,Kuala Lumpur,Tea,Drinks,35,6.00,210.00
+2026-05-03,INV-0508,Central,Kuala Lumpur,Tea,Drinks,30,6.00,180.00
+2026-05-03,INV-0509,South,Melaka,Chocolate,Drinks,41,9.00,369.00
+2026-05-03,INV-0510,South,Melaka,Chocolate,Drinks,48,9.00,432.00
+2026-05-03,INV-0511,South,Melaka,Biscuits,Food,18,7.50,135.00
+2026-05-04,INV-0512,South,Melaka,Coffee,Drinks,10,8.50,85.00
+2026-05-04,INV-0513,South,Melaka,Chocolate,Drinks,35,9.00,315.00
+2026-05-04,INV-0514,Central,Shah Alam,Coffee,Drinks,36,8.50,306.00
+2026-05-04,INV-0515,South,Johor Bahru,Biscuits,Food,48,7.50,360.00
+2026-05-04,INV-0516,South,Johor Bahru,Cake,Food,46,12.00,552.00
+2026-05-05,INV-0517,East,Kota Bharu,Chocolate,Drinks,59,9.00,531.00
+2026-05-05,INV-0518,Central,Shah Alam,Cake,Food,28,12.00,336.00
+2026-05-05,INV-0519,South,Johor Bahru,Tea,Drinks,34,6.00,204.00
+2026-05-06,INV-0520,South,Johor Bahru,Cake,Food,43,12.00,516.00
+2026-05-06,INV-0521,Central,Shah Alam,Bread,Food,54,4.50,243.00
+2026-05-06,INV-0522,North,Alor Setar,Cake,Food,8,12.00,96.00
+2026-05-06,INV-0523,Central,Kuala Lumpur,Bread,Food,57,4.50,256.50
+2026-05-07,INV-0524,Central,Shah Alam,Biscuits,Food,47,7.50,352.50
+2026-05-07,INV-0525,North,George Town,Coffee,Drinks,26,8.50,221.00
+2026-05-07,INV-0526,Central,Kuala Lumpur,Tea,Drinks,15,6.00,90.00
+2026-05-07,INV-0527,Central,Kuala Lumpur,Chocolate,Drinks,49,9.00,441.00
+2026-05-07,INV-0528,East,Kuantan,Chocolate,Drinks,58,9.00,522.00
+2026-05-08,INV-0529,North,Alor Setar,Cake,Food,57,12.00,684.00
+2026-05-08,INV-0530,Central,Kuala Lumpur,Bread,Food,29,4.50,130.50
+2026-05-08,INV-0531,East,Kota Bharu,Chocolate,Drinks,5,9.00,45.00
+2026-05-08,INV-0532,Central,Kuala Lumpur,Coffee,Drinks,22,8.50,187.00
+2026-05-09,INV-0533,East,Kuantan,Coffee,Drinks,57,8.50,484.50
+2026-05-09,INV-0534,North,Alor Setar,Chocolate,Drinks,15,9.00,135.00
+2026-05-09,INV-0535,South,Johor Bahru,Chocolate,Drinks,29,9.00,261.00
+2026-05-09,INV-0536,East,Kuantan,Cake,Food,30,12.00,360.00
+2026-05-10,INV-0537,South,Johor Bahru,Tea,Drinks,60,6.00,360.00
+2026-05-10,INV-0538,East,Kota Bharu,Tea,Drinks,47,6.00,282.00
+2026-05-10,INV-0539,Central,Kuala Lumpur,Cake,Food,25,12.00,300.00
+2026-05-11,INV-0540,South,Johor Bahru,Bread,Food,38,4.50,171.00
+2026-05-11,INV-0541,North,Alor Setar,Biscuits,Food,22,7.50,165.00
+2026-05-11,INV-0542,East,Kuantan,Coffee,Drinks,11,8.50,93.50
+2026-05-12,INV-0543,North,Alor Setar,Cake,Food,48,12.00,576.00
+2026-05-12,INV-0544,North,George Town,Chocolate,Drinks,41,9.00,369.00
+2026-05-12,INV-0545,South,Melaka,Chocolate,Drinks,29,9.00,261.00
+2026-05-12,INV-0546,Central,Kuala Lumpur,Chocolate,Drinks,18,9.00,162.00
+2026-05-13,INV-0547,East,Kota Bharu,Chocolate,Drinks,27,9.00,243.00
+2026-05-13,INV-0548,North,George Town,Bread,Food,44,4.50,198.00
+2026-05-13,INV-0549,East,Kota Bharu,Coffee,Drinks,28,8.50,238.00
+2026-05-13,INV-0550,East,Kota Bharu,Cake,Food,40,12.00,480.00
+2026-05-13,INV-0551,Central,Kuala Lumpur,Chocolate,Drinks,27,9.00,243.00
+2026-05-14,INV-0552,Central,Kuala Lumpur,Biscuits,Food,40,7.50,300.00
+2026-05-14,INV-0553,East,Kuantan,Biscuits,Food,11,7.50,82.50
+2026-05-14,INV-0554,North,George Town,Cake,Food,19,12.00,228.00
+2026-05-14,INV-0555,North,Alor Setar,Tea,Drinks,47,6.00,282.00
+2026-05-14,INV-0556,North,Alor Setar,Chocolate,Drinks,7,9.00,63.00
+2026-05-15,INV-0557,Central,Shah Alam,Cake,Food,49,12.00,588.00
+2026-05-15,INV-0558,East,Kota Bharu,Biscuits,Food,47,7.50,352.50
+2026-05-15,INV-0559,North,Alor Setar,Coffee,Drinks,46,8.50,391.00
+2026-05-16,INV-0560,North,Alor Setar,Biscuits,Food,44,7.50,330.00
+2026-05-16,INV-0561,Central,Shah Alam,Cake,Food,60,12.00,720.00
+2026-05-16,INV-0562,North,George Town,Chocolate,Drinks,30,9.00,270.00
+2026-05-16,INV-0563,Central,Kuala Lumpur,Tea,Drinks,14,6.00,84.00
+2026-05-16,INV-0564,South,Johor Bahru,Chocolate,Drinks,20,9.00,180.00
+2026-05-17,INV-0565,North,Alor Setar,Chocolate,Drinks,16,9.00,144.00
+2026-05-17,INV-0566,East,Kota Bharu,Bread,Food,44,4.50,198.00
+2026-05-17,INV-0567,South,Johor Bahru,Biscuits,Food,32,7.50,240.00
+2026-05-18,INV-0568,North,George Town,Biscuits,Food,21,7.50,157.50
+2026-05-18,INV-0569,Central,Kuala Lumpur,Chocolate,Drinks,23,9.00,207.00
+2026-05-18,INV-0570,South,Melaka,Biscuits,Food,24,7.50,180.00
+2026-05-19,INV-0571,East,Kota Bharu,Bread,Food,20,4.50,90.00
+2026-05-19,INV-0572,North,George Town,Coffee,Drinks,31,8.50,263.50
+2026-05-19,INV-0573,South,Johor Bahru,Tea,Drinks,24,6.00,144.00
+2026-05-19,INV-0574,South,Johor Bahru,Bread,Food,7,4.50,31.50
+2026-05-20,INV-0575,East,Kuantan,Bread,Food,35,4.50,157.50
+2026-05-20,INV-0576,South,Melaka,Bread,Food,21,4.50,94.50
+2026-05-20,INV-0577,Central,Kuala Lumpur,Tea,Drinks,48,6.00,288.00
+2026-05-21,INV-0578,North,Alor Setar,Biscuits,Food,57,7.50,427.50
+2026-05-21,INV-0579,Central,Kuala Lumpur,Bread,Food,43,4.50,193.50
+2026-05-21,INV-0580,North,George Town,Bread,Food,8,4.50,36.00
+2026-05-21,INV-0581,Central,Kuala Lumpur,Tea,Drinks,34,6.00,204.00
+2026-05-22,INV-0582,East,Kota Bharu,Biscuits,Food,15,7.50,112.50
+2026-05-22,INV-0583,North,Alor Setar,Bread,Food,7,4.50,31.50
+2026-05-22,INV-0584,South,Melaka,Tea,Drinks,42,6.00,252.00
+2026-05-22,INV-0585,North,George Town,Chocolate,Drinks,26,9.00,234.00
+2026-05-23,INV-0586,East,Kota Bharu,Chocolate,Drinks,10,9.00,90.00
+2026-05-23,INV-0587,North,Alor Setar,Cake,Food,5,12.00,60.00
+2026-05-23,INV-0588,South,Melaka,Tea,Drinks,49,6.00,294.00
+2026-05-23,INV-0589,Central,Shah Alam,Chocolate,Drinks,21,9.00,189.00
+2026-05-24,INV-0590,South,Johor Bahru,Biscuits,Food,5,7.50,37.50
+2026-05-24,INV-0591,South,Melaka,Cake,Food,49,12.00,588.00
+2026-05-24,INV-0592,Central,Shah Alam,Biscuits,Food,55,7.50,412.50
+2026-05-25,INV-0593,Central,Kuala Lumpur,Tea,Drinks,25,6.00,150.00
+2026-05-25,INV-0594,Central,Kuala Lumpur,Bread,Food,48,4.50,216.00
+2026-05-25,INV-0595,East,Kuantan,Chocolate,Drinks,17,9.00,153.00
+2026-05-26,INV-0596,South,Melaka,Cake,Food,52,12.00,624.00
+2026-05-26,INV-0597,North,Alor Setar,Tea,Drinks,51,6.00,306.00
+2026-05-26,INV-0598,South,Johor Bahru,Bread,Food,52,4.50,234.00
+2026-05-26,INV-0599,North,George Town,Bread,Food,59,4.50,265.50
+2026-05-26,INV-0600,East,Kuantan,Coffee,Drinks,42,8.50,357.00
+2026-05-27,INV-0601,North,Alor Setar,Biscuits,Food,9,7.50,67.50
+2026-05-27,INV-0602,Central,Shah Alam,Tea,Drinks,19,6.00,114.00
+2026-05-27,INV-0603,Central,Kuala Lumpur,Bread,Food,11,4.50,49.50
+2026-05-27,INV-0604,North,George Town,Cake,Food,18,12.00,216.00
+2026-05-27,INV-0605,South,Johor Bahru,Biscuits,Food,22,7.50,165.00
+2026-05-28,INV-0606,North,George Town,Bread,Food,58,4.50,261.00
+2026-05-28,INV-0607,East,Kuantan,Bread,Food,14,4.50,63.00
+2026-05-28,INV-0608,South,Melaka,Bread,Food,14,4.50,63.00
+2026-05-28,INV-0609,East,Kuantan,Biscuits,Food,53,7.50,397.50
+2026-05-28,INV-0610,North,George Town,Tea,Drinks,38,6.00,228.00
+2026-05-29,INV-0611,East,Kuantan,Coffee,Drinks,8,8.50,68.00
+2026-05-29,INV-0612,South,Melaka,Tea,Drinks,38,6.00,228.00
+2026-05-29,INV-0613,Central,Shah Alam,Tea,Drinks,60,6.00,360.00
+2026-05-30,INV-0614,Central,Shah Alam,Bread,Food,26,4.50,117.00
+2026-05-30,INV-0615,South,Johor Bahru,Chocolate,Drinks,56,9.00,504.00
+2026-05-30,INV-0616,East,Kuantan,Cake,Food,33,12.00,396.00
+2026-05-30,INV-0617,Central,Kuala Lumpur,Bread,Food,10,4.50,45.00
+2026-05-31,INV-0618,Central,Shah Alam,Coffee,Drinks,48,8.50,408.00
+2026-05-31,INV-0619,North,Alor Setar,Chocolate,Drinks,10,9.00,90.00
+2026-05-31,INV-0620,North,Alor Setar,Cake,Food,44,12.00,528.00
+2026-05-31,INV-0621,South,Melaka,Tea,Drinks,38,6.00,228.00
+2026-06-01,INV-0622,North,George Town,Coffee,Drinks,11,8.50,93.50
+2026-06-01,INV-0623,South,Melaka,Bread,Food,49,4.50,220.50
+2026-06-01,INV-0624,East,Kota Bharu,Tea,Drinks,54,6.00,324.00
+2026-06-02,INV-0625,South,Johor Bahru,Bread,Food,49,4.50,220.50
+2026-06-02,INV-0626,North,George Town,Bread,Food,39,4.50,175.50
+2026-06-02,INV-0627,East,Kuantan,Cake,Food,41,12.00,492.00
+2026-06-03,INV-0628,Central,Kuala Lumpur,Cake,Food,24,12.00,288.00
+2026-06-03,INV-0629,Central,Kuala Lumpur,Bread,Food,52,4.50,234.00
+2026-06-03,INV-0630,South,Melaka,Bread,Food,46,4.50,207.00
+2026-06-04,INV-0631,North,Alor Setar,Biscuits,Food,45,7.50,337.50
+2026-06-04,INV-0632,East,Kota Bharu,Cake,Food,32,12.00,384.00
+2026-06-04,INV-0633,South,Melaka,Bread,Food,55,4.50,247.50
+2026-06-04,INV-0634,South,Melaka,Bread,Food,30,4.50,135.00
+2026-06-05,INV-0635,Central,Kuala Lumpur,Chocolate,Drinks,24,9.00,216.00
+2026-06-05,INV-0636,North,George Town,Chocolate,Drinks,27,9.00,243.00
+2026-06-05,INV-0637,South,Melaka,Biscuits,Food,58,7.50,435.00
+2026-06-05,INV-0638,East,Kuantan,Tea,Drinks,18,6.00,108.00
+2026-06-06,INV-0639,Central,Kuala Lumpur,Coffee,Drinks,28,8.50,238.00
+2026-06-06,INV-0640,North,Alor Setar,Chocolate,Drinks,54,9.00,486.00
+2026-06-06,INV-0641,East,Kuantan,Tea,Drinks,13,6.00,78.00
+2026-06-06,INV-0642,South,Johor Bahru,Bread,Food,48,4.50,216.00
+2026-06-07,INV-0643,East,Kuantan,Biscuits,Food,10,7.50,75.00
+2026-06-07,INV-0644,North,Alor Setar,Coffee,Drinks,9,8.50,76.50
+2026-06-07,INV-0645,North,Alor Setar,Biscuits,Food,9,7.50,67.50
+2026-06-07,INV-0646,North,Alor Setar,Coffee,Drinks,59,8.50,501.50
+2026-06-08,INV-0647,Central,Shah Alam,Biscuits,Food,52,7.50,390.00
+2026-06-08,INV-0648,South,Melaka,Coffee,Drinks,21,8.50,178.50
+2026-06-08,INV-0649,North,Alor Setar,Tea,Drinks,57,6.00,342.00
+2026-06-08,INV-0650,Central,Kuala Lumpur,Chocolate,Drinks,23,9.00,207.00
+2026-06-08,INV-0651,Central,Shah Alam,Biscuits,Food,52,7.50,390.00
+2026-06-09,INV-0652,North,Alor Setar,Biscuits,Food,43,7.50,322.50
+2026-06-09,INV-0653,South,Melaka,Biscuits,Food,28,7.50,210.00
+2026-06-09,INV-0654,Central,Kuala Lumpur,Biscuits,Food,29,7.50,217.50
+2026-06-10,INV-0655,Central,Shah Alam,Biscuits,Food,43,7.50,322.50
+2026-06-10,INV-0656,Central,Kuala Lumpur,Tea,Drinks,6,6.00,36.00
+2026-06-10,INV-0657,East,Kuantan,Biscuits,Food,22,7.50,165.00
+2026-06-11,INV-0658,South,Melaka,Cake,Food,41,12.00,492.00
+2026-06-11,INV-0659,Central,Kuala Lumpur,Bread,Food,53,4.50,238.50
+2026-06-11,INV-0660,South,Johor Bahru,Bread,Food,25,4.50,112.50
+2026-06-11,INV-0661,South,Johor Bahru,Biscuits,Food,46,7.50,345.00
+2026-06-12,INV-0662,South,Melaka,Chocolate,Drinks,13,9.00,117.00
+2026-06-12,INV-0663,South,Johor Bahru,Coffee,Drinks,28,8.50,238.00
+2026-06-12,INV-0664,East,Kuantan,Biscuits,Food,37,7.50,277.50
+2026-06-12,INV-0665,South,Melaka,Coffee,Drinks,18,8.50,153.00
+2026-06-13,INV-0666,Central,Shah Alam,Cake,Food,35,12.00,420.00
+2026-06-13,INV-0667,Central,Shah Alam,Coffee,Drinks,34,8.50,289.00
+2026-06-13,INV-0668,Central,Shah Alam,Biscuits,Food,44,7.50,330.00
+2026-06-14,INV-0669,Central,Shah Alam,Cake,Food,44,12.00,528.00
+2026-06-14,INV-0670,Central,Shah Alam,Chocolate,Drinks,21,9.00,189.00
+2026-06-14,INV-0671,East,Kota Bharu,Cake,Food,6,12.00,72.00
+2026-06-14,INV-0672,Central,Kuala Lumpur,Tea,Drinks,10,6.00,60.00
+2026-06-15,INV-0673,Central,Kuala Lumpur,Tea,Drinks,42,6.00,252.00
+2026-06-15,INV-0674,North,George Town,Cake,Food,13,12.00,156.00
+2026-06-15,INV-0675,East,Kota Bharu,Cake,Food,38,12.00,456.00
+2026-06-16,INV-0676,East,Kota Bharu,Bread,Food,43,4.50,193.50
+2026-06-16,INV-0677,Central,Kuala Lumpur,Chocolate,Drinks,29,9.00,261.00
+2026-06-16,INV-0678,East,Kota Bharu,Bread,Food,16,4.50,72.00
+2026-06-17,INV-0679,North,Alor Setar,Tea,Drinks,43,6.00,258.00
+2026-06-17,INV-0680,North,George Town,Cake,Food,27,12.00,324.00
+2026-06-17,INV-0681,East,Kota Bharu,Bread,Food,49,4.50,220.50
+2026-06-17,INV-0682,South,Melaka,Coffee,Drinks,60,8.50,510.00
+2026-06-17,INV-0683,East,Kuantan,Bread,Food,33,4.50,148.50
+2026-06-18,INV-0684,North,Alor Setar,Chocolate,Drinks,37,9.00,333.00
+2026-06-18,INV-0685,South,Johor Bahru,Tea,Drinks,49,6.00,294.00
+2026-06-18,INV-0686,South,Johor Bahru,Coffee,Drinks,27,8.50,229.50
+2026-06-19,INV-0687,East,Kota Bharu,Cake,Food,46,12.00,552.00
+2026-06-19,INV-0688,East,Kuantan,Chocolate,Drinks,11,9.00,99.00
+2026-06-19,INV-0689,Central,Kuala Lumpur,Biscuits,Food,20,7.50,150.00
+2026-06-19,INV-0690,North,Alor Setar,Coffee,Drinks,35,8.50,297.50
+2026-06-19,INV-0691,South,Johor Bahru,Chocolate,Drinks,41,9.00,369.00
+2026-06-20,INV-0692,North,Alor Setar,Chocolate,Drinks,29,9.00,261.00
+2026-06-20,INV-0693,South,Johor Bahru,Bread,Food,32,4.50,144.00
+2026-06-20,INV-0694,Central,Kuala Lumpur,Biscuits,Food,14,7.50,105.00
+2026-06-20,INV-0695,North,George Town,Tea,Drinks,17,6.00,102.00
+2026-06-21,INV-0696,North,Alor Setar,Cake,Food,12,12.00,144.00
+2026-06-21,INV-0697,Central,Kuala Lumpur,Tea,Drinks,32,6.00,192.00
+2026-06-21,INV-0698,South,Johor Bahru,Biscuits,Food,40,7.50,300.00
+2026-06-22,INV-0699,North,Alor Setar,Chocolate,Drinks,11,9.00,99.00
+2026-06-22,INV-0700,South,Johor Bahru,Cake,Food,50,12.00,600.00
+2026-06-22,INV-0701,South,Melaka,Chocolate,Drinks,35,9.00,315.00
+2026-06-22,INV-0702,Central,Shah Alam,Cake,Food,31,12.00,372.00
+2026-06-23,INV-0703,South,Johor Bahru,Tea,Drinks,37,6.00,222.00
+2026-06-23,INV-0704,North,George Town,Chocolate,Drinks,37,9.00,333.00
+2026-06-23,INV-0705,South,Melaka,Biscuits,Food,6,7.50,45.00
+2026-06-23,INV-0706,North,George Town,Cake,Food,6,12.00,72.00
+2026-06-23,INV-0707,North,George Town,Chocolate,Drinks,42,9.00,378.00
+2026-06-24,INV-0708,North,Alor Setar,Cake,Food,25,12.00,300.00
+2026-06-24,INV-0709,East,Kuantan,Tea,Drinks,42,6.00,252.00
+2026-06-24,INV-0710,North,Alor Setar,Bread,Food,29,4.50,130.50
+2026-06-24,INV-0711,South,Melaka,Cake,Food,13,12.00,156.00
+2026-06-24,INV-0712,South,Johor Bahru,Bread,Food,25,4.50,112.50
+2026-06-25,INV-0713,South,Johor Bahru,Coffee,Drinks,58,8.50,493.00
+2026-06-25,INV-0714,East,Kota Bharu,Cake,Food,51,12.00,612.00
+2026-06-25,INV-0715,North,George Town,Biscuits,Food,33,7.50,247.50
+2026-06-25,INV-0716,South,Johor Bahru,Cake,Food,56,12.00,672.00
+2026-06-25,INV-0717,East,Kuantan,Chocolate,Drinks,20,9.00,180.00
+2026-06-26,INV-0718,East,Kota Bharu,Chocolate,Drinks,14,9.00,126.00
+2026-06-26,INV-0719,South,Melaka,Chocolate,Drinks,16,9.00,144.00
+2026-06-26,INV-0720,East,Kuantan,Biscuits,Food,8,7.50,60.00
+2026-06-27,INV-0721,Central,Kuala Lumpur,Bread,Food,36,4.50,162.00
+2026-06-27,INV-0722,South,Johor Bahru,Cake,Food,50,12.00,600.00
+2026-06-27,INV-0723,North,George Town,Biscuits,Food,54,7.50,405.00
+2026-06-28,INV-0724,Central,Shah Alam,Bread,Food,28,4.50,126.00
+2026-06-28,INV-0725,South,Melaka,Bread,Food,7,4.50,31.50
+2026-06-28,INV-0726,East,Kuantan,Cake,Food,9,12.00,108.00
+2026-06-29,INV-0727,North,George Town,Biscuits,Food,27,7.50,202.50
+2026-06-29,INV-0728,North,George Town,Tea,Drinks,22,6.00,132.00
+2026-06-29,INV-0729,South,Melaka,Coffee,Drinks,17,8.50,144.50
+2026-06-29,INV-0730,Central,Kuala Lumpur,Biscuits,Food,26,7.50,195.00
+2026-06-30,INV-0731,South,Melaka,Chocolate,Drinks,57,9.00,513.00
+2026-06-30,INV-0732,North,Alor Setar,Bread,Food,45,4.50,202.50
+2026-06-30,INV-0733,Central,Shah Alam,Bread,Food,47,4.50,211.50
+2026-06-30,INV-0734,East,Kuantan,Tea,Drinks,58,6.00,348.00
+2026-06-30,INV-0735,South,Johor Bahru,Cake,Food,24,12.00,288.00

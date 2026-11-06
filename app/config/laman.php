@@ -12,6 +12,12 @@ return [
     'pemilik' => 'Your name',
     'warna_tema' => ['cerah' => '#fafaf9', 'gelap' => '#0a0a0c'],   // browser UI colour: light / dark theme
     'sumber' => '',   // link to your source code (required by AGPL if you modify and host it); empty = hidden
+    // parent organisation (JSON-LD on the home page + one footer line); empty org.@id = both hidden
+    'induk' => [
+        'org' => ['@id' => '', 'name' => '', 'legalName' => '', 'url' => ''],
+        'pengasas' => ['@id' => ''],   // founder: schema.org Person @id
+        'url' => ['ms' => '', 'en' => ''],   // footer link per language
+    ],
     'pengajar' => [
         'nama' => 'Instructor name',
         'peranan' => 'Instructor',

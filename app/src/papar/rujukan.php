@@ -9,7 +9,8 @@ $bhs = Bahasa::kod();
 $info = Subjek::semua()[$subjekId];
 $skrip = ['/assets/js/tapis.js'];
 $slug = fn(string $n) => strtolower(trim((string) preg_replace('/[^A-Za-z0-9]+/', '-', $n), '-'));
-$langkah = fn(string $s) => implode('<span class="text-accent mx-1" aria-hidden="true">→</span>', array_map(fn($x) => '<span>' . $f(trim($x)) . '</span>', preg_split('/\s*→\s*/u', $s)));
+// <wbr> di kedua-dua sisi anak panah: tanpanya "Options→Advanced→Save→Always" = satu perkataan tanpa titik pecah (limpah di 320 px)
+$langkah = fn(string $s) => implode('<wbr><span class="text-accent mx-1" aria-hidden="true">→</span><wbr>', array_map(fn($x) => '<span>' . $f(trim($x)) . '</span>', preg_split('/\s*→\s*/u', $s)));
 
 if ($subjekId === 'excel'):
     require_once __DIR__ . '/../Fungsi.php';
@@ -85,7 +86,7 @@ require __DIR__ . '/_kepala-hal.php';
   <div class="grid gap-4 md:grid-cols-2 mt-6">
     <?php foreach ($r['ciri'] ?? [] as $c): $id = 'ciri-' . $slug($c['nama']); ?>
     <article id="<?= $e($id) ?>" data-item data-cat="<?= $e($c['cat']) ?>" data-nama="<?= $e(Papar::polos($c['nama'])) ?>" class="kad-timbul p-5 sm:p-6 flex flex-col scroll-mt-40 min-w-0"
-             data-cari="<?= $e(mb_strtolower(Papar::polos($c['nama'] . ' ' . $c['desc'] . ' ' . ($c['langkah'] ?? '') . ' ' . ($c['tip'] ?? '')))) ?>">
+             data-cari="<?= $e(mb_strtolower(Papar::polos($c['nama'] . ' ' . $c['desc'] . ' ' . ($c['langkah'] ?? '') . ' ' . ($c['tip'] ?? '') . ' ' . ($c['awas'] ?? '')))) ?>">
       <div class="flex items-start justify-between gap-3">
         <h2 class="text-[1.125rem] font-semibold tracking-tight"><a href="#<?= $e($id) ?>" class="hover:text-accent"><?= $f($c['nama']) ?></a></h2>
         <span class="lencana shrink-0"><?= $f($r['kategori'][$c['cat']][0] ?? $c['cat']) ?></span>
@@ -97,9 +98,11 @@ require __DIR__ . '/_kepala-hal.php';
       <?php if (!empty($c['pintasan'])): ?>
       <p class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-sm"><span class="text-muted"><?= Papar::ikon('keyboard') ?></span><?= Papar::pintasanTeks($c['pintasan']) ?></p>
       <?php endif; ?>
-      <?php if (!empty($c['tip'])): ?>
-      <span class="block mt-4"></span>
-      <p class="nota-aksen mt-auto teks"><span class="text-accent mt-0.5 shrink-0"><?= Papar::ikon('lightbulb') ?></span><span><?= $f($c['tip']) ?></span></p>
+      <?php if (!empty($c['tip']) || !empty($c['awas'])): ?>
+      <div class="mt-auto pt-4 space-y-3">
+        <?php if (!empty($c['tip'])): ?><p class="nota-aksen teks"><span class="text-accent mt-0.5 shrink-0"><?= Papar::ikon('lightbulb') ?></span><span><?= $f($c['tip']) ?></span></p><?php endif; ?>
+        <?php if (!empty($c['awas'])): ?><p class="nota-awas teks" data-awas><span class="text-warn mt-0.5 shrink-0"><?= Papar::ikon('triangle-alert') ?></span><span><strong><?= te('ciri.awas') ?></strong> <?= $f($c['awas']) ?></span></p><?php endif; ?>
+      </div>
       <?php endif; ?>
     </article>
     <?php endforeach; ?>

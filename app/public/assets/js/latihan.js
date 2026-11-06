@@ -1,4 +1,4 @@
-// Latihan interaktif (revamp v2): pilih set → skrin mula → soalan (formula | result | choice | pintasan) → selesai.
+// Latihan interaktif (revamp v2): pilih set → skrin mula → soalan (formula | result | choice | pintasan | susun) → selesai.
 // Kemajuan dalam localStorage '<subjek>_latihan_v2_<set>' (sama dengan versi lama — kemajuan pelajar dikekalkan; BM/EN
 // berkongsi kemajuan kerana id soalan sama). Jawapan disemak di pelayan (/api/exercise-check.php); enjin formula pelayar
 // hanya untuk hasil langsung + "formula setara". Teks UI = window.LAMAN.T (config/bahasa/<bahasa>.php, kunci js.*).
@@ -151,6 +151,10 @@
                     <span class="pilihan-huruf">${String.fromCharCode(65 + j)}</span>
                     <span class="flex-1 text-[0.9375rem] teks">${o}</span></button>`).join('')}
             </div></fieldset>`;
+        } else if (q.mode === 'susun') {
+            // langkah tiba dikocok dari pelayan; pelajar mengalih dengan butang (papan kekunci + pembaca skrin + sentuh, tiada seret)
+            interaksi = `<fieldset class="mt-6"><legend class="text-sm text-ink-2 mb-3">${esc(t('js.lat.susun_arahan'))}</legend>
+                <ol id="susun" class="susun"></ol><p id="susun-umum" class="sr-only" aria-live="polite"></p></fieldset>`;
         } else {
             const pint = q.mode === 'pintasan';
             interaksi = `<div class="mt-6">
@@ -190,6 +194,34 @@
         const kotak = $('answer-input'), petunjuk = $('hint-area'), maklum = $('feedback-area'), ralatInput = $('ralat-input');
         const pilihan = el.kad.querySelectorAll('.pilihan');
         let dipilih = null;
+        const senarai = $('susun'), umum = $('susun-umum'), n = (q.langkah || []).length;
+        let susunan = (q.langkah || []).map((_, i) => i), susunanBetul = null;
+        function lukisSusun(dialih, arah) {
+            senarai.innerHTML = susunan.map((k, i) => `<li data-k="${k}" ${k === dialih ? 'data-dialih' : ''}>
+                <span class="pilihan-huruf" aria-hidden="true">${i + 1}</span>
+                <span class="flex-1 min-w-0 text-[0.9375rem] teks">${q.langkah[k]}</span>
+                <span class="flex shrink-0">
+                <button type="button" class="susun-btn" data-alih="-1" aria-label="${esc(t('js.lat.naik', { langkah: polos(q.langkah[k]) }))}" ${i === 0 ? 'disabled' : ''}>${ikon('arrow-up')}</button>
+                <button type="button" class="susun-btn" data-alih="1" aria-label="${esc(t('js.lat.turun', { langkah: polos(q.langkah[k]) }))}" ${i === n - 1 ? 'disabled' : ''}>${ikon('arrow-down')}</button>
+                </span></li>`).join('');
+            if (dialih == null) return;
+            // fokus kekal pada langkah yang dialih; di hujung senarai butang itu dilumpuhkan → butang arah bertentangan
+            const li = senarai.querySelector(`[data-k="${dialih}"]`);
+            const b = li.querySelector(`[data-alih="${arah}"]`);
+            (b.disabled ? li.querySelector(`[data-alih="${-arah}"]`) : b).focus();
+        }
+        if (senarai) {
+            lukisSusun();
+            senarai.addEventListener('click', (e) => {
+                const b = e.target.closest('[data-alih]');
+                if (!b || b.disabled) return;
+                const k = +b.closest('li').dataset.k, d = +b.dataset.alih, i = susunan.indexOf(k), j = i + d;
+                [susunan[i], susunan[j]] = [susunan[j], susunan[i]];
+                delete senarai.dataset.hasil;
+                lukisSusun(k, d);
+                umum.textContent = t('js.lat.kedudukan', { langkah: polos(q.langkah[k]), i: j + 1, n });
+            });
+        }
         pilihan.forEach((b) => b.addEventListener('click', () => {
             pilihan.forEach((x) => { x.setAttribute('aria-checked', 'false'); delete x.dataset.hasil; });
             b.setAttribute('aria-checked', 'true');
@@ -273,6 +305,8 @@
             if (q.mode === 'choice') {
                 if (dipilih === null) { pilihan[0] && pilihan[0].focus(); return tegur(t('js.lat.pilih_dahulu')); }
                 badan.choice_index = dipilih;
+            } else if (q.mode === 'susun') {
+                badan.answer = susunan.join(',');
             } else {
                 const v = (kotak.value || '').trim();
                 if (!v) { kotak.focus(); return tegur(t(q.mode === 'pintasan' ? 'js.lat.kosong_pintasan' : 'js.lat.kosong')); }
@@ -283,8 +317,9 @@
                 const pos = (b) => fetch('/api/exercise-check.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) }).then((r) => r.json());
                 let d = await pos(badan);
                 if (!d.success) throw new Error(d.error || 'ralat');
+                susunanBetul = d.susunan || null;
                 let nota = '';
-                if (!d.correct && badan.answer) {
+                if (!d.correct && badan.answer && q.mode !== 'susun') {
                     const s = setara(badan.answer, d.canonical);
                     if (s && s.sama) {
                         const d2 = await pos(Object.assign({}, badan, { setara: true }));
@@ -315,6 +350,7 @@
             maklum.hidden = false;
             if (!ok) {
                 if (dipilih !== null && pilihan[dipilih]) pilihan[dipilih].dataset.hasil = 'salah';
+                if (senarai) senarai.dataset.hasil = 'salah';
                 maklum.className = 'mt-6 masuk';
                 maklum.innerHTML = `
                     <div class="maklum maklum-salah" role="status">
@@ -333,7 +369,8 @@
                 $('retry-btn').addEventListener('click', () => {
                     maklum.hidden = true; btnSemak.disabled = false;
                     pilihan.forEach((x) => { delete x.dataset.hasil; });
-                    if (kotak) { kotak.select(); kotak.focus(); } else pilihan[0] && pilihan[0].focus();
+                    if (senarai) { delete senarai.dataset.hasil; const b = senarai.querySelector('.susun-btn:not([disabled])'); b && b.focus(); }
+                    else if (kotak) { kotak.select(); kotak.focus(); } else pilihan[0] && pilihan[0].focus();
                 });
                 $('show-btn').addEventListener('click', () => {
                     st.answers[q.id].dilihat = true; simpan();
@@ -343,12 +380,14 @@
                 return skrolMaklum(true);
             }
             if (dipilih !== null && pilihan[dipilih]) pilihan[dipilih].dataset.hasil = 'betul';
+            if (senarai) senarai.dataset.hasil = 'betul';
             isiSasaran(kotak ? kotak.value.trim() : '');
             tunjukJawapan(true, kanon, terang, nota);
         }
         function tunjukJawapan(ok, kanon, terang, nota) {
             if (kotak) kotak.disabled = true;
             pilihan.forEach((b) => { b.disabled = true; });
+            if (senarai) senarai.querySelectorAll('.susun-btn').forEach((b) => { b.disabled = true; });
             [btnSemak, btnPetunjuk, btnLangkau, btnTanya].forEach((b) => { if (b) b.hidden = true; });
             petunjuk.hidden = true;
             maklum.className = 'mt-6 masuk';
@@ -358,7 +397,9 @@
                     <div class="min-w-0 pt-1.5">
                     <p class="font-semibold ${ok ? 'text-ok' : 'text-ink'}">${esc(t(ok ? 'js.lat.betul' : 'js.lat.jawapan_tajuk'))}</p>
                     ${nota ? `<p class="mt-2 text-sm leading-relaxed teks text-ink">${nota}</p>` : ''}
-                    ${!ok && kanon ? `<p class="mt-2 text-sm text-ink-2">${esc(t('js.lat.jawapan'))} <code class="kod">${esc(polos(kanon))}</code></p>` : ''}
+                    ${!ok && susunanBetul ? `<p class="mt-2 text-sm text-ink-2">${esc(t('js.lat.susunan_betul'))}</p>
+                        <div class="prosa text-sm leading-relaxed teks text-ink"><ol>${susunanBetul.map((l) => `<li>${l}</li>`).join('')}</ol></div>`
+                    : !ok && kanon ? `<p class="mt-2 text-sm text-ink-2">${esc(t('js.lat.jawapan'))} <code class="kod">${esc(polos(kanon))}</code></p>` : ''}
                     ${terang ? `<div class="mt-2 text-sm leading-relaxed teks text-ink-2">${terang}</div>` : ''}
                     </div>
                 </div>

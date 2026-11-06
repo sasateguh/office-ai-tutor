@@ -30,7 +30,8 @@ if ($laluan === '/sitemap.xml') {
 $bahasa = $h['bahasa'] ?? (str_starts_with($laluan, '/en/') ? 'en' : 'ms');
 Bahasa::tetap($bahasa);
 
-if ($h === null || ($h['subjek'] !== null && !Subjek::bolehLihat($h['subjek']))) {
+$templat = $h === null ? null : ($h['subjek'] === null ? 'utama' : Laluan::templat($h['subjek'], $h['halaman']));
+if ($templat === null || ($h['subjek'] !== null && !Subjek::bolehLihat($h['subjek']))) {
     http_response_code(404);
     Papar::halaman('404', ['subjekId' => null, 'halaman' => '404']);
     exit;
@@ -38,4 +39,4 @@ if ($h === null || ($h['subjek'] !== null && !Subjek::bolehLihat($h['subjek'])))
 
 $subjekId = $h['subjek'];
 $halaman = $h['halaman'];
-Papar::halaman($subjekId === null ? 'utama' : Laluan::TEMPLAT[$halaman], ['subjekId' => $subjekId, 'halaman' => $halaman]);
+Papar::halaman($templat, ['subjekId' => $subjekId, 'halaman' => $halaman]);

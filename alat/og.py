@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Jana kad OG 1200×630 (JPEG < 300 KB: kad lebih besar tiada gambar di WhatsApp) → app/public/og/<id>-<bahasa>.jpg.
-id = utama | excel | word | powerpoint. Teks diambil daripada fail kandungan/bahasa (bukan ditaip di sini): tajuk laman utama
+id = utama | <setiap subjek config/subjek.php>. Teks diambil daripada fail kandungan/bahasa (bukan ditaip di sini): tajuk laman utama
 = config/bahasa/<b>.php utama.tajuk; subjek = config/pek/<s>/[en/]utama.php ringkas. Rupa = arah "buku kerja yang hidup"
 (docs/REKA.md §1.11): subjek = latar aksen subjek + grid halus + jubin ikon besar; laman utama = latar gelap dengan cahaya
 tiga warna + tiga jubin subjek. WARNA dibaca daripada token tailwind/tapak.css (:root + [data-tema="gelap"]) — tiada palet
 kedua di sini; logo = src/papar/_logo.php. Perlu Playwright Chromium + imej Docker PHP 8.3 (php:8.3-cli, membaca PHP).
-  python3 excel/alat/og.py
+  python3 excel/alat/og.py            # semua kad
+  python3 excel/alat/og.py ai         # kad subjek tertentu sahaja (kad lain tidak ditulis semula)
 """
 import base64, html, json, pathlib, re, subprocess
 
@@ -20,14 +21,16 @@ kod = r'''
 require "src/Kandungan.php"; require "src/Subjek.php"; require "src/Ikon.php"; $o = [];
 $laman = require "config/laman.php";
 ob_start(); include "src/papar/_logo.php"; $logo = ob_get_clean();
-$semua = Subjek::semua();
+$semua = require "config/subjek.php";   // BENIH: kad laman utama = subjek benih 'hidup' sahaja (subjek draf tidak bocor ke kad OG)
+$hidup = array_filter($semua, fn($s) => ($s["status"] ?? "") === "hidup");
 foreach (["ms", "en"] as $b) {
     $t = require "config/bahasa/$b.php";
-    $o["utama-$b"] = ["tajuk" => $t["utama.tajuk"], "kecil" => implode(" · ", array_column($semua, "nama")), "jenama" => $laman["jenama"],
-                      "ikon" => array_map(fn($s) => Ikon::svg($s["ikon"], ""), $semua)];
+    $o["utama-$b"] = ["tajuk" => $t["utama.tajuk"], "kecil" => implode(" · ", array_column($hidup, "nama")), "jenama" => $laman["jenama"],
+                      "ikon" => array_map(fn($s) => Ikon::svg($s["ikon"], ""), $hidup), "cabang" => "office"];
     foreach ($semua as $id => $s) {
         $u = Kandungan::benih($id, "utama", $b);
-        $o["$id-$b"] = ["tajuk" => $s["nama"], "kecil" => $u["ringkas"], "jenama" => $laman["jenama"], "ikon" => [$id => Ikon::svg($s["ikon"], "")]];
+        $o["$id-$b"] = ["tajuk" => $s["nama"], "kecil" => $u["ringkas"], "jenama" => $laman["jenama"], "ikon" => [$id => Ikon::svg($s["ikon"], "")],
+                        "cabang" => $s["cabang"] ?? "office"];
     }
 }
 echo json_encode(["logo" => $logo, "kad" => $o], JSON_UNESCAPED_UNICODE);'''
@@ -82,11 +85,15 @@ p {{ margin-top: 24px; font-size: 30px; line-height: 1.35; letter-spacing: -0.01
 </style></head><body class="{kelas}"><div class="cahaya"></div><div class="grid"></div>
 <div class="atas">{logo}{jenama}</div>{jubin}
 <div class="tengah">{eyebrow}<h1>{tajuk}</h1>{kecil}</div>
-<div class="jalur"><i style="background:rgb(var(--excel))"></i><i style="background:rgb(var(--word))"></i><i style="background:rgb(var(--powerpoint))"></i></div>
+{jalur}
 </body></html>"""
 
 
-def main():
+JALUR_OFFICE = '<div class="jalur"><i style="background:rgb(var(--excel))"></i><i style="background:rgb(var(--word))"></i><i style="background:rgb(var(--powerpoint))"></i></div>'
+JALUR_LAIN = '<div class="jalur"><i style="background:rgb(var(--atas) / .3)"></i></div>'   # cabang bukan Office: satu jalur nada aksen
+
+
+def main(pilih=()):
     data = json.loads(subprocess.run(["docker", "run", "--rm", "-v", f"{APP}:/app:ro", "-w", "/app", "php:8.3-cli", "php", "-r", kod],
                                      capture_output=True, text=True, check=True).stdout)
     fon = base64.b64encode((APP / "public/assets/fonts/geist.woff2").read_bytes()).decode()
@@ -98,6 +105,8 @@ def main():
         hal = b.new_page(viewport={"width": 1200, "height": 630})
         for nama, t in data["kad"].items():
             id_ = nama.rsplit("-", 1)[0]
+            if pilih and id_ not in pilih:
+                continue
             utama = id_ == "utama"
             ikon = list(t["ikon"].values())
             jubin = "".join(f'<div class="jubin j{i}">{s}</div>' for i, s in enumerate(ikon))
@@ -105,6 +114,7 @@ def main():
                 fon=fon, mono=mono, token=tok, id=id_, kelas="utama" if utama else "subjek", saiz=76 if utama else (150 if len(t["tajuk"]) <= 6 else 118),
                 logo=data["logo"], jubin=jubin, jenama=html.escape(t["jenama"]),
                 eyebrow=f'<div class="eyebrow">{html.escape(t["kecil"])}</div>' if utama else "",
+                jalur=JALUR_OFFICE if t["cabang"] == "office" else JALUR_LAIN,
                 tajuk=html.escape(t["tajuk"]), kecil="" if utama else f'<p>{html.escape(t["kecil"])}</p>'), wait_until="load")
             hal.evaluate("document.fonts.ready")
             out = KELUAR / f"{nama}.jpg"
@@ -117,4 +127,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(tuple(sys.argv[1:]))

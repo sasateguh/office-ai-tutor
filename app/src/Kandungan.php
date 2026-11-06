@@ -6,11 +6,13 @@ declare(strict_types=1);
  * Kandungan setiap subjek (docs/PELAN.md): benih dalam git config/pek/<subjek>/[en/]<jenis>.php; suntingan admin dalam
  * data/kandungan/<subjek>/[en/]<jenis>.json MENANG. BM dan EN berasingan sepenuhnya (docs/REVAMP.md). Setiap simpanan merekod keadaan SEBELUM dalam sejarah/ (pulih = satu klik).
  * Jenis: 'latihan' (array set → soalan), 'prompt' (rentetan arahan AI tutor); 'utama', 'cheatsheet', 'rujukan' = teks halaman
- * subjek (benih sahaja buat masa ini — diubah dalam config/pek, belum dari admin).
+ * subjek (benih sahaja buat masa ini — diubah dalam config/pek, belum dari admin); 'jejak' = modul jejak pembelajaran (src/Jejak.php),
+ * sama seperti 'utama': benih dalam config/pek, data/kandungan/<subjek>/[en/]jejak.json menang. 'panduan' = panduan langkah demi
+ * langkah subjek cabang AI (slug → panduan → bab → langkah; skema dalam excel/docs/REVAMP.md §panduan), benih sahaja buat masa ini.
  */
 final class Kandungan
 {
-    public const JENIS = ['latihan', 'prompt', 'utama', 'cheatsheet', 'rujukan', 'formula', 'playground'];
+    public const JENIS = ['latihan', 'prompt', 'utama', 'cheatsheet', 'rujukan', 'formula', 'playground', 'jejak', 'panduan'];
     private const SEJARAH_SIMPAN = 60;
 
     public static function akar(): string
@@ -181,5 +183,27 @@ final class Kandungan
             @unlink($tmp);
             throw new RuntimeException('Gagal menyimpan kandungan.');
         }
+    }
+
+    /**
+     * Panduan: rujukan bab dalam prosa ditulis `{bab:<id>}` dan menjadi nombor bab yang DIPAPAR (1 = bab pertama), jadi menambah
+     * atau menyusun semula bab tidak menyasarkan rujukan (D116). `kod` tidak disentuh. Id tidak dikenali kekal (gerbang menolaknya).
+     */
+    public static function rujukBab(array $panduan): array
+    {
+        $n = [];
+        foreach (array_values($panduan['bab'] ?? []) as $i => $b) {
+            $n['{bab:' . ($b['id'] ?? '') . '}'] = (string) ($i + 1);
+        }
+        $ganti = function (mixed $v, int|string $k) use (&$ganti, $n): mixed {
+            if (is_array($v)) {
+                foreach ($v as $kk => $vv) {
+                    $v[$kk] = $ganti($vv, $kk);
+                }
+                return $v;
+            }
+            return is_string($v) && $k !== 'kod' ? strtr($v, $n) : $v;
+        };
+        return $ganti($panduan, '');
     }
 }

@@ -8,7 +8,8 @@ $subjekK = Subjek::sah($subjekK) ? $subjekK : 'excel';
 $infoK = Subjek::semua()[$subjekK];
 // Bahasa kandungan yang disunting (BM dan EN berasingan sepenuhnya, docs/REVAMP.md)
 $bahasaK = ($_GET['bahasa'] ?? 'ms') === 'en' ? 'en' : 'ms';
-$latihanK = Kandungan::baca($subjekK, 'latihan', $bahasaK);
+$adaLatihanK = in_array('practice', $infoK['halaman'], true);
+$latihanK = $adaLatihanK ? Kandungan::baca($subjekK, 'latihan', $bahasaK) : [];
 // Ikon set latihan = nama Lucide (laman awam); senarai pilihan ringkas
 $ikonSet = ['list-checks', 'book-open', 'chart-column', 'keyboard', 'file-text', 'layout-template', 'sigma', 'search', 'calendar', 'type',
     'banknote', 'table', 'square-function', 'filter', 'presentation', 'palette', 'layers', 'mail', 'image', 'graduation-cap'];
@@ -37,7 +38,7 @@ $pilihIkon = function (string $semasa) use ($ikonSet, $h, $kelasInput): string {
     }
     return '<select name="ikon" aria-label="Ikon set" class="' . $kelasInput . ' cursor-pointer">' . $o . '</select>';
 };
-$modLabel = ['formula' => 'Formula', 'result' => 'Jawapan', 'choice' => 'Pilihan', 'pintasan' => 'Pintasan'];
+$modLabel = ['formula' => 'Formula', 'result' => 'Jawapan', 'choice' => 'Pilihan', 'pintasan' => 'Pintasan', 'susun' => 'Susun langkah'];
 
 $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kelasInput, $kelasLabel, $ralatBorang, $sub, $qsK, $subjekK, $infoK): void {
     // Soalan baharu: Excel = formula; Word/PowerPoint = pilihan (tiada formula untuk ditulis)
@@ -65,6 +66,7 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
                     <option value="result" <?= $mod === 'result' ? 'selected' : '' ?>>Tulis jawapan (nombor/teks)</option>
                     <option value="choice" <?= $mod === 'choice' ? 'selected' : '' ?>>Pilih satu jawapan</option>
                     <option value="pintasan" <?= $mod === 'pintasan' ? 'selected' : '' ?>>⌨️ Tekan pintasan (shortcut)</option>
+                    <option value="susun" <?= $mod === 'susun' ? 'selected' : '' ?>>Susun langkah mengikut urutan</option>
                 </select>
             </div>
             <div>
@@ -81,7 +83,7 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
             <label class="<?= $kelasLabel ?>" for="f-kategori">Kategori</label>
             <input id="f-kategori" name="kategori" maxlength="40" value="<?= $h($v['kategori'] ?? '') ?>" placeholder="cth Lookup, Aggregation" class="<?= $kelasInput ?>">
         </div>
-        <div data-untuk="formula result choice" class="<?= $mod === 'pintasan' ? 'hidden' : '' ?> space-y-4">
+        <div data-untuk="formula result choice" class="<?= in_array($mod, ['pintasan', 'susun'], true) ? 'hidden' : '' ?> space-y-4">
         <div>
             <label class="<?= $kelasLabel ?>" for="f-grid">Data jadual (pilihan)</label>
             <textarea id="f-grid" name="grid" rows="4" class="<?= $kelasInput ?> font-mono" placeholder="Bulan | Revenue&#10;Jan | 1200&#10;Feb | 1500&#10;Total | ?"><?= $h($v['grid'] ?? '') ?></textarea>
@@ -92,7 +94,7 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
             <input id="f-sel" name="sel" maxlength="3" value="<?= $h($v['sel'] ?? '') ?>" placeholder="cth B5" class="<?= $kelasInput ?> font-mono uppercase">
         </div>
         </div>
-        <div data-untuk="formula result pintasan" class="<?= $mod === 'choice' ? 'hidden' : '' ?>">
+        <div data-untuk="formula result pintasan" class="<?= in_array($mod, ['choice', 'susun'], true) ? 'hidden' : '' ?>">
             <label class="<?= $kelasLabel ?>" for="f-jawapan">Jawapan yang diterima</label>
             <textarea id="f-jawapan" name="jawapan" rows="3" class="<?= $kelasInput ?> font-mono" placeholder="=SUM(B2:B4)&#10;=B2+B3+B4"><?= $h($v['jawapan'] ?? '') ?></textarea>
             <p class="text-[11px] text-gray-500 mt-1">Satu jawapan satu baris; yang pertama = jawapan contoh. Huruf besar/kecil, ruang, <code>;</code> dan <code>$</code> diterima sendiri (kecuali soalan yang menguji <code>$</code>). Pintasan: tulis cth <code>Ctrl+Alt+1</code> (⌘ Mac diterima sendiri).</p>
@@ -111,6 +113,11 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
                 <input id="f-betul" name="betul" type="number" min="1" max="6" value="<?= $h($v['betul'] ?? '') ?>" placeholder="1" class="<?= $kelasInput ?>">
                 <p class="text-[11px] text-gray-500 mt-1">Nombor baris pilihan.</p>
             </div>
+        </div>
+        <div data-untuk="susun" class="<?= $mod === 'susun' ? '' : 'hidden' ?>">
+            <label class="<?= $kelasLabel ?>" for="f-langkah">Langkah dalam susunan BETUL (satu baris satu)</label>
+            <textarea id="f-langkah" name="langkah" rows="5" class="<?= $kelasInput ?>"><?= $h($v['langkah'] ?? '') ?></textarea>
+            <p class="text-[11px] text-gray-500 mt-1"><?= Latihan::SUSUN_MIN ?> hingga <?= Latihan::SUSUN_MAKS ?> langkah yang berbeza. Pelajar melihatnya bercampur, dan menyusunnya semula.</p>
         </div>
         <div>
             <label class="<?= $kelasLabel ?>" for="f-petunjuk">Petunjuk</label>
@@ -150,7 +157,7 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
             <div class="mb-5 p-4 rounded-2xl <?= $hidupK ? 'bg-emerald-50 border border-emerald-200' : 'bg-amber-50 border border-amber-200' ?> flex flex-wrap items-center justify-between gap-3">
                 <p class="text-sm <?= $hidupK ? 'text-emerald-800' : 'text-amber-900' ?>"><?= $hidupK ? 'Diterbitkan: pelajar nampak ' . $h($infoK['nama']) . ' di laman.' : 'Draf: hanya admin nampak. Semak kandungan dahulu, kemudian terbitkan.' ?>
                     <a href="<?= Subjek::url($subjekK, '', $bahasaK) ?>" class="font-semibold underline">Buka <?= $hidupK ? '' : 'pratonton ' ?>→</a></p>
-                <form method="POST" data-confirm="<?= $hidupK ? 'Pelajar tidak lagi nampak halaman ' . $h($infoK['nama']) . '.' : 'Halaman ' . $h($infoK['nama']) . ' (cheat sheet, rujukan, latihan, chat) kelihatan kepada semua pelajar dan Google.' ?>"
+                <form method="POST" data-confirm="<?= $hidupK ? 'Pelajar tidak lagi nampak halaman ' . $h($infoK['nama']) . '.' : 'Halaman ' . $h($infoK['nama']) . ($adaLatihanK ? ' (cheat sheet, rujukan, latihan, chat)' : ' (gambaran dan panduan)') . ' kelihatan kepada semua pelajar dan Google.' ?>"
                       data-confirm-title="<?= $hidupK ? 'Sorok semula?' : 'Terbitkan ' . $h($infoK['nama']) . '?' ?>" data-confirm-ok="<?= $hidupK ? 'Ya, sorok' : 'Ya, terbitkan' ?>" data-confirm-danger="<?= $hidupK ? '1' : '0' ?>">
                     <input type="hidden" name="_token" value="<?= $tok ?>"><input type="hidden" name="action" value="kandungan_status"><?= $sub ?>
                     <input type="hidden" name="status" value="<?= $hidupK ? 'draf' : 'hidup' ?>">
@@ -158,6 +165,9 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
                 </form>
             </div>
             <?php endif; ?>
+            <?php if (!$adaLatihanK): // subjek tanpa latihan/tutor (cth cabang AI): Terbit/Sorok sahaja ?>
+            <p class="text-sm text-gray-600">Subjek ini tiada latihan atau tutor AI. Teks panduannya dalam fail kandungan (benih); yang diurus di sini hanyalah Terbitkan / Sorok.</p>
+            <?php else: ?>
             <p class="text-xs text-gray-500 mb-5">Latihan <?= $h($infoK['nama']) ?>: ubah soalan tanpa kod. Setiap perubahan terus kelihatan di <a href="<?= Subjek::url($subjekK, 'latihan', $bahasaK) ?>" class="text-brand-purple font-semibold hover:underline">halaman Latihan</a> dan boleh dipulih dari Sejarah di bawah.</p>
 
             <div class="space-y-3">
@@ -250,13 +260,14 @@ $borangSoalan = function (string $setId, ?array $q) use ($borang, $tok, $h, $kel
   "grid": [["Bulan","Revenue"],["Jan",1200],["Feb",1500],["Total","?"]], "sel": "B4",
   "jawapan": ["=SUM(B2:B3)", "=B2+B3"], "petunjuk": "...", "penerangan": "..."},
  {"soalan": "...", "mod": "choice", "pilihan": ["A", "B", "C", "D"], "betul": 2, "kategori": "...", "tahap": 1, "petunjuk": "...", "penerangan": "..."}]
-Peraturan: "mod" = "formula" (pelajar tulis formula), "result" (pelajar tulis nombor/teks), "choice" (pilih satu; "betul" = nombor pilihan bermula 1) atau "pintasan" (pelajar tekan shortcut; "jawapan" cth ["Ctrl+B"]; elak Ctrl+N/T/W). "jawapan" = SEMUA bentuk formula yang betul. "grid" baris pertama = tajuk, rujukan sel mesti sepadan dengan grid (baris 1 = tajuk). "sel" = sel yang pelajar isi. "tahap" 1–3.</textarea>
+Peraturan: "mod" = "formula" (pelajar tulis formula), "result" (pelajar tulis nombor/teks), "choice" (pilih satu; "betul" = nombor pilihan bermula 1), "pintasan" (pelajar tekan shortcut; "jawapan" cth ["Ctrl+B"]; elak Ctrl+N/T/W) atau "susun" (pelajar menyusun langkah; "langkah" = <?= Latihan::SUSUN_MIN ?>–<?= Latihan::SUSUN_MAKS ?> langkah berbeza dalam susunan BETUL). "jawapan" = SEMUA bentuk formula yang betul. "grid" baris pertama = tajuk, rujukan sel mesti sepadan dengan grid (baris 1 = tajuk). "sel" = sel yang pelajar isi. "tahap" 1–3.</textarea>
                 <?php else: ?>
                 <textarea readonly rows="7" onclick="this.select()" aria-label="Arahan untuk AI" class="<?= $kelasInput ?> font-mono text-[11px]">Jana 10 soalan latihan Microsoft <?= $h($infoK['nama']) ?> (Microsoft 365, Windows) tentang [TOPIK] untuk pelajar kelas <?= $h($infoK['nama']) ?>, dalam <?= $bahasaK === 'en' ? 'English' : 'Bahasa Melayu Malaysia' ?> (istilah menu <?= $h($infoK['nama']) ?> kekal English, cth Insert → Table of Contents). Balas dengan JSON SAHAJA, tanpa teks lain, dalam bentuk:
 [{"soalan": "Anda mahu ... Menu mana yang betul? (boleh guna <strong> dan <code>)", "mod": "choice", "pilihan": ["Home → ...", "Insert → ...", "Layout → ...", "View → ..."], "betul": 2,
   "kategori": "Format", "tahap": 1, "petunjuk": "...", "penerangan": "..."},
- {"soalan": "Tekan pintasan untuk ...", "mod": "pintasan", "jawapan": ["Ctrl+B"], "kategori": "Pintasan", "tahap": 1, "petunjuk": "...", "penerangan": "..."}]
-Peraturan: "mod" = "choice" (pilih satu; "betul" = nombor pilihan bermula 1, 3–4 pilihan yang munasabah) atau "pintasan" (pelajar tekan shortcut; "jawapan" = pintasan Windows yang PASTI wujud dalam <?= $h($infoK['nama']) ?>, cth ["Ctrl+B"]; elak Ctrl+N/T/W kerana pelayar mengambilnya). Jangan reka nama menu atau pintasan — kalau tidak pasti, buat soalan "choice". "tahap" 1–3.</textarea>
+ {"soalan": "Tekan pintasan untuk ...", "mod": "pintasan", "jawapan": ["Ctrl+B"], "kategori": "Pintasan", "tahap": 1, "petunjuk": "...", "penerangan": "..."},
+ {"soalan": "Susun langkah untuk ...", "mod": "susun", "langkah": ["Langkah pertama", "Langkah kedua", "Langkah ketiga"], "kategori": "...", "tahap": 2, "petunjuk": "...", "penerangan": "..."}]
+Peraturan: "mod" = "choice" (pilih satu; "betul" = nombor pilihan bermula 1, 3–4 pilihan yang munasabah), "susun" (pelajar menyusun prosedur; "langkah" = <?= Latihan::SUSUN_MIN ?>–<?= Latihan::SUSUN_MAKS ?> langkah berbeza dalam susunan BETUL) atau "pintasan" (pelajar tekan shortcut; "jawapan" = pintasan Windows yang PASTI wujud dalam <?= $h($infoK['nama']) ?>, cth ["Ctrl+B"]; elak Ctrl+N/T/W kerana pelayar mengambilnya). Jangan reka nama menu atau pintasan — kalau tidak pasti, buat soalan "choice". "tahap" 1–3.</textarea>
                 <?php endif; ?>
                 <form method="POST" class="mt-3 space-y-3">
                     <input type="hidden" name="_token" value="<?= $tok ?>"><input type="hidden" name="action" value="kandungan_json"><?= $sub ?>
@@ -297,6 +308,7 @@ Peraturan: "mod" = "choice" (pilih satu; "betul" = nombor pilihan bermula 1, 3�
                 </ul>
                 <?php endif; ?>
             </details>
+            <?php endif; ?>
         </section>
         <script>
             document.querySelectorAll('[data-mod]').forEach(function (sel) {

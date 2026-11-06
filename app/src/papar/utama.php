@@ -15,6 +15,10 @@ $demo = reset($pg);
 $data = ['demo' => ['grid' => array_slice($demo['grid'], 0, 8), 'formula' => $demo['cadangan'][2] ?? $demo['cadangan'][0]]];
 $skrip = ['/assets/vendor/formula.min.js', '/assets/js/formula-enjin.js', '/assets/js/demo.js'];
 $pj = $laman['pengajar'];
+// cabang (Office | AI): tajuk cabang + kad dikumpul hanya bila > 1 cabang hidup (Office sahaja = susun atur asal)
+$kumpulan = Subjek::ikutCabang($hidup);
+$berkumpul = count($kumpulan) > 1;
+$hn = $berkumpul ? 'h4' : 'h3';
 $kira = array_map(fn($sid) => Papar::kiraan($sid, $bhs), array_combine(array_keys($hidup), array_keys($hidup)));
 // tajuk: nama setiap subjek dalam warna subjeknya (teks dari config/bahasa, nama dari config/subjek.php)
 $h1 = te('utama.tajuk');
@@ -93,8 +97,11 @@ $angka = array_filter([
       <h2 class="tajuk-bahagian"><?= te('utama.subjek.tajuk') ?></h2>
       <p class="mt-4 text-ink-2 text-[1.0625rem] leading-relaxed"><?= te('utama.subjek.ringkas') ?></p>
     </div>
-    <div class="mt-12 grid gap-5 md:grid-cols-3" data-muncul>
-      <?php foreach ($hidup as $sid => $si): $k = $kira[$sid]; $u = Kandungan::baca($sid, 'utama', $bhs); ?>
+    <?php foreach ($kumpulan as $cab => $ahli): if ($berkumpul): ?>
+    <h3 class="mt-14 first-of-type:mt-12 flex items-center gap-3 text-sm font-semibold text-ink-2" data-cabang="<?= $e($cab) ?>"><?= te("cabang.$cab") ?><span class="h-px flex-1 bg-line" aria-hidden="true"></span></h3>
+    <?php endif; ?>
+    <div class="<?= $berkumpul ? 'mt-5' : 'mt-12' ?> grid gap-5 md:grid-cols-3" data-muncul>
+      <?php foreach ($ahli as $sid => $si): $k = $kira[$sid]; $u = Kandungan::baca($sid, 'utama', $bhs); ?>
       <a href="<?= Laluan::subjek($sid) ?>" data-subjek="<?= $sid ?>" class="kad-timbul group min-w-0 p-6 sm:p-7 flex flex-col">
         <span class="hiasan" aria-hidden="true">
           <span class="absolute inset-x-0 top-0 h-1 bg-accent"></span>
@@ -102,17 +109,23 @@ $angka = array_filter([
           <span class="absolute -right-5 top-8 text-accent opacity-[.08]"><?= Papar::ikon($si['ikon'], 'w-32 h-32') ?></span>
         </span>
         <span class="jubin jubin-lg relative"><?= Papar::ikon($si['ikon'], 'w-6 h-6') ?></span>
-        <h3 class="relative mt-6 text-[1.375rem] font-semibold tracking-tight"><?= $e($si['nama']) ?></h3>
+        <<?= $hn ?> class="relative mt-6 text-[1.375rem] font-semibold tracking-tight"><?= $e($si['nama']) ?></<?= $hn ?>>
         <p class="relative mt-2 text-[0.9375rem] text-ink-2 leading-relaxed flex-1"><?= $e($u['ringkas'] ?? '') ?></p>
-        <dl class="relative mt-7 pt-5 border-t border-line grid grid-cols-3 gap-3">
+        <?php if (($si['cabang'] ?? 'office') === 'office'): ?><dl class="relative mt-7 pt-5 border-t border-line grid grid-cols-3 gap-3">
           <div class="min-w-0 flex flex-col-reverse"><dt class="mt-1.5 text-xs text-muted"><?= te($sid === 'excel' ? 'kira.fungsi' : 'kira.ciri') ?></dt><dd class="angka text-[1.25rem]"><?= Bahasa::nombor($k['rujukan']) ?></dd></div>
           <div class="min-w-0 flex flex-col-reverse"><dt class="mt-1.5 text-xs text-muted"><?= te('kira.latihan') ?></dt><dd class="angka text-[1.25rem]"><?= Bahasa::nombor($k['latihan']) ?></dd></div>
           <div class="min-w-0 flex flex-col-reverse"><dt class="mt-1.5 text-xs text-muted"><?= te('kira.pintasan') ?></dt><dd class="angka text-[1.25rem]"><?= Bahasa::nombor($k['pintasan']) ?></dd></div>
         </dl>
-        <span class="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent"><?= te('utama.subjek.buka', ['subjek' => $si['nama']]) ?><span class="transition-transform group-hover:translate-x-1"><?= Papar::ikon('arrow-right') ?></span></span>
+        <?php elseif ($pd = Laluan::panduan($sid)): ?><dl class="relative mt-7 pt-5 border-t border-line grid grid-cols-3 gap-3">
+          <div class="min-w-0 flex flex-col-reverse"><dt class="mt-1.5 text-xs text-muted"><?= te('kira.panduan') ?></dt><dd class="angka text-[1.25rem]"><?= Bahasa::nombor(count($pd)) ?></dd></div>
+          <div class="min-w-0 flex flex-col-reverse"><dt class="mt-1.5 text-xs text-muted"><?= te('kira.bab') ?></dt><dd class="angka text-[1.25rem]"><?= Bahasa::nombor(array_sum(array_map(fn($x) => count($x['bab'] ?? []), $pd))) ?></dd></div>
+          <div class="min-w-0 flex flex-col-reverse"><dt class="mt-1.5 text-xs text-muted"><?= te('kira.minit') ?></dt><dd class="angka text-[1.25rem]"><?= Bahasa::nombor(array_sum(array_column($pd, 'minit'))) ?></dd></div>
+        </dl>
+        <?php endif; ?><span class="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent"><?= te('utama.subjek.buka', ['subjek' => $si['nama']]) ?><span class="transition-transform group-hover:translate-x-1"><?= Papar::ikon('arrow-right') ?></span></span>
       </a>
       <?php endforeach; ?>
     </div>
+    <?php endforeach; ?>
   </div>
 </section>
 

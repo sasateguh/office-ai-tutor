@@ -16,7 +16,10 @@
     const normal = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     const teks = (el) => { if (!cache.has(el)) cache.set(el, normal(el.dataset.cari || el.textContent)); return cache.get(el); };
     const nama = (el) => normal(el.dataset.nama || '');
-    let kat = 'all';
+    // ?cat=<kunci> (pautan jejak pembelajaran): mula dengan kategori itu dipilih; kunci tidak dikenali = semua
+    const awal = new URLSearchParams(location.search).get('cat');
+    let kat = butang.some((b) => b.dataset.kat === awal) ? awal : 'all';
+    butang.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.kat === kat)));
 
     function markah(el, q, kata) {
         if (!q) return 0;

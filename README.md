@@ -1,10 +1,19 @@
-# Office AI Tutor
+<p align="center"><img src="brand/logo-512.png" width="112" height="112" alt="Office AI Tutor"></p>
+
+<h1 align="center">Office AI Tutor</h1>
+
+<p align="center"><a href="https://github.com/sasateguh/office-ai-tutor/actions/workflows/ci.yml"><img src="https://github.com/sasateguh/office-ai-tutor/actions/workflows/ci.yml/badge.svg" alt="CI"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-blue" alt="Licence: AGPL-3.0"></a></p>
+
+<p align="center"><b>Learn Excel, Word and PowerPoint by doing, in Malay and English.</b> · <i>Belajar Excel, Word dan PowerPoint dengan membuat sendiri, dalam BM dan Inggeris.</i><br>
+<a href="https://academy.sasateguh.com">academy.sasateguh.com</a> · <a href="https://academy.sasateguh.com/en/">English site</a> · Built in Malaysia by <a href="https://aimanmalib.com">Aiman Malib</a> · <a href="https://sasateguh.com">Sasa Teguh</a></p>
 
 A self-hosted learning site for Microsoft Office classes, **Excel, Word and PowerPoint**, in **Malay and English**.
 It runs a real class at [academy.sasateguh.com](https://academy.sasateguh.com) (Malay at `/`, English at `/en/`).
 
 Each subject has a cheat sheet, a searchable reference, auto-checked exercises and an AI tutor that answers in the
 language of the question. Excel also has a formula lab: a grid that evaluates Excel formulas in the browser.
+
+[Bahasa Melayu ↓](#bahasa-melayu)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/home-dark.webp">
@@ -16,9 +25,6 @@ language of the question. Excel also has a formula lab: a grid that evaluates Ex
 | <img src="docs/screenshots/formula-lab.webp" alt="Formula lab: a spreadsheet grid with a formula bar, evaluated in the browser" width="400"> | <img src="docs/screenshots/practice-dark.webp" alt="Practice page in the dark theme with two exercise sets and progress bars" width="400"> |
 
 <sub>Screenshots of the live site (English pages), WebKit, 1280 × 800.</sub>
-
-> **Ringkasan BM:** laman belajar Microsoft Office dalam Bahasa Melayu dan Inggeris: rujukan pantas, rujukan lengkap,
-> latihan bersemak automatik, makmal formula Excel dan tutor AI. Kod sumber terbuka (AGPL-3.0); kandungan hak terpelihara.
 
 ## Features
 
@@ -101,6 +107,25 @@ there and arrives here with the next sync.
 
 See `SECURITY.md` to report a vulnerability, and `SECURITY-REVIEW.md` for the independent reviews done before this
 repository was made public.
+
+## Bahasa Melayu
+
+Laman belajar Microsoft Office (**Excel, Word dan PowerPoint**) dalam **Bahasa Melayu dan Inggeris**, dihos sendiri. Ia menjalankan
+kelas sebenar di [academy.sasateguh.com](https://academy.sasateguh.com) (BM di `/`, Inggeris di `/en/`). Setiap subjek ada rujukan
+pantas, rujukan lengkap yang boleh dicari, latihan bersemak automatik dan tutor AI yang menjawab dalam bahasa soalan. Excel juga ada
+makmal formula: grid yang mengira formula Excel dalam pelayar.
+
+- **Dwibahasa.** Teks antara muka dalam `app/config/bahasa/{ms,en}.php`; setiap pek kandungan ada fail BM dan fail Inggeris yang
+  sama strukturnya. `php app/alat/semak-kandungan.php` gagal bila kedua-duanya berbeza atau bila teks melanggar panduan gaya.
+- **Latihan:** tulis formula, taip jawapan, pilihan berganda, atau tekan pintasan papan kekunci. Formula yang *setara* juga diterima,
+  dan jawapan tidak pernah sampai ke pelayar.
+- **Enjin formula** sendiri atas formulajs; `tests/enjin.test.js` menyemak 90 kes terhadap Excel sebenar.
+- **Tutor AI** melalui Groq dengan kolam kunci, dan **panel admin** untuk sembang, model, latihan, sejarah dan statistik tanpa IP.
+- Tiada rangka kerja dan tiada langkah bina semasa berjalan: PHP 8.2+, Tailwind dikompil sekali.
+
+Jalankan di mesin sendiri: arahan dalam [Run locally](#run-locally). Kod: AGPL-3.0. Kandungan pengajaran: hak terpelihara
+(`CONTENT-LICENSE.md`). Microsoft, Excel, Word dan PowerPoint ialah tanda dagangan Microsoft Corporation; projek ini tidak bergabung
+dengan Microsoft.
 
 ## Work with Sasa Teguh
 

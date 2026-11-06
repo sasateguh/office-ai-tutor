@@ -16,7 +16,7 @@
     --line: 229 228 225; --line-2: 212 210 206;
     --ok: 21 128 61; --ok-soft: 220 252 231; --err: 185 28 28; --err-soft: 254 226 226;
     --warn: 161 98 7; --warn-soft: 254 243 199;
-    --excel: 21 128 61; --word: 29 78 216; --powerpoint: 194 65 12;
+    --excel: 21 128 61; --word: 29 78 216; --powerpoint: 194 65 12; --ai: 15 118 110;
     --accent: 23 23 23; --accent-soft: 236 236 234; --accent-ink: 23 23 23; --atas-aksen: 255 255 255;
     /* kedalaman (REKA.md §2): bayang berlapis atas ink alfa rendah; cahaya aksen STATIK di belakang hero/kad utama */
     --bayang: var(--ink); --bayang-a1: .06; --bayang-a2: .06; --bayang-a3: .08; --bayang-a4: .12;
@@ -31,6 +31,8 @@
   [data-subjek="utama"], [data-subjek="excel"] { --accent: var(--excel); --accent-soft: 220 252 231; --accent-ink: 20 83 45; }
   [data-subjek="word"] { --accent: var(--word); --accent-soft: 219 234 254; --accent-ink: 30 58 138; }
   [data-subjek="powerpoint"] { --accent: var(--powerpoint); --accent-soft: 255 237 213; --accent-ink: 124 45 18; }
+  /* cabang AI: teal (bukan gradien ungu "AI", REKA §1 larangan) */
+  [data-subjek="ai"] { --accent: var(--ai); --accent-soft: 204 251 241; --accent-ink: 19 78 74; }
 
   /* gelap: permukaan LEBIH CERAH daripada latar (tiga aras), garis kelihatan, cahaya aksen lebih kuat */
   [data-tema="gelap"] {
@@ -39,7 +41,7 @@
     --line: 46 46 52; --line-2: 66 66 73;
     --ok: 74 222 128; --ok-soft: 20 46 30; --err: 248 113 113; --err-soft: 60 22 22;
     --warn: 250 204 21; --warn-soft: 56 44 10;
-    --excel: 74 222 128; --word: 96 165 250; --powerpoint: 251 146 60;
+    --excel: 74 222 128; --word: 96 165 250; --powerpoint: 251 146 60; --ai: 45 212 191;
     --accent: 237 237 237; --accent-soft: 38 38 42; --accent-ink: 237 237 237; --atas-aksen: 10 10 12;
     --bayang: 0 0 0; --bayang-a1: .5; --bayang-a2: .45; --bayang-a3: .6; --bayang-a4: .55;
     --glow-a: .22; --tirai: 0 0 0;
@@ -48,10 +50,12 @@
   [data-tema="gelap"][data-subjek="utama"], [data-tema="gelap"][data-subjek="excel"] { --accent: var(--excel); --accent-soft: 20 46 30; --accent-ink: 187 247 208; }
   [data-tema="gelap"][data-subjek="word"] { --accent: var(--word); --accent-soft: 23 37 66; --accent-ink: 191 219 254; }
   [data-tema="gelap"][data-subjek="powerpoint"] { --accent: var(--powerpoint); --accent-soft: 60 30 14; --accent-ink: 254 215 170; }
+  [data-tema="gelap"][data-subjek="ai"] { --accent: var(--ai); --accent-soft: 17 48 45; --accent-ink: 153 246 228; }
   /* elemen dengan data-subjek di dalam halaman (kad subjek, jubin) mewarisi aksen subjek itu dalam tema gelap juga */
   [data-tema="gelap"] [data-subjek="excel"] { --accent: var(--excel); --accent-soft: 20 46 30; --accent-ink: 187 247 208; }
   [data-tema="gelap"] [data-subjek="word"] { --accent: var(--word); --accent-soft: 23 37 66; --accent-ink: 191 219 254; }
   [data-tema="gelap"] [data-subjek="powerpoint"] { --accent: var(--powerpoint); --accent-soft: 60 30 14; --accent-ink: 254 215 170; }
+  [data-tema="gelap"] [data-subjek="ai"] { --accent: var(--ai); --accent-soft: 17 48 45; --accent-ink: 153 246 228; }
   /* --glow dikira semula pada setiap elemen bersubjek (pemboleh ubah yang merujuk var() dikira di tempat ia diisytihar) */
   [data-subjek] { --glow: rgb(var(--accent) / var(--glow-a)); }
 
@@ -149,6 +153,8 @@
   /* bilangan dalam kad (mono, tabular) */
   .lencana-angka { @apply inline-flex items-center h-6 px-2 rounded-md bg-surface-2 border border-line font-mono text-[0.75rem] text-ink-2 tabular-nums whitespace-nowrap; }
   /* cip beraksen: hover = warna sahaja (tiada gerak) */
+  /* pautan modul jejak pembelajaran (src/papar/_jejak.php): baris penuh, sasaran sentuh 44 px, label berbalut di 320 px */
+  .pautan-jejak { @apply flex items-center gap-3 min-h-11 px-2 py-2 rounded-lg hover:bg-surface-2; }
   .cip-aksen { @apply h-11 sm:h-10 px-3.5 text-[0.8125rem] font-medium text-ink hover:border-accent/50 hover:bg-accent-soft hover:text-accent-ink; }
 
   /* halaman rujukan (U3): kepala halaman bergrid aksen, sauh sisi dengan bahagian aktif, kepala bahagian melekat, jalur jadual */
@@ -164,6 +170,8 @@
   /* dua lajur bersebelahan berjalur sendiri-sendiri = papan dam (tinggi baris berbeza): md+ = garis pemisah sahaja */
   @media (min-width: 768px) { .dua-lajur .baris-jalur:nth-child(even) { background: transparent; } }
   .nota-aksen { @apply flex gap-2.5 rounded-lg px-4 py-3.5 text-sm text-ink-2 bg-accent-soft/40 border border-accent/15 border-l-[3px] border-l-accent; }
+  /* rujukan Word/PowerPoint: medan `awas` (kesilapan biasa), rupa nota-aksen dalam token amaran */
+  .nota-awas { @apply flex gap-2.5 rounded-lg px-4 py-3.5 text-sm text-ink-2 bg-warn-soft/40 border border-warn/20 border-l-[3px] border-l-warn; }
   /* butang salin: tanda semak (garis CSS, tiada SVG tambahan) menggantikan ikon selama 1.4 s */
   [data-salin] { position: relative; }
   [data-salin].disalin { @apply text-ok; }
@@ -195,6 +203,15 @@
   .pilihan[data-hasil="betul"] .pilihan-huruf { @apply bg-ok border-ok text-atas-aksen; }
   .pilihan[data-hasil="salah"] { @apply border-err bg-err-soft hover:bg-err-soft; box-shadow: inset 0 0 0 1px rgb(var(--err)); }
   .pilihan[data-hasil="salah"] .pilihan-huruf { @apply bg-err border-err text-atas-aksen; }
+  /* susun (W2): CSS biasa, bukan @apply (tw.css di bawah had pagar 80 000 bait); nombor = .pilihan-huruf; butang alih 44 px */
+  .susun { display: grid; gap: .5rem; }
+  .susun > li { display: flex; align-items: center; gap: .75rem; padding: .25rem .25rem .25rem .75rem; border: 1px solid rgb(var(--line));
+                border-radius: .75rem; background: rgb(var(--surface)); }
+  .susun > li[data-dialih] { border-color: rgb(var(--accent)); background: rgb(var(--accent-soft) / .4); }
+  .susun-btn { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: .5rem; color: rgb(var(--ink-2)); }
+  .susun-btn:disabled { opacity: .3; }
+  .susun[data-hasil=betul] > li { border-color: rgb(var(--ok)); background: rgb(var(--ok-soft)); }
+  .susun[data-hasil=salah] > li { border-color: rgb(var(--err)); background: rgb(var(--err-soft)); }
   .maklum { @apply flex gap-3.5 rounded-xl border border-l-[3px] p-4 sm:p-5; }
   .maklum-betul { @apply border-ok/30 border-l-ok bg-ok-soft; } .maklum-salah { @apply border-err/30 border-l-err bg-err-soft; }
   .maklum-neutral { @apply border-line border-l-accent bg-surface-2; }

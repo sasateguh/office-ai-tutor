@@ -5,12 +5,65 @@ declare(strict_types=1);
 /**
  * Soalan latihan: semak jawapan pelajar + sahkan soalan yang ditulis pengajar di admin (atau ditampal sebagai JSON dari AI).
  * Mod: formula | result (taip jawapan, dipadan dengan corak) · choice (pilih satu) · pintasan (kombinasi kekunci,
- * cth "Ctrl+Alt+1" — Ctrl ≡ ⌘ Mac, susunan modifier tidak penting).
+ * cth "Ctrl+Alt+1" — Ctrl ≡ ⌘ Mac, susunan modifier tidak penting) · susun (susun langkah prosedur: `langkah` disimpan
+ * dalam susunan BETUL, dipapar dikocok berketentuan ikut id; jawapan = "2,0,1" = indeks dalam senarai yang DIPAPAR).
  * Pengajar menulis JAWAPAN ("=SUM(B2:B4)"), bukan regex: corak dijana dari bentuk ternormal jawapan itu.
  */
 final class Latihan
 {
-    public const MOD = ['formula', 'result', 'choice', 'pintasan'];
+    public const MOD = ['formula', 'result', 'choice', 'pintasan', 'susun'];
+    public const SUSUN_MIN = 3;
+    public const SUSUN_MAKS = 7;
+
+    /**
+     * Pilih atur paparan soalan susun: paparan[i] = langkah[p[i]]. Berketentuan ikut id (BM dan EN sama, muat semula sama,
+     * pelayan boleh mengira semula tanpa menyimpan) dan TIDAK PERNAH sama dengan susunan betul.
+     * @return array<int,int>
+     */
+    public static function kocokSusun(string $id, int $n): array
+    {
+        $p = range(0, max(0, $n - 1));
+        $benih = crc32('susun:' . $id);
+        for ($i = $n - 1; $i > 0; $i--) {
+            $benih = ($benih * 1103515245 + 12345) & 0x7fffffff;
+            $j = ($benih >> 16) % ($i + 1);   // bit atas: bit bawah LCG berulang dengan kitaran pendek
+            [$p[$i], $p[$j]] = [$p[$j], $p[$i]];
+        }
+        if ($n > 1 && $p === range(0, $n - 1)) {
+            $p[] = array_shift($p);   // susunan betul tidak boleh menjadi susunan mula
+        }
+        return $p;
+    }
+
+    /** Jawapan susun → senarai indeks paparan, atau null bila bukan pilih atur 0..n-1 yang lengkap (input rosak). */
+    public static function bacaSusun(array $q, string $jawapan): ?array
+    {
+        $n = count($q['langkah'] ?? []);
+        if ($n < 1 || !preg_match('/^\d{1,2}(,\d{1,2})*$/', trim($jawapan))) {
+            return null;
+        }
+        $a = array_map('intval', explode(',', trim($jawapan)));
+        $isih = $a;
+        sort($isih);
+        return $isih === range(0, $n - 1) ? $a : null;
+    }
+
+    /** Jawapan susun yang betul (untuk gerbang kandungan + ujian; tidak pernah dihantar ke pelayar). */
+    public static function jawapanSusun(array $q): string
+    {
+        return implode(',', self::songsang(self::kocokSusun((string) $q['id'], count($q['langkah'] ?? []))));
+    }
+
+    /** @param array<int,int> $p @return array<int,int> songsang: s[k] = kedudukan paparan bagi langkah betul ke-k */
+    private static function songsang(array $p): array
+    {
+        $s = [];
+        foreach ($p as $i => $k) {
+            $s[$k] = $i;
+        }
+        ksort($s);
+        return array_values($s);
+    }
 
     /**
      * Ruang di luar petikan dibuang, huruf kecil. Juga di luar petikan: `;` → `,` (Excel tetapan Eropah), dan — bila
@@ -81,6 +134,11 @@ final class Latihan
         if ($q['mode'] === 'choice') {
             return $pilihan === (int) $q['correct_index'];
         }
+        if ($q['mode'] === 'susun') {
+            $a = self::bacaSusun($q, $jawapan);
+            $p = self::kocokSusun((string) $q['id'], count($q['langkah'] ?? []));
+            return $a !== null && array_map(fn($i) => $p[$i], $a) === range(0, count($p) - 1);
+        }
         if ($q['mode'] === 'pintasan') {
             $j = self::normalPintasan($jawapan);
             return $j !== '' && in_array($j, array_map([self::class, 'normalPintasan'], $q['jawapan'] ?? []), true);
@@ -109,6 +167,12 @@ final class Latihan
             && !array_filter($q['accept'] ?? [], fn($p) => str_contains($p, '\\$'));
     }
 
+    /** Jawapan contoh soalan susun (teks biasa, untuk admin + tutor): "Langkah 1 → Langkah 2 → …". */
+    public static function kanonSusun(array $langkah): string
+    {
+        return implode(' → ', array_map(fn($l) => trim(html_entity_decode(strip_tags((string) $l), ENT_QUOTES, 'UTF-8')), $langkah));
+    }
+
     /** Corak untuk satu jawapan tepat yang ditulis pengajar. */
     public static function corak(string $jawapan): string
     {
@@ -121,7 +185,10 @@ final class Latihan
         return [
             'id' => $q['id'], 'category' => $q['category'], 'icon' => $q['icon'] ?? '📝', 'level' => $q['level'],
             'prompt' => self::html((string) $q['prompt']), 'mode' => $q['mode'], 'grid' => $q['grid'] ?? null, 'highlight' => $q['highlight'] ?? null,
-            'options' => isset($q['options']) ? array_map(fn($o) => self::html((string) $o), $q['options']) : null, 'hint' => self::html((string) ($q['hint'] ?? '')),
+            'options' => isset($q['options']) ? array_map(fn($o) => self::html((string) $o), $q['options']) : null,
+            // susun: langkah dalam susunan PAPARAN (dikocok) sahaja — susunan betul tidak dihantar
+            'langkah' => isset($q['langkah']) ? array_map(fn($i) => self::html((string) $q['langkah'][$i]), self::kocokSusun((string) $q['id'], count($q['langkah']))) : null,
+            'hint' => self::html((string) ($q['hint'] ?? '')),
             'setara' => self::bolehSetara($q),
             // salah satu jawapan diterima TANPA fungsi (cth =B2+B3+B4) → susunan lain tanpa fungsi juga setara
             'setara_bebas' => (bool) array_filter($q['accept'] ?? [], fn($p) => !str_contains($p, '\\(')),
@@ -131,14 +198,14 @@ final class Latihan
     /**
      * Soalan dari borang admin atau JSON AI → bentuk tersimpan. Medan (nama BM, lihat Panduan AI di admin):
      * soalan, mod, kategori, ikon, tahap 1-3, grid (baris; sel dipisah |), sel (cth B5), jawapan (senarai), corak (lanjutan),
-     * pilihan (senarai), betul (nombor pilihan bermula 1), petunjuk, penerangan.
+     * pilihan (senarai), betul (nombor pilihan bermula 1), langkah (senarai dalam susunan BETUL, 3–7), petunjuk, penerangan.
      * @param array<string,mixed> $in
      * @param array<int,string> $idWujud
      */
     public static function sahkan(array $in, array $idWujud, ?string $id = null): array
     {
-        foreach (['soalan', 'kategori', 'ikon', 'grid', 'sel', 'petunjuk', 'penerangan', 'jawapan', 'corak', 'pilihan', 'mod'] as $k) {
-            if (isset($in[$k]) && !is_scalar($in[$k]) && !(is_array($in[$k]) && in_array($k, ['grid', 'jawapan', 'corak', 'pilihan'], true))) {
+        foreach (['soalan', 'kategori', 'ikon', 'grid', 'sel', 'petunjuk', 'penerangan', 'jawapan', 'corak', 'pilihan', 'langkah', 'mod'] as $k) {
+            if (isset($in[$k]) && !is_scalar($in[$k]) && !(is_array($in[$k]) && in_array($k, ['grid', 'jawapan', 'corak', 'pilihan', 'langkah'], true))) {
                 throw new InvalidArgumentException("Medan \"$k\" mesti teks.");
             }
         }
@@ -187,6 +254,16 @@ final class Latihan
             $q['options'] = $pilihan;
             $q['correct_index'] = $betul - 1;
             $q['canonical'] = $pilihan[$betul - 1];
+        } elseif ($q['mode'] === 'susun') {
+            $langkah = array_map(fn($l) => mb_substr($l, 0, 200), $senarai('langkah'));   // teks mentah, seperti pilihan
+            if (count($langkah) < self::SUSUN_MIN || count($langkah) > self::SUSUN_MAKS) {
+                throw new InvalidArgumentException('Soalan susun perlu ' . self::SUSUN_MIN . ' hingga ' . self::SUSUN_MAKS . ' langkah (satu baris satu, dalam susunan betul).');
+            }
+            if (count(array_unique(array_map('mb_strtolower', $langkah))) !== count($langkah)) {
+                throw new InvalidArgumentException('Setiap langkah mesti berbeza (langkah yang sama menjadikan dua susunan betul).');
+            }
+            $q['langkah'] = $langkah;
+            $q['canonical'] = self::kanonSusun($langkah);
         } elseif ($q['mode'] === 'pintasan') {
             $jawapan = array_map(fn($j) => mb_substr($j, 0, 40), $senarai('jawapan'));
             if (!$jawapan || in_array('', array_map([self::class, 'normalPintasan'], $jawapan), true)) {
@@ -223,10 +300,10 @@ final class Latihan
             'soalan' => html_entity_decode($q['prompt'], ENT_QUOTES, 'UTF-8'), 'mod' => $q['mode'], 'kategori' => $q['category'], 'ikon' => $q['icon'] ?? '📝',
             'tahap' => $q['level'], 'sel' => $q['highlight'] ?? '',
             'grid' => implode("\n", array_map(fn($r) => implode(' | ', array_map('strval', $r)), $q['grid'] ?? [])),
-            'jawapan' => implode("\n", $jawapan ?: ($q['mode'] === 'choice' ? [] : [$q['canonical'] ?? ''])),
+            'jawapan' => implode("\n", $jawapan ?: (in_array($q['mode'], ['choice', 'susun'], true) ? [] : [$q['canonical'] ?? ''])),
             // pintasan: jawapan tidak dijana menjadi corak
             'corak' => implode("\n", array_values(array_diff($q['accept'] ?? [], $dijana))),
-            'pilihan' => implode("\n", $q['options'] ?? []), 'betul' => isset($q['correct_index']) ? $q['correct_index'] + 1 : '',
+            'pilihan' => implode("\n", $q['options'] ?? []), 'langkah' => implode("\n", $q['langkah'] ?? []), 'betul' => isset($q['correct_index']) ? $q['correct_index'] + 1 : '',
             'petunjuk' => html_entity_decode($q['hint'] ?? '', ENT_QUOTES, 'UTF-8'),
             'penerangan' => html_entity_decode($q['explanation'] ?? '', ENT_QUOTES, 'UTF-8'),
         ];

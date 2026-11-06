@@ -14,6 +14,33 @@ final class Laluan
     /** halaman → templat src/papar */
     public const TEMPLAT = ['' => 'subjek', 'cheatsheet' => 'cheatsheet', 'formulas' => 'formula', 'reference' => 'rujukan',
         'practice' => 'latihan', 'playground' => 'playground', 'tutor' => 'tutor'];
+    /** Halaman: huruf kecil, nombor, sengkang (slug panduan). Hanya halaman yang DIDAFTAR dalam subjek.php dilayan. */
+    private const HALAMAN = '[a-z][a-z0-9-]{1,39}';
+
+    /**
+     * Templat src/papar untuk satu halaman subjek. Slug dalam pek 'panduan' subjek = 'panduan'; gambaran ('') subjek
+     * tanpa latihan (cabang selain Office) = 'cabang' (senarai panduan); selebihnya ikut TEMPLAT. null = tiada templat
+     * (halaman berdaftar tetapi panduannya tiada dalam pek) → 404.
+     */
+    public static function templat(string $subjek, string $halaman): ?string
+    {
+        $office = (Subjek::semua()[$subjek]['cabang'] ?? 'office') === 'office';
+        if ($halaman === '') {
+            return $office ? self::TEMPLAT[''] : 'cabang';
+        }
+        if (!$office) {
+            return array_key_exists($halaman, self::panduan($subjek)) ? 'panduan' : null;
+        }
+        return self::TEMPLAT[$halaman] ?? null;
+    }
+
+    /** @return array<string,array> panduan subjek (bahasa semasa), [] bila tiada */
+    public static function panduan(string $subjek): array
+    {
+        require_once __DIR__ . '/Kandungan.php';
+        $p = Kandungan::baca($subjek, 'panduan', Bahasa::kod());
+        return is_array($p) ? array_map(fn($g) => is_array($g) ? Kandungan::rujukBab($g) : $g, $p) : [];
+    }
 
     public static function utama(?string $bahasa = null): string
     {
@@ -68,7 +95,7 @@ final class Laluan
         if ($laluan === '/') {
             return ['bahasa' => $bahasa, 'subjek' => null, 'halaman' => ''];
         }
-        if (!preg_match('~^/([a-z]{2,20})(/([a-z]{2,20})?)?/?$~', $laluan, $m)) {
+        if (!preg_match('~^/([a-z]{2,20})(/(' . self::HALAMAN . ')?)?/?$~', $laluan, $m)) {
             return null;
         }
         $subjek = $m[1];

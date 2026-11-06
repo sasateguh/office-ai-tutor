@@ -1,0 +1,736 @@
+﻿Tarikh,No. Invois,Wilayah,Cawangan,Produk,Kategori,Unit,Harga Seunit (RM),Jualan (RM)
+2026-01-01,INV-0001,Timur,Kuantan,Teh,Minuman,8,6.00,48.00
+2026-01-01,INV-0002,Utara,George Town,Coklat,Minuman,40,9.00,360.00
+2026-01-01,INV-0003,Tengah,Shah Alam,Teh,Minuman,28,6.00,168.00
+2026-01-02,INV-0004,Selatan,Johor Bahru,Biskut,Makanan,6,7.50,45.00
+2026-01-02,INV-0005,Utara,Alor Setar,Coklat,Minuman,56,9.00,504.00
+2026-01-02,INV-0006,Tengah,Shah Alam,Roti,Makanan,35,4.50,157.50
+2026-01-03,INV-0007,Tengah,Shah Alam,Kopi,Minuman,33,8.50,280.50
+2026-01-03,INV-0008,Timur,Kuantan,Roti,Makanan,21,4.50,94.50
+2026-01-03,INV-0009,Timur,Kuantan,Roti,Makanan,11,4.50,49.50
+2026-01-03,INV-0010,Tengah,Shah Alam,Kopi,Minuman,15,8.50,127.50
+2026-01-03,INV-0011,Timur,Kota Bharu,Biskut,Makanan,41,7.50,307.50
+2026-01-04,INV-0012,Tengah,Shah Alam,Biskut,Makanan,13,7.50,97.50
+2026-01-04,INV-0013,Utara,Alor Setar,Kopi,Minuman,45,8.50,382.50
+2026-01-04,INV-0014,Timur,Kota Bharu,Kek,Makanan,5,12.00,60.00
+2026-01-04,INV-0015,Timur,Kuantan,Kek,Makanan,35,12.00,420.00
+2026-01-05,INV-0016,Tengah,Shah Alam,Teh,Minuman,24,6.00,144.00
+2026-01-05,INV-0017,Utara,Alor Setar,Kopi,Minuman,29,8.50,246.50
+2026-01-05,INV-0018,Tengah,Shah Alam,Kopi,Minuman,17,8.50,144.50
+2026-01-06,INV-0019,Selatan,Johor Bahru,Roti,Makanan,40,4.50,180.00
+2026-01-06,INV-0020,Timur,Kota Bharu,Coklat,Minuman,37,9.00,333.00
+2026-01-06,INV-0021,Selatan,Melaka,Kopi,Minuman,40,8.50,340.00
+2026-01-07,INV-0022,Timur,Kota Bharu,Coklat,Minuman,28,9.00,252.00
+2026-01-07,INV-0023,Utara,Alor Setar,Coklat,Minuman,50,9.00,450.00
+2026-01-07,INV-0024,Tengah,Shah Alam,Kopi,Minuman,41,8.50,348.50
+2026-01-07,INV-0025,Tengah,Shah Alam,Teh,Minuman,35,6.00,210.00
+2026-01-07,INV-0026,Tengah,Shah Alam,Teh,Minuman,37,6.00,222.00
+2026-01-08,INV-0027,Selatan,Johor Bahru,Kek,Makanan,9,12.00,108.00
+2026-01-08,INV-0028,Utara,George Town,Kek,Makanan,55,12.00,660.00
+2026-01-08,INV-0029,Selatan,Melaka,Kek,Makanan,47,12.00,564.00
+2026-01-09,INV-0030,Utara,George Town,Kek,Makanan,24,12.00,288.00
+2026-01-09,INV-0031,Utara,Alor Setar,Kek,Makanan,23,12.00,276.00
+2026-01-09,INV-0032,Selatan,Johor Bahru,Teh,Minuman,35,6.00,210.00
+2026-01-09,INV-0033,Tengah,Shah Alam,Kopi,Minuman,16,8.50,136.00
+2026-01-09,INV-0034,Timur,Kuantan,Roti,Makanan,40,4.50,180.00
+2026-01-10,INV-0035,Tengah,Kuala Lumpur,Kopi,Minuman,42,8.50,357.00
+2026-01-10,INV-0036,Selatan,Johor Bahru,Biskut,Makanan,50,7.50,375.00
+2026-01-10,INV-0037,Tengah,Shah Alam,Roti,Makanan,57,4.50,256.50
+2026-01-11,INV-0038,Tengah,Kuala Lumpur,Roti,Makanan,58,4.50,261.00
+2026-01-11,INV-0039,Selatan,Johor Bahru,Kopi,Minuman,20,8.50,170.00
+2026-01-11,INV-0040,Tengah,Kuala Lumpur,Roti,Makanan,57,4.50,256.50
+2026-01-11,INV-0041,Utara,George Town,Teh,Minuman,57,6.00,342.00
+2026-01-11,INV-0042,Tengah,Kuala Lumpur,Teh,Minuman,10,6.00,60.00
+2026-01-12,INV-0043,Tengah,Kuala Lumpur,Kopi,Minuman,28,8.50,238.00
+2026-01-12,INV-0044,Tengah,Kuala Lumpur,Biskut,Makanan,33,7.50,247.50
+2026-01-12,INV-0045,Timur,Kota Bharu,Teh,Minuman,27,6.00,162.00
+2026-01-12,INV-0046,Tengah,Kuala Lumpur,Kek,Makanan,37,12.00,444.00
+2026-01-13,INV-0047,Selatan,Melaka,Roti,Makanan,55,4.50,247.50
+2026-01-13,INV-0048,Utara,Alor Setar,Roti,Makanan,27,4.50,121.50
+2026-01-13,INV-0049,Utara,George Town,Kek,Makanan,11,12.00,132.00
+2026-01-13,INV-0050,Timur,Kota Bharu,Biskut,Makanan,25,7.50,187.50
+2026-01-14,INV-0051,Selatan,Johor Bahru,Biskut,Makanan,11,7.50,82.50
+2026-01-14,INV-0052,Timur,Kota Bharu,Kopi,Minuman,11,8.50,93.50
+2026-01-14,INV-0053,Utara,Alor Setar,Kopi,Minuman,29,8.50,246.50
+2026-01-14,INV-0054,Selatan,Johor Bahru,Teh,Minuman,17,6.00,102.00
+2026-01-14,INV-0055,Selatan,Johor Bahru,Kopi,Minuman,59,8.50,501.50
+2026-01-15,INV-0056,Timur,Kota Bharu,Kopi,Minuman,30,8.50,255.00
+2026-01-15,INV-0057,Timur,Kuantan,Kopi,Minuman,51,8.50,433.50
+2026-01-15,INV-0058,Tengah,Kuala Lumpur,Biskut,Makanan,52,7.50,390.00
+2026-01-15,INV-0059,Utara,Alor Setar,Kopi,Minuman,11,8.50,93.50
+2026-01-16,INV-0060,Selatan,Johor Bahru,Coklat,Minuman,33,9.00,297.00
+2026-01-16,INV-0061,Utara,Alor Setar,Kek,Makanan,53,12.00,636.00
+2026-01-16,INV-0062,Selatan,Johor Bahru,Roti,Makanan,48,4.50,216.00
+2026-01-16,INV-0063,Tengah,Kuala Lumpur,Teh,Minuman,54,6.00,324.00
+2026-01-16,INV-0064,Utara,George Town,Roti,Makanan,49,4.50,220.50
+2026-01-17,INV-0065,Utara,Alor Setar,Coklat,Minuman,20,9.00,180.00
+2026-01-17,INV-0066,Tengah,Kuala Lumpur,Biskut,Makanan,40,7.50,300.00
+2026-01-17,INV-0067,Selatan,Johor Bahru,Biskut,Makanan,8,7.50,60.00
+2026-01-17,INV-0068,Utara,Alor Setar,Coklat,Minuman,53,9.00,477.00
+2026-01-18,INV-0069,Selatan,Johor Bahru,Kek,Makanan,10,12.00,120.00
+2026-01-18,INV-0070,Selatan,Melaka,Kopi,Minuman,27,8.50,229.50
+2026-01-18,INV-0071,Tengah,Shah Alam,Kek,Makanan,55,12.00,660.00
+2026-01-18,INV-0072,Timur,Kuantan,Kopi,Minuman,44,8.50,374.00
+2026-01-19,INV-0073,Utara,George Town,Kek,Makanan,37,12.00,444.00
+2026-01-19,INV-0074,Selatan,Melaka,Biskut,Makanan,22,7.50,165.00
+2026-01-19,INV-0075,Utara,George Town,Coklat,Minuman,14,9.00,126.00
+2026-01-19,INV-0076,Utara,George Town,Coklat,Minuman,10,9.00,90.00
+2026-01-19,INV-0077,Timur,Kuantan,Coklat,Minuman,53,9.00,477.00
+2026-01-20,INV-0078,Timur,Kuantan,Roti,Makanan,50,4.50,225.00
+2026-01-20,INV-0079,Utara,Alor Setar,Teh,Minuman,45,6.00,270.00
+2026-01-20,INV-0080,Selatan,Melaka,Kopi,Minuman,53,8.50,450.50
+2026-01-21,INV-0081,Timur,Kota Bharu,Kek,Makanan,7,12.00,84.00
+2026-01-21,INV-0082,Selatan,Johor Bahru,Coklat,Minuman,50,9.00,450.00
+2026-01-21,INV-0083,Timur,Kota Bharu,Kek,Makanan,35,12.00,420.00
+2026-01-21,INV-0084,Utara,George Town,Teh,Minuman,25,6.00,150.00
+2026-01-22,INV-0085,Timur,Kuantan,Roti,Makanan,59,4.50,265.50
+2026-01-22,INV-0086,Selatan,Johor Bahru,Teh,Minuman,30,6.00,180.00
+2026-01-22,INV-0087,Timur,Kota Bharu,Kek,Makanan,30,12.00,360.00
+2026-01-23,INV-0088,Selatan,Johor Bahru,Biskut,Makanan,11,7.50,82.50
+2026-01-23,INV-0089,Tengah,Shah Alam,Roti,Makanan,25,4.50,112.50
+2026-01-23,INV-0090,Tengah,Kuala Lumpur,Biskut,Makanan,12,7.50,90.00
+2026-01-24,INV-0091,Timur,Kuantan,Roti,Makanan,22,4.50,99.00
+2026-01-24,INV-0092,Utara,George Town,Teh,Minuman,49,6.00,294.00
+2026-01-24,INV-0093,Tengah,Shah Alam,Biskut,Makanan,44,7.50,330.00
+2026-01-24,INV-0094,Selatan,Melaka,Biskut,Makanan,47,7.50,352.50
+2026-01-24,INV-0095,Timur,Kuantan,Kek,Makanan,49,12.00,588.00
+2026-01-25,INV-0096,Utara,George Town,Teh,Minuman,43,6.00,258.00
+2026-01-25,INV-0097,Utara,George Town,Biskut,Makanan,6,7.50,45.00
+2026-01-25,INV-0098,Selatan,Melaka,Kek,Makanan,33,12.00,396.00
+2026-01-25,INV-0099,Tengah,Kuala Lumpur,Roti,Makanan,34,4.50,153.00
+2026-01-26,INV-0100,Selatan,Melaka,Coklat,Minuman,33,9.00,297.00
+2026-01-26,INV-0101,Utara,Alor Setar,Teh,Minuman,13,6.00,78.00
+2026-01-26,INV-0102,Tengah,Shah Alam,Biskut,Makanan,7,7.50,52.50
+2026-01-26,INV-0103,Timur,Kuantan,Biskut,Makanan,42,7.50,315.00
+2026-01-27,INV-0104,Selatan,Johor Bahru,Biskut,Makanan,59,7.50,442.50
+2026-01-27,INV-0105,Timur,Kuantan,Roti,Makanan,45,4.50,202.50
+2026-01-27,INV-0106,Selatan,Melaka,Biskut,Makanan,34,7.50,255.00
+2026-01-27,INV-0107,Timur,Kuantan,Roti,Makanan,44,4.50,198.00
+2026-01-27,INV-0108,Tengah,Kuala Lumpur,Teh,Minuman,32,6.00,192.00
+2026-01-28,INV-0109,Selatan,Johor Bahru,Roti,Makanan,41,4.50,184.50
+2026-01-28,INV-0110,Tengah,Shah Alam,Teh,Minuman,12,6.00,72.00
+2026-01-28,INV-0111,Selatan,Melaka,Coklat,Minuman,52,9.00,468.00
+2026-01-28,INV-0112,Selatan,Johor Bahru,Teh,Minuman,45,6.00,270.00
+2026-01-28,INV-0113,Timur,Kota Bharu,Kek,Makanan,25,12.00,300.00
+2026-01-29,INV-0114,Tengah,Shah Alam,Teh,Minuman,35,6.00,210.00
+2026-01-29,INV-0115,Timur,Kota Bharu,Kopi,Minuman,23,8.50,195.50
+2026-01-29,INV-0116,Timur,Kuantan,Coklat,Minuman,58,9.00,522.00
+2026-01-29,INV-0117,Selatan,Johor Bahru,Teh,Minuman,49,6.00,294.00
+2026-01-29,INV-0118,Timur,Kuantan,Teh,Minuman,22,6.00,132.00
+2026-01-30,INV-0119,Tengah,Shah Alam,Coklat,Minuman,58,9.00,522.00
+2026-01-30,INV-0120,Timur,Kuantan,Kek,Makanan,46,12.00,552.00
+2026-01-30,INV-0121,Tengah,Shah Alam,Coklat,Minuman,27,9.00,243.00
+2026-01-30,INV-0122,Timur,Kuantan,Roti,Makanan,34,4.50,153.00
+2026-01-30,INV-0123,Utara,Alor Setar,Roti,Makanan,7,4.50,31.50
+2026-01-31,INV-0124,Utara,Alor Setar,Coklat,Minuman,60,9.00,540.00
+2026-01-31,INV-0125,Utara,George Town,Biskut,Makanan,10,7.50,75.00
+2026-01-31,INV-0126,Utara,Alor Setar,Kopi,Minuman,41,8.50,348.50
+2026-01-31,INV-0127,Timur,Kota Bharu,Biskut,Makanan,55,7.50,412.50
+2026-02-01,INV-0128,Timur,Kuantan,Teh,Minuman,48,6.00,288.00
+2026-02-01,INV-0129,Utara,Alor Setar,Kek,Makanan,50,12.00,600.00
+2026-02-01,INV-0130,Utara,Alor Setar,Biskut,Makanan,25,7.50,187.50
+2026-02-02,INV-0131,Tengah,Kuala Lumpur,Roti,Makanan,16,4.50,72.00
+2026-02-02,INV-0132,Utara,George Town,Biskut,Makanan,22,7.50,165.00
+2026-02-02,INV-0133,Timur,Kota Bharu,Coklat,Minuman,38,9.00,342.00
+2026-02-02,INV-0134,Selatan,Melaka,Roti,Makanan,36,4.50,162.00
+2026-02-02,INV-0135,Selatan,Melaka,Coklat,Minuman,44,9.00,396.00
+2026-02-03,INV-0136,Selatan,Melaka,Biskut,Makanan,48,7.50,360.00
+2026-02-03,INV-0137,Tengah,Shah Alam,Coklat,Minuman,45,9.00,405.00
+2026-02-03,INV-0138,Tengah,Shah Alam,Biskut,Makanan,40,7.50,300.00
+2026-02-03,INV-0139,Selatan,Melaka,Biskut,Makanan,10,7.50,75.00
+2026-02-04,INV-0140,Utara,George Town,Roti,Makanan,6,4.50,27.00
+2026-02-04,INV-0141,Timur,Kota Bharu,Kek,Makanan,21,12.00,252.00
+2026-02-04,INV-0142,Tengah,Shah Alam,Kopi,Minuman,15,8.50,127.50
+2026-02-05,INV-0143,Timur,Kuantan,Roti,Makanan,52,4.50,234.00
+2026-02-05,INV-0144,Tengah,Shah Alam,Teh,Minuman,57,6.00,342.00
+2026-02-05,INV-0145,Tengah,Shah Alam,Coklat,Minuman,25,9.00,225.00
+2026-02-05,INV-0146,Timur,Kota Bharu,Kek,Makanan,37,12.00,444.00
+2026-02-05,INV-0147,Utara,George Town,Roti,Makanan,14,4.50,63.00
+2026-02-06,INV-0148,Selatan,Melaka,Teh,Minuman,35,6.00,210.00
+2026-02-06,INV-0149,Utara,Alor Setar,Teh,Minuman,32,6.00,192.00
+2026-02-06,INV-0150,Timur,Kuantan,Teh,Minuman,8,6.00,48.00
+2026-02-06,INV-0151,Selatan,Melaka,Biskut,Makanan,57,7.50,427.50
+2026-02-07,INV-0152,Timur,Kuantan,Roti,Makanan,50,4.50,225.00
+2026-02-07,INV-0153,Tengah,Kuala Lumpur,Coklat,Minuman,39,9.00,351.00
+2026-02-07,INV-0154,Timur,Kuantan,Roti,Makanan,19,4.50,85.50
+2026-02-07,INV-0155,Selatan,Johor Bahru,Roti,Makanan,11,4.50,49.50
+2026-02-07,INV-0156,Selatan,Melaka,Teh,Minuman,10,6.00,60.00
+2026-02-08,INV-0157,Selatan,Melaka,Kopi,Minuman,31,8.50,263.50
+2026-02-08,INV-0158,Utara,George Town,Coklat,Minuman,6,9.00,54.00
+2026-02-08,INV-0159,Utara,Alor Setar,Teh,Minuman,10,6.00,60.00
+2026-02-08,INV-0160,Selatan,Melaka,Kopi,Minuman,10,8.50,85.00
+2026-02-08,INV-0161,Timur,Kota Bharu,Roti,Makanan,6,4.50,27.00
+2026-02-09,INV-0162,Tengah,Kuala Lumpur,Roti,Makanan,16,4.50,72.00
+2026-02-09,INV-0163,Selatan,Johor Bahru,Coklat,Minuman,26,9.00,234.00
+2026-02-09,INV-0164,Timur,Kota Bharu,Biskut,Makanan,5,7.50,37.50
+2026-02-09,INV-0165,Timur,Kota Bharu,Teh,Minuman,29,6.00,174.00
+2026-02-09,INV-0166,Timur,Kuantan,Coklat,Minuman,46,9.00,414.00
+2026-02-10,INV-0167,Utara,Alor Setar,Roti,Makanan,21,4.50,94.50
+2026-02-10,INV-0168,Timur,Kota Bharu,Kek,Makanan,41,12.00,492.00
+2026-02-10,INV-0169,Utara,George Town,Teh,Minuman,59,6.00,354.00
+2026-02-10,INV-0170,Utara,Alor Setar,Biskut,Makanan,12,7.50,90.00
+2026-02-10,INV-0171,Selatan,Johor Bahru,Kopi,Minuman,59,8.50,501.50
+2026-02-11,INV-0172,Utara,George Town,Coklat,Minuman,39,9.00,351.00
+2026-02-11,INV-0173,Utara,Alor Setar,Kopi,Minuman,37,8.50,314.50
+2026-02-11,INV-0174,Timur,Kota Bharu,Roti,Makanan,14,4.50,63.00
+2026-02-11,INV-0175,Tengah,Shah Alam,Kek,Makanan,39,12.00,468.00
+2026-02-12,INV-0176,Timur,Kota Bharu,Kek,Makanan,19,12.00,228.00
+2026-02-12,INV-0177,Timur,Kuantan,Coklat,Minuman,52,9.00,468.00
+2026-02-12,INV-0178,Tengah,Shah Alam,Teh,Minuman,5,6.00,30.00
+2026-02-12,INV-0179,Selatan,Johor Bahru,Teh,Minuman,45,6.00,270.00
+2026-02-12,INV-0180,Tengah,Shah Alam,Biskut,Makanan,30,7.50,225.00
+2026-02-13,INV-0181,Utara,George Town,Kek,Makanan,51,12.00,612.00
+2026-02-13,INV-0182,Timur,Kota Bharu,Roti,Makanan,29,4.50,130.50
+2026-02-13,INV-0183,Timur,Kuantan,Biskut,Makanan,56,7.50,420.00
+2026-02-14,INV-0184,Timur,Kota Bharu,Biskut,Makanan,55,7.50,412.50
+2026-02-14,INV-0185,Tengah,Shah Alam,Kek,Makanan,59,12.00,708.00
+2026-02-14,INV-0186,Timur,Kuantan,Biskut,Makanan,55,7.50,412.50
+2026-02-14,INV-0187,Tengah,Kuala Lumpur,Biskut,Makanan,27,7.50,202.50
+2026-02-14,INV-0188,Tengah,Kuala Lumpur,Teh,Minuman,48,6.00,288.00
+2026-02-15,INV-0189,Tengah,Shah Alam,Coklat,Minuman,7,9.00,63.00
+2026-02-15,INV-0190,Tengah,Kuala Lumpur,Kopi,Minuman,6,8.50,51.00
+2026-02-15,INV-0191,Utara,Alor Setar,Roti,Makanan,47,4.50,211.50
+2026-02-15,INV-0192,Tengah,Shah Alam,Kopi,Minuman,20,8.50,170.00
+2026-02-15,INV-0193,Tengah,Shah Alam,Roti,Makanan,35,4.50,157.50
+2026-02-16,INV-0194,Timur,Kota Bharu,Kopi,Minuman,60,8.50,510.00
+2026-02-16,INV-0195,Timur,Kota Bharu,Biskut,Makanan,54,7.50,405.00
+2026-02-16,INV-0196,Timur,Kuantan,Biskut,Makanan,59,7.50,442.50
+2026-02-16,INV-0197,Utara,George Town,Biskut,Makanan,49,7.50,367.50
+2026-02-16,INV-0198,Selatan,Johor Bahru,Roti,Makanan,27,4.50,121.50
+2026-02-17,INV-0199,Timur,Kuantan,Biskut,Makanan,20,7.50,150.00
+2026-02-17,INV-0200,Timur,Kuantan,Kek,Makanan,42,12.00,504.00
+2026-02-17,INV-0201,Timur,Kota Bharu,Roti,Makanan,51,4.50,229.50
+2026-02-17,INV-0202,Selatan,Johor Bahru,Teh,Minuman,43,6.00,258.00
+2026-02-18,INV-0203,Timur,Kuantan,Teh,Minuman,38,6.00,228.00
+2026-02-18,INV-0204,Utara,Alor Setar,Kopi,Minuman,9,8.50,76.50
+2026-02-18,INV-0205,Selatan,Johor Bahru,Teh,Minuman,18,6.00,108.00
+2026-02-19,INV-0206,Tengah,Kuala Lumpur,Kopi,Minuman,12,8.50,102.00
+2026-02-19,INV-0207,Utara,Alor Setar,Biskut,Makanan,13,7.50,97.50
+2026-02-19,INV-0208,Utara,Alor Setar,Teh,Minuman,40,6.00,240.00
+2026-02-20,INV-0209,Tengah,Shah Alam,Kek,Makanan,6,12.00,72.00
+2026-02-20,INV-0210,Utara,Alor Setar,Biskut,Makanan,35,7.50,262.50
+2026-02-20,INV-0211,Utara,Alor Setar,Kopi,Minuman,45,8.50,382.50
+2026-02-20,INV-0212,Selatan,Johor Bahru,Kek,Makanan,22,12.00,264.00
+2026-02-20,INV-0213,Timur,Kuantan,Kopi,Minuman,31,8.50,263.50
+2026-02-21,INV-0214,Utara,Alor Setar,Teh,Minuman,41,6.00,246.00
+2026-02-21,INV-0215,Selatan,Melaka,Coklat,Minuman,17,9.00,153.00
+2026-02-21,INV-0216,Utara,Alor Setar,Kopi,Minuman,42,8.50,357.00
+2026-02-21,INV-0217,Utara,George Town,Coklat,Minuman,11,9.00,99.00
+2026-02-21,INV-0218,Utara,Alor Setar,Kopi,Minuman,49,8.50,416.50
+2026-02-22,INV-0219,Timur,Kuantan,Kopi,Minuman,9,8.50,76.50
+2026-02-22,INV-0220,Selatan,Johor Bahru,Kopi,Minuman,18,8.50,153.00
+2026-02-22,INV-0221,Tengah,Shah Alam,Kek,Makanan,10,12.00,120.00
+2026-02-22,INV-0222,Selatan,Melaka,Teh,Minuman,60,6.00,360.00
+2026-02-22,INV-0223,Timur,Kuantan,Coklat,Minuman,47,9.00,423.00
+2026-02-23,INV-0224,Utara,George Town,Kopi,Minuman,44,8.50,374.00
+2026-02-23,INV-0225,Tengah,Shah Alam,Coklat,Minuman,16,9.00,144.00
+2026-02-23,INV-0226,Tengah,Shah Alam,Coklat,Minuman,39,9.00,351.00
+2026-02-23,INV-0227,Selatan,Johor Bahru,Coklat,Minuman,25,9.00,225.00
+2026-02-23,INV-0228,Utara,Alor Setar,Biskut,Makanan,50,7.50,375.00
+2026-02-24,INV-0229,Utara,Alor Setar,Roti,Makanan,19,4.50,85.50
+2026-02-24,INV-0230,Tengah,Kuala Lumpur,Coklat,Minuman,17,9.00,153.00
+2026-02-24,INV-0231,Utara,George Town,Kek,Makanan,8,12.00,96.00
+2026-02-24,INV-0232,Tengah,Kuala Lumpur,Kek,Makanan,10,12.00,120.00
+2026-02-24,INV-0233,Tengah,Shah Alam,Biskut,Makanan,32,7.50,240.00
+2026-02-25,INV-0234,Selatan,Melaka,Biskut,Makanan,7,7.50,52.50
+2026-02-25,INV-0235,Timur,Kota Bharu,Coklat,Minuman,47,9.00,423.00
+2026-02-25,INV-0236,Selatan,Johor Bahru,Kopi,Minuman,53,8.50,450.50
+2026-02-25,INV-0237,Selatan,Melaka,Roti,Makanan,55,4.50,247.50
+2026-02-25,INV-0238,Timur,Kota Bharu,Kopi,Minuman,50,8.50,425.00
+2026-02-26,INV-0239,Selatan,Johor Bahru,Kopi,Minuman,38,8.50,323.00
+2026-02-26,INV-0240,Timur,Kuantan,Coklat,Minuman,49,9.00,441.00
+2026-02-26,INV-0241,Timur,Kuantan,Biskut,Makanan,22,7.50,165.00
+2026-02-26,INV-0242,Timur,Kuantan,Coklat,Minuman,24,9.00,216.00
+2026-02-26,INV-0243,Tengah,Shah Alam,Kopi,Minuman,41,8.50,348.50
+2026-02-27,INV-0244,Tengah,Shah Alam,Kopi,Minuman,9,8.50,76.50
+2026-02-27,INV-0245,Utara,George Town,Teh,Minuman,6,6.00,36.00
+2026-02-27,INV-0246,Timur,Kuantan,Biskut,Makanan,26,7.50,195.00
+2026-02-28,INV-0247,Tengah,Shah Alam,Kopi,Minuman,52,8.50,442.00
+2026-02-28,INV-0248,Tengah,Shah Alam,Coklat,Minuman,51,9.00,459.00
+2026-02-28,INV-0249,Selatan,Melaka,Biskut,Makanan,41,7.50,307.50
+2026-03-01,INV-0250,Timur,Kota Bharu,Roti,Makanan,24,4.50,108.00
+2026-03-01,INV-0251,Selatan,Melaka,Kopi,Minuman,28,8.50,238.00
+2026-03-01,INV-0252,Timur,Kota Bharu,Biskut,Makanan,10,7.50,75.00
+2026-03-01,INV-0253,Utara,George Town,Coklat,Minuman,29,9.00,261.00
+2026-03-01,INV-0254,Timur,Kuantan,Kopi,Minuman,52,8.50,442.00
+2026-03-02,INV-0255,Timur,Kota Bharu,Kek,Makanan,40,12.00,480.00
+2026-03-02,INV-0256,Timur,Kota Bharu,Biskut,Makanan,18,7.50,135.00
+2026-03-02,INV-0257,Tengah,Kuala Lumpur,Kopi,Minuman,27,8.50,229.50
+2026-03-02,INV-0258,Utara,George Town,Biskut,Makanan,19,7.50,142.50
+2026-03-02,INV-0259,Tengah,Shah Alam,Kek,Makanan,59,12.00,708.00
+2026-03-03,INV-0260,Selatan,Melaka,Kopi,Minuman,20,8.50,170.00
+2026-03-03,INV-0261,Timur,Kota Bharu,Coklat,Minuman,29,9.00,261.00
+2026-03-03,INV-0262,Tengah,Shah Alam,Teh,Minuman,9,6.00,54.00
+2026-03-03,INV-0263,Tengah,Kuala Lumpur,Roti,Makanan,29,4.50,130.50
+2026-03-04,INV-0264,Selatan,Melaka,Kopi,Minuman,58,8.50,493.00
+2026-03-04,INV-0265,Selatan,Melaka,Roti,Makanan,45,4.50,202.50
+2026-03-04,INV-0266,Selatan,Melaka,Teh,Minuman,35,6.00,210.00
+2026-03-04,INV-0267,Selatan,Melaka,Roti,Makanan,59,4.50,265.50
+2026-03-05,INV-0268,Timur,Kota Bharu,Kopi,Minuman,60,8.50,510.00
+2026-03-05,INV-0269,Selatan,Melaka,Roti,Makanan,34,4.50,153.00
+2026-03-05,INV-0270,Timur,Kuantan,Biskut,Makanan,57,7.50,427.50
+2026-03-05,INV-0271,Selatan,Melaka,Kopi,Minuman,14,8.50,119.00
+2026-03-05,INV-0272,Tengah,Kuala Lumpur,Kek,Makanan,49,12.00,588.00
+2026-03-06,INV-0273,Tengah,Shah Alam,Kopi,Minuman,46,8.50,391.00
+2026-03-06,INV-0274,Utara,Alor Setar,Kek,Makanan,13,12.00,156.00
+2026-03-06,INV-0275,Timur,Kuantan,Roti,Makanan,25,4.50,112.50
+2026-03-06,INV-0276,Timur,Kota Bharu,Kopi,Minuman,53,8.50,450.50
+2026-03-06,INV-0277,Utara,George Town,Teh,Minuman,27,6.00,162.00
+2026-03-07,INV-0278,Utara,Alor Setar,Roti,Makanan,21,4.50,94.50
+2026-03-07,INV-0279,Utara,Alor Setar,Roti,Makanan,12,4.50,54.00
+2026-03-07,INV-0280,Selatan,Johor Bahru,Kopi,Minuman,53,8.50,450.50
+2026-03-08,INV-0281,Timur,Kota Bharu,Coklat,Minuman,8,9.00,72.00
+2026-03-08,INV-0282,Tengah,Kuala Lumpur,Biskut,Makanan,39,7.50,292.50
+2026-03-08,INV-0283,Timur,Kuantan,Teh,Minuman,24,6.00,144.00
+2026-03-08,INV-0284,Tengah,Shah Alam,Teh,Minuman,15,6.00,90.00
+2026-03-08,INV-0285,Selatan,Johor Bahru,Kek,Makanan,46,12.00,552.00
+2026-03-09,INV-0286,Tengah,Kuala Lumpur,Biskut,Makanan,21,7.50,157.50
+2026-03-09,INV-0287,Utara,George Town,Roti,Makanan,23,4.50,103.50
+2026-03-09,INV-0288,Utara,Alor Setar,Teh,Minuman,39,6.00,234.00
+2026-03-09,INV-0289,Tengah,Shah Alam,Kopi,Minuman,46,8.50,391.00
+2026-03-10,INV-0290,Timur,Kota Bharu,Biskut,Makanan,16,7.50,120.00
+2026-03-10,INV-0291,Tengah,Shah Alam,Teh,Minuman,38,6.00,228.00
+2026-03-10,INV-0292,Selatan,Johor Bahru,Roti,Makanan,26,4.50,117.00
+2026-03-11,INV-0293,Utara,George Town,Biskut,Makanan,15,7.50,112.50
+2026-03-11,INV-0294,Utara,George Town,Coklat,Minuman,26,9.00,234.00
+2026-03-11,INV-0295,Tengah,Shah Alam,Roti,Makanan,52,4.50,234.00
+2026-03-11,INV-0296,Selatan,Johor Bahru,Coklat,Minuman,52,9.00,468.00
+2026-03-11,INV-0297,Timur,Kota Bharu,Teh,Minuman,42,6.00,252.00
+2026-03-12,INV-0298,Timur,Kota Bharu,Roti,Makanan,56,4.50,252.00
+2026-03-12,INV-0299,Utara,George Town,Biskut,Makanan,46,7.50,345.00
+2026-03-12,INV-0300,Timur,Kuantan,Kek,Makanan,20,12.00,240.00
+2026-03-13,INV-0301,Tengah,Kuala Lumpur,Kopi,Minuman,21,8.50,178.50
+2026-03-13,INV-0302,Selatan,Melaka,Roti,Makanan,60,4.50,270.00
+2026-03-13,INV-0303,Utara,George Town,Coklat,Minuman,28,9.00,252.00
+2026-03-13,INV-0304,Tengah,Kuala Lumpur,Kek,Makanan,38,12.00,456.00
+2026-03-13,INV-0305,Tengah,Kuala Lumpur,Kek,Makanan,40,12.00,480.00
+2026-03-14,INV-0306,Selatan,Melaka,Biskut,Makanan,10,7.50,75.00
+2026-03-14,INV-0307,Tengah,Shah Alam,Kopi,Minuman,31,8.50,263.50
+2026-03-14,INV-0308,Timur,Kota Bharu,Biskut,Makanan,53,7.50,397.50
+2026-03-14,INV-0309,Selatan,Melaka,Teh,Minuman,58,6.00,348.00
+2026-03-14,INV-0310,Tengah,Shah Alam,Coklat,Minuman,16,9.00,144.00
+2026-03-15,INV-0311,Tengah,Shah Alam,Teh,Minuman,19,6.00,114.00
+2026-03-15,INV-0312,Selatan,Johor Bahru,Coklat,Minuman,21,9.00,189.00
+2026-03-15,INV-0313,Utara,George Town,Coklat,Minuman,25,9.00,225.00
+2026-03-15,INV-0314,Timur,Kota Bharu,Kek,Makanan,42,12.00,504.00
+2026-03-15,INV-0315,Selatan,Melaka,Biskut,Makanan,20,7.50,150.00
+2026-03-16,INV-0316,Tengah,Kuala Lumpur,Kek,Makanan,16,12.00,192.00
+2026-03-16,INV-0317,Tengah,Kuala Lumpur,Biskut,Makanan,15,7.50,112.50
+2026-03-16,INV-0318,Timur,Kota Bharu,Biskut,Makanan,26,7.50,195.00
+2026-03-16,INV-0319,Timur,Kuantan,Biskut,Makanan,54,7.50,405.00
+2026-03-16,INV-0320,Tengah,Shah Alam,Roti,Makanan,13,4.50,58.50
+2026-03-17,INV-0321,Timur,Kota Bharu,Teh,Minuman,57,6.00,342.00
+2026-03-17,INV-0322,Selatan,Johor Bahru,Teh,Minuman,30,6.00,180.00
+2026-03-17,INV-0323,Utara,George Town,Kek,Makanan,30,12.00,360.00
+2026-03-17,INV-0324,Utara,George Town,Coklat,Minuman,13,9.00,117.00
+2026-03-17,INV-0325,Selatan,Johor Bahru,Teh,Minuman,57,6.00,342.00
+2026-03-18,INV-0326,Tengah,Shah Alam,Coklat,Minuman,46,9.00,414.00
+2026-03-18,INV-0327,Tengah,Kuala Lumpur,Kopi,Minuman,40,8.50,340.00
+2026-03-18,INV-0328,Timur,Kota Bharu,Kek,Makanan,23,12.00,276.00
+2026-03-19,INV-0329,Utara,George Town,Kopi,Minuman,9,8.50,76.50
+2026-03-19,INV-0330,Utara,Alor Setar,Kek,Makanan,16,12.00,192.00
+2026-03-19,INV-0331,Utara,Alor Setar,Kek,Makanan,23,12.00,276.00
+2026-03-20,INV-0332,Selatan,Johor Bahru,Teh,Minuman,14,6.00,84.00
+2026-03-20,INV-0333,Selatan,Melaka,Biskut,Makanan,49,7.50,367.50
+2026-03-20,INV-0334,Tengah,Kuala Lumpur,Kek,Makanan,22,12.00,264.00
+2026-03-20,INV-0335,Utara,Alor Setar,Kopi,Minuman,13,8.50,110.50
+2026-03-20,INV-0336,Timur,Kuantan,Biskut,Makanan,12,7.50,90.00
+2026-03-21,INV-0337,Selatan,Johor Bahru,Kopi,Minuman,20,8.50,170.00
+2026-03-21,INV-0338,Selatan,Johor Bahru,Teh,Minuman,48,6.00,288.00
+2026-03-21,INV-0339,Selatan,Melaka,Coklat,Minuman,48,9.00,432.00
+2026-03-21,INV-0340,Tengah,Kuala Lumpur,Coklat,Minuman,22,9.00,198.00
+2026-03-21,INV-0341,Utara,George Town,Coklat,Minuman,45,9.00,405.00
+2026-03-22,INV-0342,Tengah,Shah Alam,Kopi,Minuman,30,8.50,255.00
+2026-03-22,INV-0343,Tengah,Shah Alam,Coklat,Minuman,52,9.00,468.00
+2026-03-22,INV-0344,Timur,Kuantan,Kopi,Minuman,53,8.50,450.50
+2026-03-22,INV-0345,Tengah,Shah Alam,Kopi,Minuman,43,8.50,365.50
+2026-03-23,INV-0346,Utara,Alor Setar,Kek,Makanan,40,12.00,480.00
+2026-03-23,INV-0347,Tengah,Shah Alam,Kopi,Minuman,60,8.50,510.00
+2026-03-23,INV-0348,Tengah,Kuala Lumpur,Kopi,Minuman,19,8.50,161.50
+2026-03-23,INV-0349,Timur,Kuantan,Teh,Minuman,39,6.00,234.00
+2026-03-24,INV-0350,Tengah,Kuala Lumpur,Roti,Makanan,23,4.50,103.50
+2026-03-24,INV-0351,Utara,George Town,Biskut,Makanan,30,7.50,225.00
+2026-03-24,INV-0352,Utara,Alor Setar,Coklat,Minuman,22,9.00,198.00
+2026-03-25,INV-0353,Utara,George Town,Biskut,Makanan,14,7.50,105.00
+2026-03-25,INV-0354,Selatan,Melaka,Kopi,Minuman,54,8.50,459.00
+2026-03-25,INV-0355,Utara,Alor Setar,Biskut,Makanan,22,7.50,165.00
+2026-03-26,INV-0356,Tengah,Kuala Lumpur,Teh,Minuman,29,6.00,174.00
+2026-03-26,INV-0357,Tengah,Shah Alam,Kopi,Minuman,26,8.50,221.00
+2026-03-26,INV-0358,Utara,George Town,Kek,Makanan,37,12.00,444.00
+2026-03-27,INV-0359,Utara,George Town,Biskut,Makanan,53,7.50,397.50
+2026-03-27,INV-0360,Tengah,Kuala Lumpur,Biskut,Makanan,5,7.50,37.50
+2026-03-27,INV-0361,Tengah,Shah Alam,Kek,Makanan,16,12.00,192.00
+2026-03-28,INV-0362,Selatan,Johor Bahru,Kek,Makanan,19,12.00,228.00
+2026-03-28,INV-0363,Tengah,Kuala Lumpur,Teh,Minuman,20,6.00,120.00
+2026-03-28,INV-0364,Timur,Kota Bharu,Kopi,Minuman,41,8.50,348.50
+2026-03-29,INV-0365,Selatan,Johor Bahru,Biskut,Makanan,7,7.50,52.50
+2026-03-29,INV-0366,Selatan,Johor Bahru,Roti,Makanan,50,4.50,225.00
+2026-03-29,INV-0367,Utara,Alor Setar,Roti,Makanan,43,4.50,193.50
+2026-03-29,INV-0368,Selatan,Melaka,Coklat,Minuman,24,9.00,216.00
+2026-03-29,INV-0369,Utara,Alor Setar,Kek,Makanan,17,12.00,204.00
+2026-03-30,INV-0370,Tengah,Kuala Lumpur,Coklat,Minuman,40,9.00,360.00
+2026-03-30,INV-0371,Utara,Alor Setar,Kopi,Minuman,17,8.50,144.50
+2026-03-30,INV-0372,Selatan,Johor Bahru,Kek,Makanan,48,12.00,576.00
+2026-03-30,INV-0373,Timur,Kuantan,Roti,Makanan,23,4.50,103.50
+2026-03-31,INV-0374,Selatan,Johor Bahru,Kopi,Minuman,36,8.50,306.00
+2026-03-31,INV-0375,Selatan,Melaka,Coklat,Minuman,21,9.00,189.00
+2026-03-31,INV-0376,Selatan,Johor Bahru,Kek,Makanan,27,12.00,324.00
+2026-04-01,INV-0377,Utara,Alor Setar,Coklat,Minuman,11,9.00,99.00
+2026-04-01,INV-0378,Tengah,Kuala Lumpur,Kek,Makanan,52,12.00,624.00
+2026-04-01,INV-0379,Timur,Kota Bharu,Coklat,Minuman,44,9.00,396.00
+2026-04-01,INV-0380,Tengah,Shah Alam,Teh,Minuman,46,6.00,276.00
+2026-04-01,INV-0381,Utara,Alor Setar,Coklat,Minuman,25,9.00,225.00
+2026-04-02,INV-0382,Selatan,Melaka,Kopi,Minuman,6,8.50,51.00
+2026-04-02,INV-0383,Timur,Kota Bharu,Kopi,Minuman,50,8.50,425.00
+2026-04-02,INV-0384,Timur,Kota Bharu,Kopi,Minuman,25,8.50,212.50
+2026-04-03,INV-0385,Selatan,Johor Bahru,Coklat,Minuman,7,9.00,63.00
+2026-04-03,INV-0386,Utara,George Town,Teh,Minuman,29,6.00,174.00
+2026-04-03,INV-0387,Selatan,Johor Bahru,Teh,Minuman,45,6.00,270.00
+2026-04-04,INV-0388,Selatan,Johor Bahru,Coklat,Minuman,56,9.00,504.00
+2026-04-04,INV-0389,Tengah,Kuala Lumpur,Roti,Makanan,19,4.50,85.50
+2026-04-04,INV-0390,Tengah,Kuala Lumpur,Biskut,Makanan,44,7.50,330.00
+2026-04-05,INV-0391,Tengah,Shah Alam,Kopi,Minuman,10,8.50,85.00
+2026-04-05,INV-0392,Tengah,Shah Alam,Kopi,Minuman,30,8.50,255.00
+2026-04-05,INV-0393,Selatan,Johor Bahru,Kek,Makanan,17,12.00,204.00
+2026-04-05,INV-0394,Utara,Alor Setar,Kopi,Minuman,50,8.50,425.00
+2026-04-05,INV-0395,Utara,George Town,Kek,Makanan,38,12.00,456.00
+2026-04-06,INV-0396,Timur,Kota Bharu,Kopi,Minuman,25,8.50,212.50
+2026-04-06,INV-0397,Timur,Kuantan,Biskut,Makanan,13,7.50,97.50
+2026-04-06,INV-0398,Timur,Kuantan,Coklat,Minuman,53,9.00,477.00
+2026-04-06,INV-0399,Utara,George Town,Teh,Minuman,21,6.00,126.00
+2026-04-06,INV-0400,Selatan,Johor Bahru,Biskut,Makanan,52,7.50,390.00
+2026-04-07,INV-0401,Timur,Kuantan,Coklat,Minuman,28,9.00,252.00
+2026-04-07,INV-0402,Selatan,Johor Bahru,Coklat,Minuman,40,9.00,360.00
+2026-04-07,INV-0403,Tengah,Shah Alam,Teh,Minuman,13,6.00,78.00
+2026-04-07,INV-0404,Tengah,Shah Alam,Teh,Minuman,43,6.00,258.00
+2026-04-07,INV-0405,Timur,Kota Bharu,Kopi,Minuman,6,8.50,51.00
+2026-04-08,INV-0406,Utara,Alor Setar,Coklat,Minuman,34,9.00,306.00
+2026-04-08,INV-0407,Selatan,Melaka,Coklat,Minuman,7,9.00,63.00
+2026-04-08,INV-0408,Utara,George Town,Teh,Minuman,26,6.00,156.00
+2026-04-09,INV-0409,Utara,Alor Setar,Roti,Makanan,54,4.50,243.00
+2026-04-09,INV-0410,Selatan,Melaka,Teh,Minuman,48,6.00,288.00
+2026-04-09,INV-0411,Timur,Kuantan,Kek,Makanan,13,12.00,156.00
+2026-04-09,INV-0412,Utara,Alor Setar,Biskut,Makanan,42,7.50,315.00
+2026-04-09,INV-0413,Utara,George Town,Kopi,Minuman,10,8.50,85.00
+2026-04-10,INV-0414,Tengah,Shah Alam,Teh,Minuman,19,6.00,114.00
+2026-04-10,INV-0415,Utara,Alor Setar,Kek,Makanan,48,12.00,576.00
+2026-04-10,INV-0416,Utara,George Town,Kek,Makanan,20,12.00,240.00
+2026-04-10,INV-0417,Utara,Alor Setar,Kopi,Minuman,17,8.50,144.50
+2026-04-10,INV-0418,Tengah,Shah Alam,Kek,Makanan,6,12.00,72.00
+2026-04-11,INV-0419,Timur,Kuantan,Kek,Makanan,20,12.00,240.00
+2026-04-11,INV-0420,Utara,George Town,Kopi,Minuman,43,8.50,365.50
+2026-04-11,INV-0421,Timur,Kota Bharu,Kek,Makanan,15,12.00,180.00
+2026-04-12,INV-0422,Tengah,Kuala Lumpur,Biskut,Makanan,26,7.50,195.00
+2026-04-12,INV-0423,Utara,George Town,Coklat,Minuman,26,9.00,234.00
+2026-04-12,INV-0424,Selatan,Melaka,Kopi,Minuman,34,8.50,289.00
+2026-04-13,INV-0425,Utara,Alor Setar,Kek,Makanan,14,12.00,168.00
+2026-04-13,INV-0426,Utara,Alor Setar,Teh,Minuman,58,6.00,348.00
+2026-04-13,INV-0427,Selatan,Melaka,Biskut,Makanan,53,7.50,397.50
+2026-04-13,INV-0428,Selatan,Melaka,Kek,Makanan,26,12.00,312.00
+2026-04-14,INV-0429,Selatan,Melaka,Kek,Makanan,13,12.00,156.00
+2026-04-14,INV-0430,Timur,Kuantan,Biskut,Makanan,36,7.50,270.00
+2026-04-14,INV-0431,Selatan,Johor Bahru,Roti,Makanan,55,4.50,247.50
+2026-04-15,INV-0432,Selatan,Johor Bahru,Kek,Makanan,54,12.00,648.00
+2026-04-15,INV-0433,Timur,Kuantan,Roti,Makanan,13,4.50,58.50
+2026-04-15,INV-0434,Selatan,Johor Bahru,Roti,Makanan,18,4.50,81.00
+2026-04-15,INV-0435,Utara,Alor Setar,Teh,Minuman,7,6.00,42.00
+2026-04-16,INV-0436,Selatan,Johor Bahru,Coklat,Minuman,58,9.00,522.00
+2026-04-16,INV-0437,Utara,George Town,Kopi,Minuman,55,8.50,467.50
+2026-04-16,INV-0438,Selatan,Johor Bahru,Teh,Minuman,30,6.00,180.00
+2026-04-16,INV-0439,Tengah,Kuala Lumpur,Teh,Minuman,19,6.00,114.00
+2026-04-16,INV-0440,Tengah,Shah Alam,Kek,Makanan,45,12.00,540.00
+2026-04-17,INV-0441,Tengah,Shah Alam,Biskut,Makanan,54,7.50,405.00
+2026-04-17,INV-0442,Tengah,Kuala Lumpur,Kopi,Minuman,37,8.50,314.50
+2026-04-17,INV-0443,Selatan,Melaka,Biskut,Makanan,27,7.50,202.50
+2026-04-18,INV-0444,Selatan,Johor Bahru,Roti,Makanan,28,4.50,126.00
+2026-04-18,INV-0445,Tengah,Kuala Lumpur,Coklat,Minuman,54,9.00,486.00
+2026-04-18,INV-0446,Tengah,Kuala Lumpur,Teh,Minuman,13,6.00,78.00
+2026-04-18,INV-0447,Selatan,Melaka,Coklat,Minuman,6,9.00,54.00
+2026-04-19,INV-0448,Tengah,Shah Alam,Roti,Makanan,26,4.50,117.00
+2026-04-19,INV-0449,Selatan,Melaka,Kopi,Minuman,42,8.50,357.00
+2026-04-19,INV-0450,Timur,Kota Bharu,Biskut,Makanan,56,7.50,420.00
+2026-04-19,INV-0451,Timur,Kota Bharu,Coklat,Minuman,56,9.00,504.00
+2026-04-19,INV-0452,Timur,Kuantan,Roti,Makanan,44,4.50,198.00
+2026-04-20,INV-0453,Utara,George Town,Kek,Makanan,33,12.00,396.00
+2026-04-20,INV-0454,Utara,George Town,Biskut,Makanan,12,7.50,90.00
+2026-04-20,INV-0455,Timur,Kota Bharu,Biskut,Makanan,54,7.50,405.00
+2026-04-20,INV-0456,Tengah,Shah Alam,Roti,Makanan,56,4.50,252.00
+2026-04-20,INV-0457,Tengah,Shah Alam,Biskut,Makanan,5,7.50,37.50
+2026-04-21,INV-0458,Utara,George Town,Kopi,Minuman,43,8.50,365.50
+2026-04-21,INV-0459,Selatan,Johor Bahru,Coklat,Minuman,26,9.00,234.00
+2026-04-21,INV-0460,Selatan,Melaka,Roti,Makanan,24,4.50,108.00
+2026-04-21,INV-0461,Utara,Alor Setar,Teh,Minuman,35,6.00,210.00
+2026-04-22,INV-0462,Selatan,Melaka,Kek,Makanan,25,12.00,300.00
+2026-04-22,INV-0463,Tengah,Shah Alam,Roti,Makanan,10,4.50,45.00
+2026-04-22,INV-0464,Timur,Kota Bharu,Teh,Minuman,12,6.00,72.00
+2026-04-23,INV-0465,Tengah,Kuala Lumpur,Teh,Minuman,20,6.00,120.00
+2026-04-23,INV-0466,Selatan,Johor Bahru,Roti,Makanan,12,4.50,54.00
+2026-04-23,INV-0467,Timur,Kota Bharu,Roti,Makanan,37,4.50,166.50
+2026-04-23,INV-0468,Tengah,Shah Alam,Kopi,Minuman,12,8.50,102.00
+2026-04-24,INV-0469,Utara,Alor Setar,Kopi,Minuman,43,8.50,365.50
+2026-04-24,INV-0470,Selatan,Johor Bahru,Teh,Minuman,7,6.00,42.00
+2026-04-24,INV-0471,Timur,Kuantan,Roti,Makanan,15,4.50,67.50
+2026-04-24,INV-0472,Timur,Kota Bharu,Teh,Minuman,6,6.00,36.00
+2026-04-24,INV-0473,Utara,George Town,Roti,Makanan,11,4.50,49.50
+2026-04-25,INV-0474,Tengah,Shah Alam,Kopi,Minuman,10,8.50,85.00
+2026-04-25,INV-0475,Tengah,Kuala Lumpur,Teh,Minuman,22,6.00,132.00
+2026-04-25,INV-0476,Timur,Kota Bharu,Kopi,Minuman,14,8.50,119.00
+2026-04-25,INV-0477,Selatan,Melaka,Roti,Makanan,34,4.50,153.00
+2026-04-26,INV-0478,Utara,Alor Setar,Roti,Makanan,36,4.50,162.00
+2026-04-26,INV-0479,Timur,Kuantan,Kek,Makanan,6,12.00,72.00
+2026-04-26,INV-0480,Selatan,Melaka,Roti,Makanan,17,4.50,76.50
+2026-04-26,INV-0481,Selatan,Melaka,Biskut,Makanan,41,7.50,307.50
+2026-04-27,INV-0482,Tengah,Kuala Lumpur,Roti,Makanan,35,4.50,157.50
+2026-04-27,INV-0483,Tengah,Kuala Lumpur,Roti,Makanan,17,4.50,76.50
+2026-04-27,INV-0484,Selatan,Melaka,Coklat,Minuman,37,9.00,333.00
+2026-04-27,INV-0485,Tengah,Shah Alam,Teh,Minuman,31,6.00,186.00
+2026-04-28,INV-0486,Selatan,Melaka,Roti,Makanan,27,4.50,121.50
+2026-04-28,INV-0487,Timur,Kuantan,Kek,Makanan,43,12.00,516.00
+2026-04-28,INV-0488,Tengah,Shah Alam,Coklat,Minuman,51,9.00,459.00
+2026-04-28,INV-0489,Tengah,Kuala Lumpur,Kek,Makanan,41,12.00,492.00
+2026-04-28,INV-0490,Selatan,Melaka,Biskut,Makanan,26,7.50,195.00
+2026-04-29,INV-0491,Timur,Kuantan,Kopi,Minuman,19,8.50,161.50
+2026-04-29,INV-0492,Selatan,Melaka,Kek,Makanan,15,12.00,180.00
+2026-04-29,INV-0493,Selatan,Johor Bahru,Coklat,Minuman,16,9.00,144.00
+2026-04-29,INV-0494,Utara,George Town,Biskut,Makanan,57,7.50,427.50
+2026-04-30,INV-0495,Utara,George Town,Coklat,Minuman,30,9.00,270.00
+2026-04-30,INV-0496,Tengah,Shah Alam,Teh,Minuman,23,6.00,138.00
+2026-04-30,INV-0497,Tengah,Shah Alam,Kopi,Minuman,31,8.50,263.50
+2026-04-30,INV-0498,Selatan,Melaka,Biskut,Makanan,25,7.50,187.50
+2026-04-30,INV-0499,Selatan,Johor Bahru,Biskut,Makanan,44,7.50,330.00
+2026-05-01,INV-0500,Selatan,Melaka,Roti,Makanan,51,4.50,229.50
+2026-05-01,INV-0501,Utara,George Town,Coklat,Minuman,23,9.00,207.00
+2026-05-01,INV-0502,Selatan,Johor Bahru,Biskut,Makanan,35,7.50,262.50
+2026-05-01,INV-0503,Utara,Alor Setar,Biskut,Makanan,23,7.50,172.50
+2026-05-01,INV-0504,Utara,Alor Setar,Teh,Minuman,20,6.00,120.00
+2026-05-02,INV-0505,Utara,George Town,Kek,Makanan,59,12.00,708.00
+2026-05-02,INV-0506,Utara,Alor Setar,Coklat,Minuman,10,9.00,90.00
+2026-05-02,INV-0507,Tengah,Kuala Lumpur,Teh,Minuman,35,6.00,210.00
+2026-05-03,INV-0508,Tengah,Kuala Lumpur,Teh,Minuman,30,6.00,180.00
+2026-05-03,INV-0509,Selatan,Melaka,Coklat,Minuman,41,9.00,369.00
+2026-05-03,INV-0510,Selatan,Melaka,Coklat,Minuman,48,9.00,432.00
+2026-05-03,INV-0511,Selatan,Melaka,Biskut,Makanan,18,7.50,135.00
+2026-05-04,INV-0512,Selatan,Melaka,Kopi,Minuman,10,8.50,85.00
+2026-05-04,INV-0513,Selatan,Melaka,Coklat,Minuman,35,9.00,315.00
+2026-05-04,INV-0514,Tengah,Shah Alam,Kopi,Minuman,36,8.50,306.00
+2026-05-04,INV-0515,Selatan,Johor Bahru,Biskut,Makanan,48,7.50,360.00
+2026-05-04,INV-0516,Selatan,Johor Bahru,Kek,Makanan,46,12.00,552.00
+2026-05-05,INV-0517,Timur,Kota Bharu,Coklat,Minuman,59,9.00,531.00
+2026-05-05,INV-0518,Tengah,Shah Alam,Kek,Makanan,28,12.00,336.00
+2026-05-05,INV-0519,Selatan,Johor Bahru,Teh,Minuman,34,6.00,204.00
+2026-05-06,INV-0520,Selatan,Johor Bahru,Kek,Makanan,43,12.00,516.00
+2026-05-06,INV-0521,Tengah,Shah Alam,Roti,Makanan,54,4.50,243.00
+2026-05-06,INV-0522,Utara,Alor Setar,Kek,Makanan,8,12.00,96.00
+2026-05-06,INV-0523,Tengah,Kuala Lumpur,Roti,Makanan,57,4.50,256.50
+2026-05-07,INV-0524,Tengah,Shah Alam,Biskut,Makanan,47,7.50,352.50
+2026-05-07,INV-0525,Utara,George Town,Kopi,Minuman,26,8.50,221.00
+2026-05-07,INV-0526,Tengah,Kuala Lumpur,Teh,Minuman,15,6.00,90.00
+2026-05-07,INV-0527,Tengah,Kuala Lumpur,Coklat,Minuman,49,9.00,441.00
+2026-05-07,INV-0528,Timur,Kuantan,Coklat,Minuman,58,9.00,522.00
+2026-05-08,INV-0529,Utara,Alor Setar,Kek,Makanan,57,12.00,684.00
+2026-05-08,INV-0530,Tengah,Kuala Lumpur,Roti,Makanan,29,4.50,130.50
+2026-05-08,INV-0531,Timur,Kota Bharu,Coklat,Minuman,5,9.00,45.00
+2026-05-08,INV-0532,Tengah,Kuala Lumpur,Kopi,Minuman,22,8.50,187.00
+2026-05-09,INV-0533,Timur,Kuantan,Kopi,Minuman,57,8.50,484.50
+2026-05-09,INV-0534,Utara,Alor Setar,Coklat,Minuman,15,9.00,135.00
+2026-05-09,INV-0535,Selatan,Johor Bahru,Coklat,Minuman,29,9.00,261.00
+2026-05-09,INV-0536,Timur,Kuantan,Kek,Makanan,30,12.00,360.00
+2026-05-10,INV-0537,Selatan,Johor Bahru,Teh,Minuman,60,6.00,360.00
+2026-05-10,INV-0538,Timur,Kota Bharu,Teh,Minuman,47,6.00,282.00
+2026-05-10,INV-0539,Tengah,Kuala Lumpur,Kek,Makanan,25,12.00,300.00
+2026-05-11,INV-0540,Selatan,Johor Bahru,Roti,Makanan,38,4.50,171.00
+2026-05-11,INV-0541,Utara,Alor Setar,Biskut,Makanan,22,7.50,165.00
+2026-05-11,INV-0542,Timur,Kuantan,Kopi,Minuman,11,8.50,93.50
+2026-05-12,INV-0543,Utara,Alor Setar,Kek,Makanan,48,12.00,576.00
+2026-05-12,INV-0544,Utara,George Town,Coklat,Minuman,41,9.00,369.00
+2026-05-12,INV-0545,Selatan,Melaka,Coklat,Minuman,29,9.00,261.00
+2026-05-12,INV-0546,Tengah,Kuala Lumpur,Coklat,Minuman,18,9.00,162.00
+2026-05-13,INV-0547,Timur,Kota Bharu,Coklat,Minuman,27,9.00,243.00
+2026-05-13,INV-0548,Utara,George Town,Roti,Makanan,44,4.50,198.00
+2026-05-13,INV-0549,Timur,Kota Bharu,Kopi,Minuman,28,8.50,238.00
+2026-05-13,INV-0550,Timur,Kota Bharu,Kek,Makanan,40,12.00,480.00
+2026-05-13,INV-0551,Tengah,Kuala Lumpur,Coklat,Minuman,27,9.00,243.00
+2026-05-14,INV-0552,Tengah,Kuala Lumpur,Biskut,Makanan,40,7.50,300.00
+2026-05-14,INV-0553,Timur,Kuantan,Biskut,Makanan,11,7.50,82.50
+2026-05-14,INV-0554,Utara,George Town,Kek,Makanan,19,12.00,228.00
+2026-05-14,INV-0555,Utara,Alor Setar,Teh,Minuman,47,6.00,282.00
+2026-05-14,INV-0556,Utara,Alor Setar,Coklat,Minuman,7,9.00,63.00
+2026-05-15,INV-0557,Tengah,Shah Alam,Kek,Makanan,49,12.00,588.00
+2026-05-15,INV-0558,Timur,Kota Bharu,Biskut,Makanan,47,7.50,352.50
+2026-05-15,INV-0559,Utara,Alor Setar,Kopi,Minuman,46,8.50,391.00
+2026-05-16,INV-0560,Utara,Alor Setar,Biskut,Makanan,44,7.50,330.00
+2026-05-16,INV-0561,Tengah,Shah Alam,Kek,Makanan,60,12.00,720.00
+2026-05-16,INV-0562,Utara,George Town,Coklat,Minuman,30,9.00,270.00
+2026-05-16,INV-0563,Tengah,Kuala Lumpur,Teh,Minuman,14,6.00,84.00
+2026-05-16,INV-0564,Selatan,Johor Bahru,Coklat,Minuman,20,9.00,180.00
+2026-05-17,INV-0565,Utara,Alor Setar,Coklat,Minuman,16,9.00,144.00
+2026-05-17,INV-0566,Timur,Kota Bharu,Roti,Makanan,44,4.50,198.00
+2026-05-17,INV-0567,Selatan,Johor Bahru,Biskut,Makanan,32,7.50,240.00
+2026-05-18,INV-0568,Utara,George Town,Biskut,Makanan,21,7.50,157.50
+2026-05-18,INV-0569,Tengah,Kuala Lumpur,Coklat,Minuman,23,9.00,207.00
+2026-05-18,INV-0570,Selatan,Melaka,Biskut,Makanan,24,7.50,180.00
+2026-05-19,INV-0571,Timur,Kota Bharu,Roti,Makanan,20,4.50,90.00
+2026-05-19,INV-0572,Utara,George Town,Kopi,Minuman,31,8.50,263.50
+2026-05-19,INV-0573,Selatan,Johor Bahru,Teh,Minuman,24,6.00,144.00
+2026-05-19,INV-0574,Selatan,Johor Bahru,Roti,Makanan,7,4.50,31.50
+2026-05-20,INV-0575,Timur,Kuantan,Roti,Makanan,35,4.50,157.50
+2026-05-20,INV-0576,Selatan,Melaka,Roti,Makanan,21,4.50,94.50
+2026-05-20,INV-0577,Tengah,Kuala Lumpur,Teh,Minuman,48,6.00,288.00
+2026-05-21,INV-0578,Utara,Alor Setar,Biskut,Makanan,57,7.50,427.50
+2026-05-21,INV-0579,Tengah,Kuala Lumpur,Roti,Makanan,43,4.50,193.50
+2026-05-21,INV-0580,Utara,George Town,Roti,Makanan,8,4.50,36.00
+2026-05-21,INV-0581,Tengah,Kuala Lumpur,Teh,Minuman,34,6.00,204.00
+2026-05-22,INV-0582,Timur,Kota Bharu,Biskut,Makanan,15,7.50,112.50
+2026-05-22,INV-0583,Utara,Alor Setar,Roti,Makanan,7,4.50,31.50
+2026-05-22,INV-0584,Selatan,Melaka,Teh,Minuman,42,6.00,252.00
+2026-05-22,INV-0585,Utara,George Town,Coklat,Minuman,26,9.00,234.00
+2026-05-23,INV-0586,Timur,Kota Bharu,Coklat,Minuman,10,9.00,90.00
+2026-05-23,INV-0587,Utara,Alor Setar,Kek,Makanan,5,12.00,60.00
+2026-05-23,INV-0588,Selatan,Melaka,Teh,Minuman,49,6.00,294.00
+2026-05-23,INV-0589,Tengah,Shah Alam,Coklat,Minuman,21,9.00,189.00
+2026-05-24,INV-0590,Selatan,Johor Bahru,Biskut,Makanan,5,7.50,37.50
+2026-05-24,INV-0591,Selatan,Melaka,Kek,Makanan,49,12.00,588.00
+2026-05-24,INV-0592,Tengah,Shah Alam,Biskut,Makanan,55,7.50,412.50
+2026-05-25,INV-0593,Tengah,Kuala Lumpur,Teh,Minuman,25,6.00,150.00
+2026-05-25,INV-0594,Tengah,Kuala Lumpur,Roti,Makanan,48,4.50,216.00
+2026-05-25,INV-0595,Timur,Kuantan,Coklat,Minuman,17,9.00,153.00
+2026-05-26,INV-0596,Selatan,Melaka,Kek,Makanan,52,12.00,624.00
+2026-05-26,INV-0597,Utara,Alor Setar,Teh,Minuman,51,6.00,306.00
+2026-05-26,INV-0598,Selatan,Johor Bahru,Roti,Makanan,52,4.50,234.00
+2026-05-26,INV-0599,Utara,George Town,Roti,Makanan,59,4.50,265.50
+2026-05-26,INV-0600,Timur,Kuantan,Kopi,Minuman,42,8.50,357.00
+2026-05-27,INV-0601,Utara,Alor Setar,Biskut,Makanan,9,7.50,67.50
+2026-05-27,INV-0602,Tengah,Shah Alam,Teh,Minuman,19,6.00,114.00
+2026-05-27,INV-0603,Tengah,Kuala Lumpur,Roti,Makanan,11,4.50,49.50
+2026-05-27,INV-0604,Utara,George Town,Kek,Makanan,18,12.00,216.00
+2026-05-27,INV-0605,Selatan,Johor Bahru,Biskut,Makanan,22,7.50,165.00
+2026-05-28,INV-0606,Utara,George Town,Roti,Makanan,58,4.50,261.00
+2026-05-28,INV-0607,Timur,Kuantan,Roti,Makanan,14,4.50,63.00
+2026-05-28,INV-0608,Selatan,Melaka,Roti,Makanan,14,4.50,63.00
+2026-05-28,INV-0609,Timur,Kuantan,Biskut,Makanan,53,7.50,397.50
+2026-05-28,INV-0610,Utara,George Town,Teh,Minuman,38,6.00,228.00
+2026-05-29,INV-0611,Timur,Kuantan,Kopi,Minuman,8,8.50,68.00
+2026-05-29,INV-0612,Selatan,Melaka,Teh,Minuman,38,6.00,228.00
+2026-05-29,INV-0613,Tengah,Shah Alam,Teh,Minuman,60,6.00,360.00
+2026-05-30,INV-0614,Tengah,Shah Alam,Roti,Makanan,26,4.50,117.00
+2026-05-30,INV-0615,Selatan,Johor Bahru,Coklat,Minuman,56,9.00,504.00
+2026-05-30,INV-0616,Timur,Kuantan,Kek,Makanan,33,12.00,396.00
+2026-05-30,INV-0617,Tengah,Kuala Lumpur,Roti,Makanan,10,4.50,45.00
+2026-05-31,INV-0618,Tengah,Shah Alam,Kopi,Minuman,48,8.50,408.00
+2026-05-31,INV-0619,Utara,Alor Setar,Coklat,Minuman,10,9.00,90.00
+2026-05-31,INV-0620,Utara,Alor Setar,Kek,Makanan,44,12.00,528.00
+2026-05-31,INV-0621,Selatan,Melaka,Teh,Minuman,38,6.00,228.00
+2026-06-01,INV-0622,Utara,George Town,Kopi,Minuman,11,8.50,93.50
+2026-06-01,INV-0623,Selatan,Melaka,Roti,Makanan,49,4.50,220.50
+2026-06-01,INV-0624,Timur,Kota Bharu,Teh,Minuman,54,6.00,324.00
+2026-06-02,INV-0625,Selatan,Johor Bahru,Roti,Makanan,49,4.50,220.50
+2026-06-02,INV-0626,Utara,George Town,Roti,Makanan,39,4.50,175.50
+2026-06-02,INV-0627,Timur,Kuantan,Kek,Makanan,41,12.00,492.00
+2026-06-03,INV-0628,Tengah,Kuala Lumpur,Kek,Makanan,24,12.00,288.00
+2026-06-03,INV-0629,Tengah,Kuala Lumpur,Roti,Makanan,52,4.50,234.00
+2026-06-03,INV-0630,Selatan,Melaka,Roti,Makanan,46,4.50,207.00
+2026-06-04,INV-0631,Utara,Alor Setar,Biskut,Makanan,45,7.50,337.50
+2026-06-04,INV-0632,Timur,Kota Bharu,Kek,Makanan,32,12.00,384.00
+2026-06-04,INV-0633,Selatan,Melaka,Roti,Makanan,55,4.50,247.50
+2026-06-04,INV-0634,Selatan,Melaka,Roti,Makanan,30,4.50,135.00
+2026-06-05,INV-0635,Tengah,Kuala Lumpur,Coklat,Minuman,24,9.00,216.00
+2026-06-05,INV-0636,Utara,George Town,Coklat,Minuman,27,9.00,243.00
+2026-06-05,INV-0637,Selatan,Melaka,Biskut,Makanan,58,7.50,435.00
+2026-06-05,INV-0638,Timur,Kuantan,Teh,Minuman,18,6.00,108.00
+2026-06-06,INV-0639,Tengah,Kuala Lumpur,Kopi,Minuman,28,8.50,238.00
+2026-06-06,INV-0640,Utara,Alor Setar,Coklat,Minuman,54,9.00,486.00
+2026-06-06,INV-0641,Timur,Kuantan,Teh,Minuman,13,6.00,78.00
+2026-06-06,INV-0642,Selatan,Johor Bahru,Roti,Makanan,48,4.50,216.00
+2026-06-07,INV-0643,Timur,Kuantan,Biskut,Makanan,10,7.50,75.00
+2026-06-07,INV-0644,Utara,Alor Setar,Kopi,Minuman,9,8.50,76.50
+2026-06-07,INV-0645,Utara,Alor Setar,Biskut,Makanan,9,7.50,67.50
+2026-06-07,INV-0646,Utara,Alor Setar,Kopi,Minuman,59,8.50,501.50
+2026-06-08,INV-0647,Tengah,Shah Alam,Biskut,Makanan,52,7.50,390.00
+2026-06-08,INV-0648,Selatan,Melaka,Kopi,Minuman,21,8.50,178.50
+2026-06-08,INV-0649,Utara,Alor Setar,Teh,Minuman,57,6.00,342.00
+2026-06-08,INV-0650,Tengah,Kuala Lumpur,Coklat,Minuman,23,9.00,207.00
+2026-06-08,INV-0651,Tengah,Shah Alam,Biskut,Makanan,52,7.50,390.00
+2026-06-09,INV-0652,Utara,Alor Setar,Biskut,Makanan,43,7.50,322.50
+2026-06-09,INV-0653,Selatan,Melaka,Biskut,Makanan,28,7.50,210.00
+2026-06-09,INV-0654,Tengah,Kuala Lumpur,Biskut,Makanan,29,7.50,217.50
+2026-06-10,INV-0655,Tengah,Shah Alam,Biskut,Makanan,43,7.50,322.50
+2026-06-10,INV-0656,Tengah,Kuala Lumpur,Teh,Minuman,6,6.00,36.00
+2026-06-10,INV-0657,Timur,Kuantan,Biskut,Makanan,22,7.50,165.00
+2026-06-11,INV-0658,Selatan,Melaka,Kek,Makanan,41,12.00,492.00
+2026-06-11,INV-0659,Tengah,Kuala Lumpur,Roti,Makanan,53,4.50,238.50
+2026-06-11,INV-0660,Selatan,Johor Bahru,Roti,Makanan,25,4.50,112.50
+2026-06-11,INV-0661,Selatan,Johor Bahru,Biskut,Makanan,46,7.50,345.00
+2026-06-12,INV-0662,Selatan,Melaka,Coklat,Minuman,13,9.00,117.00
+2026-06-12,INV-0663,Selatan,Johor Bahru,Kopi,Minuman,28,8.50,238.00
+2026-06-12,INV-0664,Timur,Kuantan,Biskut,Makanan,37,7.50,277.50
+2026-06-12,INV-0665,Selatan,Melaka,Kopi,Minuman,18,8.50,153.00
+2026-06-13,INV-0666,Tengah,Shah Alam,Kek,Makanan,35,12.00,420.00
+2026-06-13,INV-0667,Tengah,Shah Alam,Kopi,Minuman,34,8.50,289.00
+2026-06-13,INV-0668,Tengah,Shah Alam,Biskut,Makanan,44,7.50,330.00
+2026-06-14,INV-0669,Tengah,Shah Alam,Kek,Makanan,44,12.00,528.00
+2026-06-14,INV-0670,Tengah,Shah Alam,Coklat,Minuman,21,9.00,189.00
+2026-06-14,INV-0671,Timur,Kota Bharu,Kek,Makanan,6,12.00,72.00
+2026-06-14,INV-0672,Tengah,Kuala Lumpur,Teh,Minuman,10,6.00,60.00
+2026-06-15,INV-0673,Tengah,Kuala Lumpur,Teh,Minuman,42,6.00,252.00
+2026-06-15,INV-0674,Utara,George Town,Kek,Makanan,13,12.00,156.00
+2026-06-15,INV-0675,Timur,Kota Bharu,Kek,Makanan,38,12.00,456.00
+2026-06-16,INV-0676,Timur,Kota Bharu,Roti,Makanan,43,4.50,193.50
+2026-06-16,INV-0677,Tengah,Kuala Lumpur,Coklat,Minuman,29,9.00,261.00
+2026-06-16,INV-0678,Timur,Kota Bharu,Roti,Makanan,16,4.50,72.00
+2026-06-17,INV-0679,Utara,Alor Setar,Teh,Minuman,43,6.00,258.00
+2026-06-17,INV-0680,Utara,George Town,Kek,Makanan,27,12.00,324.00
+2026-06-17,INV-0681,Timur,Kota Bharu,Roti,Makanan,49,4.50,220.50
+2026-06-17,INV-0682,Selatan,Melaka,Kopi,Minuman,60,8.50,510.00
+2026-06-17,INV-0683,Timur,Kuantan,Roti,Makanan,33,4.50,148.50
+2026-06-18,INV-0684,Utara,Alor Setar,Coklat,Minuman,37,9.00,333.00
+2026-06-18,INV-0685,Selatan,Johor Bahru,Teh,Minuman,49,6.00,294.00
+2026-06-18,INV-0686,Selatan,Johor Bahru,Kopi,Minuman,27,8.50,229.50
+2026-06-19,INV-0687,Timur,Kota Bharu,Kek,Makanan,46,12.00,552.00
+2026-06-19,INV-0688,Timur,Kuantan,Coklat,Minuman,11,9.00,99.00
+2026-06-19,INV-0689,Tengah,Kuala Lumpur,Biskut,Makanan,20,7.50,150.00
+2026-06-19,INV-0690,Utara,Alor Setar,Kopi,Minuman,35,8.50,297.50
+2026-06-19,INV-0691,Selatan,Johor Bahru,Coklat,Minuman,41,9.00,369.00
+2026-06-20,INV-0692,Utara,Alor Setar,Coklat,Minuman,29,9.00,261.00
+2026-06-20,INV-0693,Selatan,Johor Bahru,Roti,Makanan,32,4.50,144.00
+2026-06-20,INV-0694,Tengah,Kuala Lumpur,Biskut,Makanan,14,7.50,105.00
+2026-06-20,INV-0695,Utara,George Town,Teh,Minuman,17,6.00,102.00
+2026-06-21,INV-0696,Utara,Alor Setar,Kek,Makanan,12,12.00,144.00
+2026-06-21,INV-0697,Tengah,Kuala Lumpur,Teh,Minuman,32,6.00,192.00
+2026-06-21,INV-0698,Selatan,Johor Bahru,Biskut,Makanan,40,7.50,300.00
+2026-06-22,INV-0699,Utara,Alor Setar,Coklat,Minuman,11,9.00,99.00
+2026-06-22,INV-0700,Selatan,Johor Bahru,Kek,Makanan,50,12.00,600.00
+2026-06-22,INV-0701,Selatan,Melaka,Coklat,Minuman,35,9.00,315.00
+2026-06-22,INV-0702,Tengah,Shah Alam,Kek,Makanan,31,12.00,372.00
+2026-06-23,INV-0703,Selatan,Johor Bahru,Teh,Minuman,37,6.00,222.00
+2026-06-23,INV-0704,Utara,George Town,Coklat,Minuman,37,9.00,333.00
+2026-06-23,INV-0705,Selatan,Melaka,Biskut,Makanan,6,7.50,45.00
+2026-06-23,INV-0706,Utara,George Town,Kek,Makanan,6,12.00,72.00
+2026-06-23,INV-0707,Utara,George Town,Coklat,Minuman,42,9.00,378.00
+2026-06-24,INV-0708,Utara,Alor Setar,Kek,Makanan,25,12.00,300.00
+2026-06-24,INV-0709,Timur,Kuantan,Teh,Minuman,42,6.00,252.00
+2026-06-24,INV-0710,Utara,Alor Setar,Roti,Makanan,29,4.50,130.50
+2026-06-24,INV-0711,Selatan,Melaka,Kek,Makanan,13,12.00,156.00
+2026-06-24,INV-0712,Selatan,Johor Bahru,Roti,Makanan,25,4.50,112.50
+2026-06-25,INV-0713,Selatan,Johor Bahru,Kopi,Minuman,58,8.50,493.00
+2026-06-25,INV-0714,Timur,Kota Bharu,Kek,Makanan,51,12.00,612.00
+2026-06-25,INV-0715,Utara,George Town,Biskut,Makanan,33,7.50,247.50
+2026-06-25,INV-0716,Selatan,Johor Bahru,Kek,Makanan,56,12.00,672.00
+2026-06-25,INV-0717,Timur,Kuantan,Coklat,Minuman,20,9.00,180.00
+2026-06-26,INV-0718,Timur,Kota Bharu,Coklat,Minuman,14,9.00,126.00
+2026-06-26,INV-0719,Selatan,Melaka,Coklat,Minuman,16,9.00,144.00
+2026-06-26,INV-0720,Timur,Kuantan,Biskut,Makanan,8,7.50,60.00
+2026-06-27,INV-0721,Tengah,Kuala Lumpur,Roti,Makanan,36,4.50,162.00
+2026-06-27,INV-0722,Selatan,Johor Bahru,Kek,Makanan,50,12.00,600.00
+2026-06-27,INV-0723,Utara,George Town,Biskut,Makanan,54,7.50,405.00
+2026-06-28,INV-0724,Tengah,Shah Alam,Roti,Makanan,28,4.50,126.00
+2026-06-28,INV-0725,Selatan,Melaka,Roti,Makanan,7,4.50,31.50
+2026-06-28,INV-0726,Timur,Kuantan,Kek,Makanan,9,12.00,108.00
+2026-06-29,INV-0727,Utara,George Town,Biskut,Makanan,27,7.50,202.50
+2026-06-29,INV-0728,Utara,George Town,Teh,Minuman,22,6.00,132.00
+2026-06-29,INV-0729,Selatan,Melaka,Kopi,Minuman,17,8.50,144.50
+2026-06-29,INV-0730,Tengah,Kuala Lumpur,Biskut,Makanan,26,7.50,195.00
+2026-06-30,INV-0731,Selatan,Melaka,Coklat,Minuman,57,9.00,513.00
+2026-06-30,INV-0732,Utara,Alor Setar,Roti,Makanan,45,4.50,202.50
+2026-06-30,INV-0733,Tengah,Shah Alam,Roti,Makanan,47,4.50,211.50
+2026-06-30,INV-0734,Timur,Kuantan,Teh,Minuman,58,6.00,348.00
+2026-06-30,INV-0735,Selatan,Johor Bahru,Kek,Makanan,24,12.00,288.00

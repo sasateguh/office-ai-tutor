@@ -37,6 +37,10 @@ $angka = array_values(array_filter([
     ['kira.pintasan', $k['pintasan']],
 ], fn($a) => $a[1] > 0));
 $bil = 0;
+// latar bahagian bersilih ganti (bahagian pertama selepas wira = biasa), walau bahagian pilihan (jejak, set, popular) tiada
+$selang = 0;
+$kelasBahagian = function () use (&$selang) { return ++$selang % 2 ? 'bahagian' : 'bahagian bahagian-alt'; };
+require_once __DIR__ . '/../Jejak.php';
 ?>
 <section class="relative overflow-hidden border-b border-line bg-accent-soft/30">
   <div class="absolute inset-0 -z-10 [background-image:linear-gradient(rgb(var(--accent)/.10)_1px,transparent_1px),linear-gradient(90deg,rgb(var(--accent)/.10)_1px,transparent_1px)] [background-size:32px_32px] [mask-image:radial-gradient(ellipse_80%_70%_at_80%_30%,black_10%,transparent_70%)]" aria-hidden="true"></div>
@@ -74,7 +78,7 @@ $bil = 0;
   </div>
 </section>
 
-<section class="bahagian">
+<section class="<?= $kelasBahagian() ?>">
   <div class="bekas">
     <div class="max-w-2xl" data-muncul>
       <p class="eyebrow-aksen"><?= sprintf('%02d', ++$bil) ?> · <?= te('subjek.alat') ?></p>
@@ -97,8 +101,10 @@ $bil = 0;
   </div>
 </section>
 
+<?php require __DIR__ . '/_jejak.php'; ?>
+
 <?php if ($set): ?>
-<section class="bahagian bahagian-alt">
+<section class="<?= $kelasBahagian() ?>">
   <div class="bekas">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4" data-muncul>
       <div class="max-w-2xl">
@@ -143,7 +149,7 @@ $bil = 0;
 <?php endif; ?>
 
 <?php if ($popular): ?>
-<section class="bahagian">
+<section class="<?= $kelasBahagian() ?>">
   <div class="bekas">
     <div class="max-w-2xl" data-muncul>
       <p class="eyebrow-aksen"><?= sprintf('%02d', ++$bil) ?> · <?= te('kira.fungsi') ?></p>

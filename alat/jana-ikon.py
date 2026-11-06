@@ -14,6 +14,7 @@ align-justify bold heading pilcrow mouse-pointer-click timer video mic move grou
 refresh-cw shuffle info circle-help settings log-out chart-column trending-up database code binary cpu box archive
 square-function variable send paperclip trash-2 rotate-ccw notebook-pen flask-conical text-cursor-input spell-check
 file-down file-up lock sparkle arrow-up list-checks square-check-big repeat arrow-down-up between-horizontal-start
+arrow-down bot terminal server laptop circle
 """.split()
 
 SINI = pathlib.Path(__file__).resolve().parent

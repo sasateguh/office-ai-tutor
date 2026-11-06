@@ -21,6 +21,21 @@ final class Subjek
         return $semua;
     }
 
+    /**
+     * Kumpul senarai subjek ikut 'cabang' (susunan pertama kali muncul dikekalkan): ['office' => [id => info, …], 'ai' => …].
+     * Templat mengumpul (tajuk cabang) HANYA bila hasilnya > 1 cabang; satu cabang = paparan rata seperti sebelum cabang wujud.
+     * @param array<string,array> $senarai
+     * @return array<string,array<string,array>>
+     */
+    public static function ikutCabang(array $senarai): array
+    {
+        $k = [];
+        foreach ($senarai as $id => $info) {
+            $k[$info['cabang'] ?? 'office'][$id] = $info;
+        }
+        return $k;
+    }
+
     public static function sah(string $id): bool
     {
         return isset(self::semua()[$id]);

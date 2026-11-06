@@ -16,6 +16,7 @@ final class Papar
         $tajuk = '';            // <title> (tanpa nama jenama — _bingkai menambahnya)
         $huraian = '';          // meta description
         $skrip = [];            // [laluan JS] dimuat defer selepas badan
+        $gaya = [];             // [laluan CSS] tambahan selepas tw.css (komponen satu templat, cth panduan.css)
         $data = [];             // window.DATA (JSON) untuk JS halaman
         $widget = true;         // butang tutor terapung
         $noindex = false;
